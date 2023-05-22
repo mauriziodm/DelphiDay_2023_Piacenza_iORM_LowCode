@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{98068D1E-8CDB-4B8E-86BB-22EF1999F066}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\..\iorm\Packages\Delphi\iORM_Project.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PizzAmore_25_LessAttr_Class_simpleviews\vcl\PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PizzAmore_25_LessAttr_Class_simpleviews\fmx\PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="iORM_Project">
+        <MSBuild Projects="..\..\iorm\Packages\Delphi\iORM_Project.dproj"/>
+    </Target>
+    <Target Name="iORM_Project:Clean">
+        <MSBuild Projects="..\..\iorm\Packages\Delphi\iORM_Project.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="iORM_Project:Make">
+        <MSBuild Projects="..\..\iorm\Packages\Delphi\iORM_Project.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop">
+        <MSBuild Projects="PizzAmore_25_LessAttr_Class_simpleviews\vcl\PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop.dproj"/>
+    </Target>
+    <Target Name="PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop:Clean">
+        <MSBuild Projects="PizzAmore_25_LessAttr_Class_simpleviews\vcl\PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop:Make">
+        <MSBuild Projects="PizzAmore_25_LessAttr_Class_simpleviews\vcl\PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile">
+        <MSBuild Projects="PizzAmore_25_LessAttr_Class_simpleviews\fmx\PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile.dproj"/>
+    </Target>
+    <Target Name="PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile:Clean">
+        <MSBuild Projects="PizzAmore_25_LessAttr_Class_simpleviews\fmx\PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile:Make">
+        <MSBuild Projects="PizzAmore_25_LessAttr_Class_simpleviews\fmx\PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="iORM_Project;PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop;PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="iORM_Project:Clean;PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop:Clean;PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="iORM_Project:Make;PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop:Make;PizzAmore_25_LessAttr_Class_simpleview_fmx_mobile:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
