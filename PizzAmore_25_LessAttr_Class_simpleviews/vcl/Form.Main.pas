@@ -28,9 +28,7 @@ type
     procedure SQLiteConnAfterCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript,
       AWarnings: TStrings);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 var
