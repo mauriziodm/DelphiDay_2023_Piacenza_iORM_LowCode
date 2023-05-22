@@ -27,6 +27,7 @@ object PizzasForm: TPizzasForm
     Color = clNavy
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 380
     object ButtonSelect: TSpeedButton
       Left = 334
       Top = 0
@@ -80,6 +81,8 @@ object PizzasForm: TPizzasForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 620
+    ExplicitWidth = 380
     object ButtonAdd: TSpeedButton
       Left = 334
       Top = 0
@@ -124,6 +127,8 @@ object PizzasForm: TPizzasForm
     RowCount = 5
     SelectedColor = 13828095
     ShowFocus = False
+    ExplicitWidth = 380
+    ExplicitHeight = 501
     object DBTextName: TDBText
       Left = 99
       Top = 20
@@ -176,6 +181,8 @@ object PizzasForm: TPizzasForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 541
+    ExplicitWidth = 380
     object Label1: TLabel
       Left = 8
       Top = 7
@@ -389,8 +396,8 @@ object PizzasForm: TPizzasForm
     object acWhereClear: TioBSWhereClear
       Category = 'iORM-BSWhereBuilder'
       Caption = 'Clear'
-      WhereAutoExecuteOnTargetBS = True
       TargetBindSource = DSWhere
+      WhereAutoExecuteOnTargetBS = True
     end
   end
   object DSWhere: TioDataSetMaster

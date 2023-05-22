@@ -26,6 +26,8 @@ object CustomersForm: TCustomersForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 720
+    ExplicitWidth = 380
     object ButtonAdd: TSpeedButton
       Left = 334
       Top = 0
@@ -118,6 +120,7 @@ object CustomersForm: TCustomersForm
     Color = clNavy
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 380
     object ButtonSelect: TSpeedButton
       Left = 334
       Top = 0
@@ -223,6 +226,8 @@ object CustomersForm: TCustomersForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 641
+    ExplicitWidth = 380
     object Label1: TLabel
       Left = 8
       Top = 7
@@ -429,8 +434,8 @@ object CustomersForm: TCustomersForm
     object acWhereClear: TioBSWhereClear
       Category = 'iORM-BSWhereBuilder'
       Caption = 'Clear'
-      WhereAutoExecuteOnTargetBS = True
       TargetBindSource = DSWhere
+      WhereAutoExecuteOnTargetBS = True
     end
   end
   object DSWhere: TioDataSetMaster

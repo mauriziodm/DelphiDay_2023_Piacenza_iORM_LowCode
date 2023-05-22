@@ -179,7 +179,6 @@ object OrdersForm: TOrdersForm
         Visible = True
       end
       item
-        Alignment = taCenter
         Expanded = False
         FieldName = 'OrderState'
         Title.Alignment = taCenter
@@ -440,6 +439,7 @@ object OrdersForm: TOrdersForm
       FieldName = 'GrandTotal'
     end
     object DSOrdersOrderState: TStringField
+      Alignment = taCenter
       FieldName = 'OrderState'
       Size = 100
     end
@@ -486,8 +486,8 @@ object OrdersForm: TOrdersForm
     object acWhereClear: TioBSWhereClear
       Category = 'iORM-BSWhereBuilder'
       Caption = 'Clear'
-      WhereAutoExecuteOnTargetBS = True
       TargetBindSource = DSWhere
+      WhereAutoExecuteOnTargetBS = True
     end
     object acWherePersist: TioBSPersistencePersist
       Category = 'iORM-BSPersistence'
