@@ -42,28 +42,14 @@ type
     DBEditVAT: TDBEdit;
     DSCustomerVAT: TStringField;
     acBack: TioBSCloseQuery;
-    procedure acBackExecute(Sender: TObject);
-    procedure acBackUpdate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation
 
 {$R *.dfm}
-
-procedure TBusinessCustomerForm.acBackExecute(Sender: TObject);
-begin
-  Close;
-end;
-
-procedure TBusinessCustomerForm.acBackUpdate(Sender: TObject);
-begin
-  acBack.Enabled := not DSCustomer.Persistence.IsAppending;
-end;
 
 procedure TBusinessCustomerForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

@@ -32,9 +32,7 @@ type
     acDelete: TAction;
     procedure acDeleteExecute(Sender: TObject);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

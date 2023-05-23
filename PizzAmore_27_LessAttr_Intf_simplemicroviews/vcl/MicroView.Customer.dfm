@@ -60,7 +60,7 @@ object MicroViewCustomer: TMicroViewCustomer
     Top = 6
     Width = 25
     Height = 25
-    Action = acSelectCustomer
+    Action = acSelect
     Anchors = [akTop, akRight]
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -74,7 +74,7 @@ object MicroViewCustomer: TMicroViewCustomer
     Top = 6
     Width = 42
     Height = 25
-    Action = acShowCustomer
+    Action = acShow
     Anchors = [akTop, akRight]
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -169,13 +169,20 @@ object MicroViewCustomer: TMicroViewCustomer
   end
   object ActionListCustMView: TActionList
     Left = 276
-    object acShowCustomer: TAction
+    object acShow: TioBSShowOrSelect
+      Category = 'iORM-BS'
       Caption = 'Show'
-      OnExecute = acShowCustomerExecute
+      ShowMode = smBSCurrent
+      TargetBindSource = DSCustomer
+      ViewContextBy = vcByDefaultViewContextProvider
     end
-    object acSelectCustomer: TAction
+    object acSelect: TioBSShowOrSelect
+      Category = 'iORM-BS'
       Caption = '...'
-      OnExecute = acSelectCustomerExecute
+      EntityTypeName = 'IGenericCustomer'
+      ShowMode = smEntityTypeNameAsSelector
+      TargetBindSource = DSCustomer
+      ViewContextBy = vcByDefaultViewContextProvider
     end
   end
   object DSCustomer: TioDataSetDetail

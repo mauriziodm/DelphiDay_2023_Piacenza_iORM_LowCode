@@ -54,10 +54,10 @@ object OrderForm: TOrderForm
     Height = 40
     Align = alTop
     BevelOuter = bvNone
-    Caption = 'Back'
     Color = clNavy
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 780
     DesignSize = (
       784
       40)
@@ -78,7 +78,7 @@ object OrderForm: TOrderForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 681
+      Width = 677
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -119,6 +119,8 @@ object OrderForm: TOrderForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 521
+    ExplicitWidth = 780
     object ButtonRevert: TSpeedButton
       Left = 0
       Top = 0
@@ -207,6 +209,8 @@ object OrderForm: TOrderForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 2
+    ExplicitLeft = 430
+    ExplicitHeight = 481
     object DBCtrlGrid1: TDBCtrlGrid
       Left = 0
       Top = 0
@@ -222,7 +226,7 @@ object OrderForm: TOrderForm
       RowCount = 5
       SelectedColor = 13828095
       ShowFocus = False
-      OnDblClick = DBCtrlGrid1DblClick
+      ExplicitHeight = 481
       object DBTextName: TDBText
         Left = 99
         Top = 20
@@ -236,7 +240,6 @@ object OrderForm: TOrderForm
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        OnDblClick = DBCtrlGrid1DblClick
       end
       object DBTextPrice: TDBText
         Left = 99
@@ -251,7 +254,6 @@ object OrderForm: TOrderForm
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        OnDblClick = DBCtrlGrid1DblClick
       end
       object DBImage: TDBImage
         Left = 7
@@ -265,7 +267,6 @@ object OrderForm: TOrderForm
         Proportional = True
         Stretch = True
         TabOrder = 0
-        OnDblClick = DBCtrlGrid1DblClick
       end
     end
   end
@@ -330,11 +331,13 @@ object OrderForm: TOrderForm
     ParentColor = False
     TabOrder = 6
     ExplicitTop = 128
-    inherited DSCustomer: TioDataSetDetail
+    inherited DSCustomer: TioDataSetDetail [10]
       AsDefault = False
       MasterBindSource = DSOrder
       MasterPropertyName = 'Customer'
       Left = 275
+    end
+    inherited ActionListCustMView: TActionList [11]
     end
   end
   object ScrollBoxRows: TScrollBox
@@ -418,12 +421,12 @@ object OrderForm: TOrderForm
     object acRevert: TioBSPersistenceRevertOrDelete
       Category = 'iORM-BSPersistence'
       Caption = 'Revert'
+      CloseQueryAction = acBack
       TargetBindSource = DSOrder
     end
     object acSelectPizza: TioBSSelectCurrent
       Category = 'iORM-BS'
       Caption = 'Add'
-      OnExecute = acSelectPizzaExecute
       TargetBindSource = DSPizzas
     end
     object acAddCustomPizza: TAction
@@ -441,10 +444,11 @@ object OrderForm: TOrderForm
     AsDefault = False
     OnAfterRequest = VCProviderOrderRowsAfterRequest
     OnRequest = VCProviderOrderRowsRequest
-    Left = 253
+    Left = 245
     Top = 370
   end
   object DSRows: TioDataSetDetail
+    AsDefault = False
     MasterBindSource = DSOrder
     MasterPropertyName = 'Rows'
     AfterOpen = DSRowsAfterOpen

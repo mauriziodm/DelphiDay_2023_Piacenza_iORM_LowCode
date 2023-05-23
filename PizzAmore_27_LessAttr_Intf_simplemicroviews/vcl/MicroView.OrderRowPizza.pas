@@ -38,9 +38,7 @@ type
     procedure acDeleteExecute(Sender: TObject);
     procedure acShowExecute(Sender: TObject);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

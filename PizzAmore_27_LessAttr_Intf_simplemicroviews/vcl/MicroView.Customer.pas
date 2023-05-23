@@ -27,31 +27,14 @@ type
     DSCustomerFullName: TStringField;
     DSCustomerFullAddress: TStringField;
     DSCustomerPhoneNumber: TStringField;
-    acShowCustomer: TAction;
-    acSelectCustomer: TAction;
-    procedure acShowCustomerExecute(Sender: TObject);
-    procedure acSelectCustomerExecute(Sender: TObject);
+    acShow: TioBSShowOrSelect;
+    acSelect: TioBSShowOrSelect;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation
 
-uses
-  Model.Interfaces;
-
 {$R *.dfm}
-
-procedure TMicroViewCustomer.acSelectCustomerExecute(Sender: TObject);
-begin
-  io.ShowAsSelector<IGenericCustomer>(DSCustomer, nil);
-end;
-
-procedure TMicroViewCustomer.acShowCustomerExecute(Sender: TObject);
-begin
-  DSCustomer.ShowCurrent(nil);
-end;
 
 end.

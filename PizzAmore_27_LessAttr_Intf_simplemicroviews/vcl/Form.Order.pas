@@ -54,15 +54,12 @@ type
     acAddCustomPizza: TAction;
     acBack: TioBSCloseQuery;
     procedure FormShow(Sender: TObject);
-    procedure acBackExecute(Sender: TObject);
-    procedure DBCtrlGrid1DblClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure VCProviderOrderRowsRequest(const Sender: TObject; out ResultViewContext: TComponent);
     procedure VCProviderOrderRowsAfterRequest(const Sender: TObject; const AView, AViewContext: TComponent);
     procedure DSRowsAfterOpen(DataSet: TDataSet);
     procedure DSOrderSelectionInterface(const ASender: TObject; var ASelected: IInterface; var ASelectionType: TioSelectionType; var ADone: Boolean);
     procedure acAddCustomPizzaExecute(Sender: TObject);
-    procedure acSelectPizzaExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -87,21 +84,6 @@ begin
   LNewOrderRow := io.Create<IOrderRow>('CustomOrderRow');
   DSRows.Append(LNewOrderRow);
   DSRows.ShowCurrent(acBack, VCProviderOrderRows);
-end;
-
-procedure TOrderForm.acBackExecute(Sender: TObject);
-begin
-  Close;
-end;
-
-procedure TOrderForm.acSelectPizzaExecute(Sender: TObject);
-begin
-  DSPizzas.SelectCurrent;
-end;
-
-procedure TOrderForm.DBCtrlGrid1DblClick(Sender: TObject);
-begin
-  acSelectPizza.Execute;
 end;
 
 procedure TOrderForm.DSOrderSelectionInterface(const ASender: TObject; var ASelected: IInterface; var ASelectionType: TioSelectionType; var ADone: Boolean);

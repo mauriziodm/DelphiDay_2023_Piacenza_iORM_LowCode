@@ -42,28 +42,14 @@ type
     DBEditLastName: TDBEdit;
     DSCustomerLastName: TStringField;
     acBack: TioBSCloseQuery;
-    procedure acBackExecute(Sender: TObject);
-    procedure acBackUpdate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation
 
 {$R *.dfm}
-
-procedure TPrivateCustomerForm.acBackExecute(Sender: TObject);
-begin
-  Close;
-end;
-
-procedure TPrivateCustomerForm.acBackUpdate(Sender: TObject);
-begin
-  acBack.Enabled := not DSCustomer.Persistence.IsAppending;
-end;
 
 procedure TPrivateCustomerForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
