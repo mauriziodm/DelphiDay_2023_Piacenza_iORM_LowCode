@@ -21,9 +21,6 @@ type
     LayoutMain: TLayout;
     ActionList1: TActionList;
     ioFMX1: TioFMX;
-    acShowCustomers: TAction;
-    acShowPizzas: TAction;
-    acShowOrders: TAction;
     SQLiteConn: TioSQLiteConnectionDef;
     VCProvider: TioViewContextProvider;
     Layout1: TLayout;
@@ -31,9 +28,9 @@ type
     Label1: TLabel;
     ImageLogo: TImage;
     acQuit: TioBSCloseQuery;
-    procedure acShowCustomersExecute(Sender: TObject);
-    procedure acShowPizzasExecute(Sender: TObject);
-    procedure acShowOrdersExecute(Sender: TObject);
+    acShowOrders: TioBSShowOrSelect;
+    acShowCustomers: TioBSShowOrSelect;
+    acShowPizzas: TioBSShowOrSelect;
     procedure SQLiteConnAfterCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript,
       AWarnings: TStrings);
     procedure VCProviderRequest(const Sender: TObject; out ResultViewContext: TComponent);
@@ -51,24 +48,9 @@ var
 implementation
 
 uses
-  Utils.SampleData, System.IOUtils, Model.Interfaces;
+  Utils.SampleData;
 
 {$R *.fmx}
-
-procedure TStartForm.acShowCustomersExecute(Sender: TObject);
-begin
-  io.Show<IGenericCustomer>(nil);
-end;
-
-procedure TStartForm.acShowOrdersExecute(Sender: TObject);
-begin
-  io.Show<IOrder>(nil);
-end;
-
-procedure TStartForm.acShowPizzasExecute(Sender: TObject);
-begin
-  io.Show<IPizza>(nil);
-end;
 
 procedure TStartForm.SQLiteConnAfterCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript,
   AWarnings: TStrings);

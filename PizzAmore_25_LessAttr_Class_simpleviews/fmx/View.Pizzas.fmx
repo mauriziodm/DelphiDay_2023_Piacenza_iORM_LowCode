@@ -27,6 +27,7 @@ inherited ViewPizzas: TViewPizzas
     object EditWhereID: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 3
+      Text = '-33'
       TextSettings.Font.Size = 14.000000000000000000
       Position.X = 56.000000000000000000
       Position.Y = 8.000000000000000000
@@ -52,6 +53,27 @@ inherited ViewPizzas: TViewPizzas
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 2
+      Text = 
+        'ipsum mi vehicula purus, eu congue sapien orci eu est. Morbi bla' +
+        'ndit volutpat ante, non ultrices eros semper at. Fusce leo leo, ' +
+        'mollis id viverra a, pulvinar non diam. Praesent ornare mauris a' +
+        'c magna placerat rutrum.Curabitur volutpat urna fermentum sem ia' +
+        'culis ultrices. Maecenas adipiscing sapien risus, nec consectetu' +
+        'r arcu. Sed in arcu iaculis felis placerat elementum vitae porta' +
+        ' libero. Donec quis purus nisi, ac ultrices lorem. Proin vitae d' +
+        'iam id turpis rhoncus vestibulum scelerisque vel leo. Nulla quis' +
+        ' scelerisque sem. Etiam imperdiet lacinia nulla sit amet varius.' +
+        ' Aliquam in interdum mauris. Praesent placerat, libero vel biben' +
+        'dum malesuada, velit libero vestibulum erat, vel porttitor diam ' +
+        'urna et nibh. Nullam fringilla cursus tempor. Cras eleifend male' +
+        'suada lacus quis consectetur. Cum sociis natoque penatibus et ma' +
+        'gnis dis parturient montes, nascetur ridiculus mus. Sed vestibul' +
+        'um bibendum sodales.Mauris consectetur ipsum ac turpis aliquam i' +
+        'd placerat justo ornare. Donec nisl arcu, faucibus vel dictum vi' +
+        'tae, dapibus vel mauris. Sed lacinia, elit ut commodo tempor, ma' +
+        'uris felis consequat nisl, sit amet laoreet est quam et tortor. ' +
+        'Proin mattis interdum tempus. Etiam ac vehicula neque. Donec tem' +
+        'por, velit sit'
       TextSettings.Font.Size = 14.000000000000000000
       Position.X = 176.000000000000000000
       Position.Y = 8.000000000000000000
@@ -76,6 +98,7 @@ inherited ViewPizzas: TViewPizzas
     object EditWhereFromPrice: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 1
+      Text = '67,67 '#8364
       TextSettings.Font.Size = 14.000000000000000000
       Position.X = 92.000000000000000000
       Position.Y = 46.000000000000000000
@@ -100,6 +123,7 @@ inherited ViewPizzas: TViewPizzas
     object EditWhereToPrice: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 0
+      Text = '67,67 '#8364
       TextSettings.Font.Size = 14.000000000000000000
       Position.X = 262.000000000000000000
       Position.Y = 46.000000000000000000
@@ -133,6 +157,7 @@ inherited ViewPizzas: TViewPizzas
     TypeName = 'TPizza'
   end
   inherited BSWhere: TioPrototypeBindSourceMaster
+    AutoActivate = True
     FieldDefs = <
       item
         Name = 'ID'
@@ -157,6 +182,7 @@ inherited ViewPizzas: TViewPizzas
         Generator = 'Currency'
         ReadOnly = False
       end>
+    Preview = True
     TypeName = 'TWherePizza'
   end
   object BindingsList1: TBindingsList

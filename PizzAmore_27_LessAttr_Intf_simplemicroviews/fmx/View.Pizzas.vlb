@@ -1,26 +1,26 @@
 ﻿[ListView]
-Coordinates=10,10,89,195
+Coordinates=292,10,89,195
 
 [LabelTitle]
-Coordinates=207,231,62,51
+Coordinates=289,420,62,51
 
 [RectangleTitle]
-Coordinates=390,231,84,33
+Coordinates=82,497,84,33
 
 [ButtonSelect]
-Coordinates=266,10,77,51
+Coordinates=186,420,77,51
 
 [Rectangle1]
-Coordinates=295,231,69,33
+Coordinates=192,497,69,33
 
 [ButtonDelete]
-Coordinates=103,231,78,51
+Coordinates=10,420,78,51
 
 [ButtonBack]
-Coordinates=369,10,72,51
+Coordinates=377,420,72,51
 
 [ButtonAdd]
-Coordinates=10,231,67,51
+Coordinates=718,420,67,51
 
 []
 Coordinates=322,53,70,33
@@ -30,7 +30,7 @@ Visible=True
 Coordinates=118,134,82,33
 
 [BSMaster]
-Coordinates=160,30,61,105
+Coordinates=461,55,61,105
 Visible=True
 
 [acBack]
@@ -47,4 +47,54 @@ Coordinates=259,132,56,33
 
 [acShowOrSelect]
 Coordinates=259,184,95,33
+
+[ButtonSearch]
+Coordinates=548,10,81,51
+
+[ButtonClear]
+Coordinates=475,420,73,51
+
+[RectangleWhere]
+Coordinates=446,497,95,33
+
+[acSelectCurrent]
+Coordinates=297,359,93,33
+
+[RectangleWhereButtons]
+Coordinates=287,497,133,33
+
+[BSWhere]
+Coordinates=10,140,60,123
+
+[acWhereClear]
+Coordinates=198,359,83,33
+
+[acWhereBuild]
+Coordinates=99,359,83,33
+
+[EditWhereName]
+Coordinates=162,121,93,51
+Visible=True
+
+[Label1]
+Coordinates=574,420,46,51
+
+[Label3]
+Coordinates=10,497,46,51
+
+[Label4]
+Coordinates=114,420,46,51
+
+[EditWhereToPrice]
+Coordinates=157,10,103,51
+
+[EditWhereID]
+Coordinates=171,343,75,51
+
+[EditWhereFromPrice]
+Coordinates=150,232,116,51
+Visible=True
+
+[Label2]
+Coordinates=646,420,46,51
 

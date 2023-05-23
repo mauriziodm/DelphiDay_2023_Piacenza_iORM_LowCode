@@ -87,6 +87,7 @@ Visible=True
 
 [EditWhereName]
 Coordinates=162,121,93,51
+Visible=True
 
 [Label2]
 Coordinates=501,420,46,51

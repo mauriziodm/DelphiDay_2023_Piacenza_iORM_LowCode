@@ -38,10 +38,10 @@ inherited ViewOrderHistory: TViewOrderHistory
         ReadOnly = False
       end>
     Preview = True
-    TypeName = 'TWhereOrder'
+    TypeName = 'IWhereOrder'
   end
   inherited BSWhere: TioPrototypeBindSourceMaster
-    TypeName = 'TWhereOrder'
+    TypeName = 'IWhereOrder'
   end
   object BindingsList1: TBindingsList
     Methods = <>

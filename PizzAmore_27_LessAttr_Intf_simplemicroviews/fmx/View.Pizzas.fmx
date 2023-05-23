@@ -11,9 +11,107 @@ inherited ViewPizzas: TViewPizzas
     ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
     ItemIndex = 0
   end
-  inherited ActionList1: TActionList
-    inherited acBack: TioBSCloseQuery
-      OnUpdateScope = usLocal
+  inherited RectangleWhere: TRectangle
+    object Label1: TLabel
+      StyledSettings = [Family]
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claDarkslategray
+      Text = 'ID'
+      TabOrder = 7
+    end
+    object EditWhereID: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Text = '-33'
+      TextSettings.Font.Size = 14.000000000000000000
+      Position.X = 56.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object Label3: TLabel
+      StyledSettings = [Family]
+      Position.X = 120.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claDarkslategray
+      Text = 'Name'
+      TabOrder = 6
+    end
+    object EditWhereName: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
+      TabOrder = 2
+      Text = 'Darkgoldenrod'
+      TextSettings.Font.Size = 14.000000000000000000
+      Position.X = 176.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 176.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object Label2: TLabel
+      StyledSettings = [Family]
+      Position.X = 8.000000000000000000
+      Position.Y = 45.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claDarkslategray
+      Text = 'From price'
+      TabOrder = 5
+    end
+    object EditWhereFromPrice: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Text = '67,67 '#8364
+      TextSettings.Font.Size = 14.000000000000000000
+      Position.X = 92.000000000000000000
+      Position.Y = 46.000000000000000000
+      Size.Width = 90.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object Label4: TLabel
+      StyledSettings = [Family]
+      Position.X = 200.000000000000000000
+      Position.Y = 46.000000000000000000
+      Size.Width = 61.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claDarkslategray
+      Text = 'to price'
+      TabOrder = 4
+    end
+    object EditWhereToPrice: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Text = '67,67 '#8364
+      TextSettings.Font.Size = 14.000000000000000000
+      Position.X = 262.000000000000000000
+      Position.Y = 46.000000000000000000
+      Size.Width = 90.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style, FontColor]
     end
   end
   inherited BSMaster: TioPrototypeBindSourceMaster
@@ -39,6 +137,43 @@ inherited ViewPizzas: TViewPizzas
     Preview = True
     TypeName = 'IPizza'
   end
+  inherited BSWhere: TioPrototypeBindSourceMaster
+    AutoActivate = True
+    FieldDefs = <
+      item
+        Name = 'ID'
+        FieldType = ftInteger
+        Generator = 'Integers'
+        ReadOnly = False
+      end
+      item
+        Name = 'Name'
+        Generator = 'ColorsNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'FromPrice'
+        FieldType = ftCurrency
+        Generator = 'Currency'
+        ReadOnly = False
+      end
+      item
+        Name = 'ToPrice'
+        FieldType = ftCurrency
+        Generator = 'Currency'
+        ReadOnly = False
+      end>
+    Preview = True
+    TypeName = 'IWherePizza'
+  end
+  inherited ActionList1: TActionList
+    inherited acBack: TioBSCloseQuery
+      OnUpdateScope = usLocal
+    end
+    inherited acAdd: TioBSPersistenceAppend
+      EntityTypeName = 'IPizza'
+    end
+  end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
@@ -61,6 +196,36 @@ inherited ViewPizzas: TViewPizzas
         end>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BSWhere
+      FieldName = 'Name'
+      Control = EditWhereName
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BSWhere
+      FieldName = 'ToPrice'
+      Control = EditWhereToPrice
+      Track = False
+      CustomFormat = 'Format('#39'%%m'#39', Value)'
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BSWhere
+      FieldName = 'FromPrice'
+      Control = EditWhereFromPrice
+      Track = False
+      CustomFormat = 'Format('#39'%%m'#39', Value)'
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BSWhere
+      FieldName = 'ID'
+      Control = EditWhereID
+      Track = False
     end
   end
 end

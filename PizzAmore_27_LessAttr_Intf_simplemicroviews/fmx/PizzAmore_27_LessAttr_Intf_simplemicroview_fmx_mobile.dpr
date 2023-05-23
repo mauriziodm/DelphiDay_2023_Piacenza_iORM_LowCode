@@ -22,7 +22,11 @@ uses
   View.CustomerBusiness in 'View.CustomerBusiness.pas' {ViewCustomerBusiness: TFrame},
   MicroView.Customer in 'MicroView.Customer.pas' {MicroViewCustomer: TFrame},
   MicroView.OrderRowCustom in 'MicroView.OrderRowCustom.pas' {MicroViewOrderRowCustom: TFrame},
-  MicroView.OrderRowPizza in 'MicroView.OrderRowPizza.pas' {MicroViewOrderRowPizza: TFrame};
+  MicroView.OrderRowPizza in 'MicroView.OrderRowPizza.pas' {MicroViewOrderRowPizza: TFrame},
+  Model.Where.Interfaces in '..\common_model\Model.Where.Interfaces.pas',
+  Model.Where.Order in '..\common_model\Model.Where.Order.pas',
+  Model.Where.Pizza in '..\common_model\Model.Where.Pizza.pas',
+  View.Where.OrderHistory in 'View.Where.OrderHistory.pas' {ViewOrderHistory: TFrame};
 
 {$R *.res}
 {$STRONGLINKTYPES ON}

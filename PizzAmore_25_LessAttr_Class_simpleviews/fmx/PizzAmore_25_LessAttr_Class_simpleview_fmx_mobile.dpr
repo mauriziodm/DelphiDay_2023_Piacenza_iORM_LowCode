@@ -19,7 +19,7 @@ uses
   View.Orders in 'View.Orders.pas' {ViewOrders: TFrame},
   Model.Where.Pizza in '..\common_model\Model.Where.Pizza.pas',
   Model.Where.Order in '..\common_model\Model.Where.Order.pas',
-  View.Where.OrderHistory in 'View.Where.OrderHistory.pas' {ViewBaseForList1: TFrame};
+  View.Where.OrderHistory in 'View.Where.OrderHistory.pas' {ViewOrderHistory: TFrame};
 
 {$R *.res}
 {$STRONGLINKTYPES ON}

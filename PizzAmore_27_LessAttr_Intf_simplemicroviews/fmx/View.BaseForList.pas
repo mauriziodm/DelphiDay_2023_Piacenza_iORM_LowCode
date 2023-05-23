@@ -11,7 +11,7 @@ uses
 
 type
   TViewBaseForList = class(TFrame)
-    Rectangle1: TRectangle;
+    RectangleBottom: TRectangle;
     ButtonDelete: TSpeedButton;
     ButtonAdd: TSpeedButton;
     RectangleTitle: TRectangle;
@@ -19,17 +19,20 @@ type
     ButtonBack: TSpeedButton;
     ButtonSelect: TSpeedButton;
     ListView: TListView;
-    ActionList1: TActionList;
-    acAdd: TAction;
-    acShowOrSelect: TAction;
-    acDelete: TioBSPersistenceDelete;
     BSMaster: TioPrototypeBindSourceMaster;
+    BSWhere: TioPrototypeBindSourceMaster;
+    RectangleWhere: TRectangle;
+    RectangleWhereButtons: TRectangle;
+    ButtonSearch: TSpeedButton;
+    ButtonClear: TSpeedButton;
+    ActionList1: TActionList;
+    acDelete: TioBSPersistenceDelete;
     acBack: TioBSCloseQuery;
-    procedure acAddExecute(Sender: TObject);
-    procedure acShowOrSelectExecute(Sender: TObject);
-    procedure ListViewDblClick(Sender: TObject);
-    procedure acBackExecute(Sender: TObject);
-    procedure acShowOrSelectUpdate(Sender: TObject);
+    acShowOrSelect: TioBSShowOrSelect;
+    acSelectCurrent: TioBSSelectCurrent;
+    acAdd: TioBSPersistenceAppend;
+    acWhereBuild: TioBSWhereBuild;
+    acWhereClear: TioBSWhereClear;
   private
   public
     constructor Create(AOwner: TComponent); override;
@@ -39,51 +42,11 @@ implementation
 
 {$R *.fmx}
 
-procedure TViewBaseForList.acAddExecute(Sender: TObject);
-begin
-  BSMaster.Persistence.Append;
-  acShowOrSelect.Execute;
-end;
-
-procedure TViewBaseForList.acBackExecute(Sender: TObject);
-begin
-  Owner.RemoveComponent(Self);
-  Free;
-end;
-
-procedure TViewBaseForList.acShowOrSelectExecute(Sender: TObject);
-begin
-  if Assigned(BSMaster.SelectorFor) then
-  begin
-    BSMaster.SelectCurrent;
-    io.AnonymousTimer(100,
-      function: boolean
-      begin
-        acBack.Execute;
-      end
-    );
-  end
-  else
-    BSMaster.ShowCurrent(acBack);
-end;
-
-procedure TViewBaseForList.acShowOrSelectUpdate(Sender: TObject);
-begin
-  if Assigned(BSMaster.SelectorFor) then
-    acShowOrSelect.Caption := 'Select'
-  else
-    acShowOrSelect.Caption := 'Show';
-end;
-
 constructor TViewBaseForList.Create(AOwner: TComponent);
 begin
   inherited;
   BSMaster.Open;
-end;
-
-procedure TViewBaseForList.ListViewDblClick(Sender: TObject);
-begin
-  acShowOrSelect.Execute;
+  BSWhere.Open;
 end;
 
 end.

@@ -104,3 +104,12 @@ Coordinates=371,387,46,51
 Coordinates=970,300,125,123
 Visible=True
 
+[acWhereShowHistory]
+Coordinates=512,53,120,33
+
+[ButtonWhereHistory]
+Coordinates=307,80,114,51
+
+[acWherePersist]
+Coordinates=297,193,91,33
+

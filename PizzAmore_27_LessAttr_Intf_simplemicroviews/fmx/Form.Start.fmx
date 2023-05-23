@@ -5213,25 +5213,33 @@ object StartForm: TStartForm
   object ActionList1: TActionList
     Left = 32
     Top = 392
-    object acShowCustomers: TAction
-      Category = 'Tab'
-      Text = 'Customers'
-      OnExecute = acShowCustomersExecute
-    end
-    object acShowPizzas: TAction
-      Category = 'Tab'
-      Text = 'Pizzas'
-      OnExecute = acShowPizzasExecute
-    end
-    object acShowOrders: TAction
-      Category = 'Tab'
-      Text = 'Orders'
-      OnExecute = acShowOrdersExecute
-    end
     object acQuit: TioBSCloseQuery
       Category = 'iORM-BS'
       Text = 'acQuit'
       OnExecuteAction = eaTerminateApplication
+    end
+    object acShowOrders: TioBSShowOrSelect
+      Category = 'iORM-BS'
+      Text = 'Orders'
+      EntityTypeName = 'IOrder'
+      ParentCloseQueryAction = acQuit
+      ShowMode = smEntityTypeName
+      ViewContextBy = vcByDefaultViewContextProvider
+    end
+    object acShowCustomers: TioBSShowOrSelect
+      Category = 'iORM-BS'
+      Text = 'Customers'
+      EntityTypeName = 'IGenericCustomer'
+      ParentCloseQueryAction = acQuit
+      ShowMode = smEntityTypeName
+      ViewContextBy = vcByDefaultViewContextProvider
+    end
+    object acShowPizzas: TioBSShowOrSelect
+      Category = 'iORM-BS'
+      Text = 'Pizzas'
+      EntityTypeName = 'IPizza'
+      ShowMode = smEntityTypeName
+      ViewContextBy = vcByDefaultViewContextProvider
     end
   end
   object ioFMX1: TioFMX

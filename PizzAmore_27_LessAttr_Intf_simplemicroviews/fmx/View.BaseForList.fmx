@@ -2,7 +2,7 @@ object ViewBaseForList: TViewBaseForList
   Size.Width = 400.000000000000000000
   Size.Height = 600.000000000000000000
   Size.PlatformDefault = False
-  object Rectangle1: TRectangle
+  object RectangleBottom: TRectangle
     Align = Bottom
     Fill.Color = xFFF2F2F2
     Position.Y = 560.000000000000000000
@@ -90,32 +90,53 @@ object ViewBaseForList: TViewBaseForList
     FooterAppearanceClassName = 'TListHeaderObjects'
     Align = Client
     Size.Width = 400.000000000000000000
-    Size.Height = 520.000000000000000000
+    Size.Height = 440.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 3
-    OnDblClick = ListViewDblClick
   end
-  object ActionList1: TActionList
-    Left = 203
-    Top = 163
-    object acAdd: TAction
-      Text = 'Add'
-      OnExecute = acAddExecute
-    end
-    object acShowOrSelect: TAction
-      Text = '---'
-      OnExecute = acShowOrSelectExecute
-      OnUpdate = acShowOrSelectUpdate
-    end
-    object acDelete: TioBSPersistenceDelete
-      Category = 'iORM-BSPersistence'
-      Text = 'Delete'
-      TargetBindSource = BSMaster
-    end
-    object acBack: TioBSCloseQuery
-      Category = 'iORM-BS'
-      Text = 'acBack'
-      TargetBindSource = BSMaster
+  object RectangleWhere: TRectangle
+    Align = Bottom
+    Fill.Color = xFFF2F2F2
+    Position.Y = 480.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object RectangleWhereButtons: TRectangle
+      Align = MostRight
+      Fill.Color = xFFF2F2F2
+      Position.X = 360.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 80.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object ButtonSearch: TSpeedButton
+        Action = acWhereBuild
+        Align = Top
+        CanFocus = True
+        Enabled = True
+        StyledSettings = [Family, Size, Style]
+        ImageIndex = -1
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'searchtoolbutton'
+        TextSettings.FontColor = claAliceblue
+      end
+      object ButtonClear: TSpeedButton
+        Action = acWhereClear
+        Align = Bottom
+        CanFocus = True
+        Enabled = True
+        StyledSettings = [Family, Size, Style]
+        ImageIndex = -1
+        Position.Y = 40.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'stoptoolbutton'
+        TextSettings.FontColor = claAliceblue
+      end
     end
   end
   object BSMaster: TioPrototypeBindSourceMaster
@@ -125,5 +146,63 @@ object ViewBaseForList: TViewBaseForList
     Paging.CurrentPageOfFormat = '%d/%d'
     Left = 56
     Top = 160
+  end
+  object BSWhere: TioPrototypeBindSourceMaster
+    FieldDefs = <>
+    ScopeMappings = <>
+    AsDefault = False
+    LoadType = ltCreate
+    TypeOfCollection = tcSingleObject
+    Paging.CurrentPageOfFormat = '%d/%d'
+    WhereBuilderFor = BSMaster
+    Left = 67
+    Top = 420
+  end
+  object ActionList1: TActionList
+    Left = 203
+    Top = 163
+    object acDelete: TioBSPersistenceDelete
+      Category = 'iORM-BSPersistence'
+      Text = 'Delete'
+      TargetBindSource = BSMaster
+    end
+    object acBack: TioBSCloseQuery
+      Category = 'iORM-BS'
+      Text = 'Back'
+      OnUpdateScope = usGlobal
+      TargetBindSource = BSMaster
+    end
+    object acShowOrSelect: TioBSShowOrSelect
+      Category = 'iORM-BS'
+      Text = 'Select'
+      ParentCloseQueryAction = acBack
+      SelectCurrentAction = acSelectCurrent
+      ShowMode = smBSCurrent
+      TargetBindSource = BSMaster
+      ViewContextBy = vcByDefaultViewContextProvider
+    end
+    object acSelectCurrent: TioBSSelectCurrent
+      Category = 'iORM-BS'
+      Text = 'Select'
+      CloseQueryAction = acBack
+      TargetBindSource = BSMaster
+    end
+    object acAdd: TioBSPersistenceAppend
+      Category = 'iORM-BSPersistence'
+      Text = 'Add'
+      ShowOrSelectAction = acShowOrSelect
+      TargetBindSource = BSMaster
+    end
+    object acWhereBuild: TioBSWhereBuild
+      Category = 'iORM-BSWhereBuilder'
+      Text = 'acWhereBuild'
+      TargetBindSource = BSWhere
+    end
+    object acWhereClear: TioBSWhereClear
+      Category = 'iORM-BSWhereBuilder'
+      Text = 'acWhereClear'
+      TargetBindSource = BSWhere
+      WhereAutoExecuteOnTargetBS = True
+    end
   end
 end

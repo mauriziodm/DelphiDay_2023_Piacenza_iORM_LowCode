@@ -8,7 +8,8 @@ uses
   FMX.ListView.Adapters.Base, iORM, iORM.Attributes, iORM.CommonTypes, iORM.Where.Interfaces, Data.Bind.Components, Data.Bind.ObjectScope,
   iORM.LiveBindings.PrototypeBindSource.Custom, iORM.LiveBindings.PrototypeBindSource.Master, Fmx.Bind.Navigator, System.Actions, FMX.ActnList, FMX.ListView,
   FMX.Controls.Presentation, FMX.Objects, Data.Bind.GenData, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt, Fmx.Bind.DBEngExt,
-  iORM.StdActions.Fmx, Model.Interfaces;
+  iORM.StdActions.Fmx, Model.Interfaces, FMX.DateTimeCtrls, FMX.Edit,
+  FMX.ListBox;
 
 type
 
@@ -16,17 +17,37 @@ type
   TViewOrders = class(TViewBaseForList)
     BindingsList1: TBindingsList;
     LinkListControlToField1: TLinkListControlToField;
+    Label2: TLabel;
+    ComboBoxWhereState: TComboBox;
+    Label1: TLabel;
+    EditWhereNote: TEdit;
+    Line1: TLine;
+    Label3: TLabel;
+    Label4: TLabel;
+    DateEditWhereFromDate: TDateEdit;
+    DateEditToDate: TDateEdit;
+    ButtonWhereHistory: TSpeedButton;
+    LinkFillControlToField1: TLinkFillControlToField;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    acWherePersist: TioBSPersistencePersist;
+    acWhereShowHistory: TioBSShowOrSelect;
   private
-    { Private declarations }
   public
-    { Public declarations }
+    constructor Create(AOwner: TComponent); override;
   end;
-
-var
-  ViewOrders: TViewOrders;
 
 implementation
 
 {$R *.fmx}
+
+{ TViewOrders }
+
+constructor TViewOrders.Create(AOwner: TComponent);
+begin
+  inherited;
+  io.Enums.FillStrings<TOrderState>(ComboBoxWhereState.Items);
+end;
 
 end.

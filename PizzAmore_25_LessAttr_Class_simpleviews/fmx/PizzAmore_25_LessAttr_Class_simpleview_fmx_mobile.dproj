@@ -247,7 +247,7 @@
         <DCCReference Include="..\common_model\Model.Where.Pizza.pas"/>
         <DCCReference Include="..\common_model\Model.Where.Order.pas"/>
         <DCCReference Include="View.Where.OrderHistory.pas">
-            <Form>ViewBaseForList1</Form>
+            <Form>ViewOrderHistory</Form>
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
