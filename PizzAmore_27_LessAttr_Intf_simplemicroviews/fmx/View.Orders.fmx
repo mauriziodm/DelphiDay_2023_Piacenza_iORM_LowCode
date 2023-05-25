@@ -149,6 +149,30 @@ inherited ViewOrders: TViewOrders
       TextSettings.HorzAlign = Center
     end
   end
+  inherited ActionList1: TActionList
+    inherited acBack: TioBSCloseQuery
+      OnUpdateScope = usLocal
+    end
+    inherited acAdd: TioBSPersistenceAppend
+      EntityTypeName = 'IOrder'
+    end
+    inherited acWhereBuild: TioBSWhereBuild
+      PersistAction = acWherePersist
+    end
+    object acWherePersist: TioBSPersistencePersist
+      Category = 'iORM-BSPersistence'
+      Text = 'acWherePersist'
+      TargetBindSource = BSWhere
+    end
+    object acWhereShowHistory: TioBSShowOrSelect
+      Category = 'iORM-BS'
+      Text = 'History'
+      ParentCloseQueryAction = acBack
+      ShowMode = smBSTypeNameAsSelector
+      TargetBindSource = BSWhere
+      ViewContextBy = vcByDefaultViewContextProvider
+    end
+  end
   inherited BSMaster: TioPrototypeBindSourceMaster
     AutoActivate = True
     FieldDefs = <
@@ -199,30 +223,7 @@ inherited ViewOrders: TViewOrders
       end>
     Preview = True
     TypeName = 'IWhereOrder'
-  end
-  inherited ActionList1: TActionList
-    inherited acBack: TioBSCloseQuery
-      OnUpdateScope = usLocal
-    end
-    inherited acAdd: TioBSPersistenceAppend
-      EntityTypeName = 'IOrder'
-    end
-    inherited acWhereBuild: TioBSWhereBuild
-      PersistAction = acWherePersist
-    end
-    object acWherePersist: TioBSPersistencePersist
-      Category = 'iORM-BSPersistence'
-      Text = 'acWherePersist'
-      TargetBindSource = BSWhere
-    end
-    object acWhereShowHistory: TioBSShowOrSelect
-      Category = 'iORM-BS'
-      Text = 'History'
-      ParentCloseQueryAction = acBack
-      ShowMode = smBSTypeNameAsSelector
-      TargetBindSource = BSWhere
-      ViewContextBy = vcByDefaultViewContextProvider
-    end
+    OnAfterSelectionInterface = BSWhereAfterSelectionInterface
   end
   object BindingsList1: TBindingsList
     Methods = <>
