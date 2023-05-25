@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="..\..\PizzAmore_30_LessAttr_Intf"/>
+    <File Path="..\common_model"/>
+    <File Path="..\common_model\Model.Customer.pas"/>
+    <File Path="..\common_model\Model.Interfaces.pas"/>
+    <File Path="..\common_model\Model.Order.pas"/>
+    <File Path="..\common_model\Model.OrderRow.pas"/>
+    <File Path="..\common_model\Model.Pizza.pas"/>
+    <File Path="..\common_model\Utils.SampleData.pas"/>
+    <File Path="..\mvvm_common_vm"/>
+    <File Path="..\mvvm_common_vm\VM.BaseForForm.pas"/>
+    <File Path="..\mvvm_common_vm\VM.BaseForForm.dfm"/>
+    <File Path="..\mvvm_common_vm\VM.BaseForList.pas"/>
+    <File Path="..\mvvm_common_vm\VM.BaseForList.dfm"/>
+    <File Path="..\mvvm_common_vm\VM.Customer.pas"/>
+    <File Path="..\mvvm_common_vm\VM.Customer.dfm"/>
+    <File Path="..\mvvm_common_vm\VM.Customers.pas"/>
+    <File Path="..\mvvm_common_vm\VM.Customers.dfm"/>
+    <File Path="..\mvvm_common_vm\VM.Interfaces.pas"/>
+    <File Path="..\mvvm_common_vm\VM.Order.pas"/>
+    <File Path="..\mvvm_common_vm\VM.Order.dfm"/>
+    <File Path="..\mvvm_common_vm\VM.Order.PizzaSel.pas"/>
+    <File Path="..\mvvm_common_vm\VM.Order.PizzaSel.dfm"/>
+    <File Path="..\mvvm_common_vm\VM.Orders.pas"/>
+    <File Path="..\mvvm_common_vm\VM.Orders.dfm"/>
+    <File Path="..\mvvm_common_vm\VM.Pizza.pas"/>
+    <File Path="..\mvvm_common_vm\VM.Pizza.dfm"/>
+    <File Path="..\mvvm_common_vm\VM.Pizzas.pas"/>
+    <File Path="..\mvvm_common_vm\VM.Pizzas.dfm"/>
+    <File Path="..\mvvm_common_vm\VM.Start.pas"/>
+    <File Path="..\mvvm_common_vm\VM.Start.dfm"/>
+    <File Path="Form.Start.pas"/>
+    <File Path="Form.Start.dfm"/>
+    <File Path="Form.ViewContext.pas"/>
+    <File Path="Form.ViewContext.dfm"/>
+    <File Path="RegisterClasses.pas"/>
+    <File Path="View.BaseForForm.pas"/>
+    <File Path="View.BaseForForm.dfm"/>
+    <File Path="View.BaseForList.pas"/>
+    <File Path="View.BaseForList.dfm"/>
+    <File Path="View.Customer.pas"/>
+    <File Path="View.Customer.dfm"/>
+    <File Path="View.Customers.pas"/>
+    <File Path="View.Customers.dfm"/>
+    <File Path="View.Order.pas"/>
+    <File Path="View.Order.dfm"/>
+    <File Path="View.Orders.pas"/>
+    <File Path="View.Orders.dfm"/>
+    <File Path="View.Pizza.pas"/>
+    <File Path="View.Pizza.dfm"/>
+    <File Path="View.Pizzas.pas"/>
+    <File Path="View.Pizzas.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>
