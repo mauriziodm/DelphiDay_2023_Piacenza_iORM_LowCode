@@ -1,8 +1,10 @@
 inherited ViewCustomers: TViewCustomers
   inherited PanelTop: TPanel
     inherited LabelTitle: TLabel
+      Width = 700
+      Height = 40
       Caption = 'Customers'
-      ExplicitWidth = 80
+      ExplicitWidth = 700
     end
   end
   inherited PanelBottom: TPanel
@@ -61,10 +63,10 @@ inherited ViewCustomers: TViewCustomers
     Left = 0
     Top = 40
     Width = 800
-    Height = 520
+    Height = 441
     Align = alClient
     DataSource = SourceMaster
-    TabOrder = 2
+    TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -122,6 +124,106 @@ inherited ViewCustomers: TViewCustomers
         Visible = True
       end>
   end
+  inherited PanelWhere: TPanel
+    object Label1: TLabel
+      Left = 8
+      Top = 7
+      Width = 17
+      Height = 25
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'ID'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 98
+      Top = 7
+      Width = 51
+      Height = 25
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'Name'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 7
+      Top = 37
+      Width = 30
+      Height = 25
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'City'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object DBEditWhereID: TDBEdit
+      Left = 43
+      Top = 7
+      Width = 40
+      Height = 25
+      BorderStyle = bsNone
+      Color = clWhite
+      DataField = 'ID'
+      DataSource = SourceWhere
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object DBEditWhereName: TDBEdit
+      Left = 155
+      Top = 6
+      Width = 589
+      Height = 25
+      Anchors = [akLeft, akTop, akRight]
+      BorderStyle = bsNone
+      Color = clWhite
+      DataField = 'Name'
+      DataSource = SourceWhere
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object DBEditWhereCity: TDBEdit
+      Left = 43
+      Top = 37
+      Width = 701
+      Height = 25
+      Anchors = [akLeft, akTop, akRight]
+      BorderStyle = bsNone
+      Color = clWhite
+      DataField = 'City'
+      DataSource = SourceWhere
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
   inherited ActionList1: TActionList
     object acNextPage: TioViewAction
       Category = 'iORM-MVVM'
@@ -156,6 +258,19 @@ inherited ViewCustomers: TViewCustomers
     end
     object BSMasterPagingCurrentPageOf: TStringField
       FieldName = '%Paging.CurrentPageOf'
+    end
+  end
+  inherited BSWhere: TioModelDataSet
+    object BSWhereID: TIntegerField
+      FieldName = 'ID'
+    end
+    object BSWhereName: TStringField
+      FieldName = 'Name'
+      Size = 100
+    end
+    object BSWhereCity: TStringField
+      FieldName = 'City'
+      Size = 100
     end
   end
 end

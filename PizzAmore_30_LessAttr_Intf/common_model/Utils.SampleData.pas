@@ -131,6 +131,7 @@ begin
   LOrder.Rows.Add( io.Create<IOrderRow>('', [1, 'Margherita pizza', 4.5, 3]) );
   LOrder.Rows.Add( io.Create<IOrderRow>('', [2, 'Capricciosa pizza', 7, 2]) );
   LOrder.Rows.Add( io.Create<IOrderRow>('', [4, 'Love pizza', 5, 1]) );
+  LOrder.OrderState := osReady;
   io.Persist(LOrder);
   // Second order
   LOrder := io.Create<IOrder>;
@@ -139,12 +140,14 @@ begin
   LOrder.Note := 'Double cheese please';
   LOrder.Rows.Add( io.Create<IOrderRow>('', [1, 'Margherita pizza', 4.5, 1]) );
   LOrder.Rows.Add( io.Create<IOrderRow>('', [3, 'Pepperoni pizza', 6.5, 1]) );
+  LOrder.OrderState := osPreparing;
   io.Persist(LOrder);
   // Third order
   LOrder := io.Create<IOrder>;
   LOrder.OrderDate := Date;
   LOrder.Customer := io.LoadObject<ICustomer>(3);
   LOrder.Rows.Add( io.Create<IOrderRow>('', [4, 'Love pizza', 5, 1]) );
+  LOrder.OrderState := osWaiting;
   io.Persist(LOrder);
 end;
 

@@ -228,6 +228,9 @@ object CustomersForm: TCustomersForm
     TabOrder = 3
     ExplicitTop = 641
     ExplicitWidth = 380
+    DesignSize = (
+      384
+      79)
     object Label1: TLabel
       Left = 8
       Top = 7
@@ -321,6 +324,7 @@ object CustomersForm: TCustomersForm
       Top = 6
       Width = 166
       Height = 25
+      Anchors = [akLeft, akTop, akRight]
       BorderStyle = bsNone
       Color = clWhite
       DataField = 'Name'
@@ -338,6 +342,7 @@ object CustomersForm: TCustomersForm
       Top = 37
       Width = 278
       Height = 25
+      Anchors = [akLeft, akTop, akRight]
       BorderStyle = bsNone
       Color = clWhite
       DataField = 'City'

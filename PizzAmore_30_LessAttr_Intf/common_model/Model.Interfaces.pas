@@ -3,6 +3,7 @@ unit Model.Interfaces;
 interface
 
 uses
+  iORM,
 // "ioFMX" is defined in project options to indicate that it is a firemonkey project (Project | Options | Delphi Compiler | Conditional defines).
 // Note: You need to build your project (Project | Build <ProjectName> or Shift + F9) for the changes to take effect.
 {$IFDEF ioFMX}
@@ -14,11 +15,15 @@ uses
 
 type
 
+  [ioEnumerated('All, Waiting, Preparing, Ready, Delivered')]
+  TOrderState = (osUnknown, osWaiting, osPreparing, osReady, osDelivered);
+
   ICustomer = interface
     ['{28219347-5122-48BC-B735-3063FCFAE2B8}']
     // ID property
+    procedure SetID(const AValue: Integer);
     function GetID: Integer;
-    property ID: Integer read GetID;  // ReadOnly
+    property ID: Integer read GetID write SetID;
     // Name property
     procedure SetName(const AValue: String);
     function GetName: String;
@@ -93,6 +98,10 @@ type
     procedure SetOrderDate(const AValue: TDate);
     function GetOrderDate: TDate;
     property OrderDate: TDate read GetOrderDate Write SetOrderDate;
+    // OrderState property
+    procedure SetOrderState(const AValue: TOrderState);
+    function GetOrderState: TOrderState;
+    property OrderState: TOrderState read GetOrderState write SetOrderState;
     // Customer property
     procedure SetCustomer(const AValue: ICustomer);
     function GetCustomer: ICustomer;

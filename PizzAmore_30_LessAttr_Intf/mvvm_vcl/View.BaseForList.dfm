@@ -106,6 +106,48 @@ object ViewBaseForList: TViewBaseForList
       ExplicitLeft = 8
     end
   end
+  object PanelWhere: TPanel
+    Left = 0
+    Top = 481
+    Width = 800
+    Height = 79
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = clMenu
+    ParentBackground = False
+    TabOrder = 2
+    DesignSize = (
+      800
+      79)
+    object ButtonSearch: TSpeedButton
+      Left = 750
+      Top = 0
+      Width = 50
+      Height = 45
+      Action = acWhereBuild
+      Anchors = [akTop, akRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object ButtonClear: TSpeedButton
+      Left = 750
+      Top = 49
+      Width = 50
+      Height = 25
+      Action = acWhereClear
+      Anchors = [akTop, akRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+  end
   object ActionList1: TActionList
     Left = 203
     Top = 163
@@ -137,6 +179,20 @@ object ViewBaseForList: TViewBaseForList
       Visible = True
       VMActionName = 'acShowOrSelect'
     end
+    object acWhereBuild: TioViewAction
+      Category = 'iORM-MVVM'
+      Caption = 'Search'
+      Enabled = True
+      Visible = True
+      VMActionName = 'acWhereBuild'
+    end
+    object acWhereClear: TioViewAction
+      Category = 'iORM-MVVM'
+      Caption = 'Clear'
+      Enabled = True
+      Visible = True
+      VMActionName = 'acWhereClear'
+    end
   end
   object BSMaster: TioModelDataSet
     ViewModelBridge = VMBridge
@@ -152,5 +208,16 @@ object ViewBaseForList: TViewBaseForList
     DataSet = BSMaster
     Left = 286
     Top = 274
+  end
+  object BSWhere: TioModelDataSet
+    ViewModelBridge = VMBridge
+    ModelPresenter = 'BSWhere'
+    Left = 203
+    Top = 426
+  end
+  object SourceWhere: TDataSource
+    DataSet = BSWhere
+    Left = 286
+    Top = 426
   end
 end

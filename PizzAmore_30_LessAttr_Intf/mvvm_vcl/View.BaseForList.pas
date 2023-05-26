@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.DBCtrls, System.Actions, Vcl.ActnList, iORM.StdActions.Vcl,
-  iORM, iORM.Attributes, iORM.CommonTypes, iORM.MVVM.Interfaces, iORM.MVVM.ViewModelBridge, Data.DB, iORM.DB.DataSet.Base, iORM.MVVM.ModelDataSet;
+  iORM, iORM.Attributes, iORM.CommonTypes, iORM.MVVM.Interfaces, iORM.MVVM.ViewModelBridge, Data.DB, iORM.DB.DataSet.Base, iORM.MVVM.ModelDataSet,
+  Vcl.Mask;
 
 type
   TViewBaseForList = class(TFrame)
@@ -24,6 +25,13 @@ type
     VMBridge: TioViewModelBridge;
     BSMaster: TioModelDataSet;
     SourceMaster: TDataSource;
+    PanelWhere: TPanel;
+    ButtonSearch: TSpeedButton;
+    ButtonClear: TSpeedButton;
+    BSWhere: TioModelDataSet;
+    SourceWhere: TDataSource;
+    acWhereBuild: TioViewAction;
+    acWhereClear: TioViewAction;
   private
   public
   end;

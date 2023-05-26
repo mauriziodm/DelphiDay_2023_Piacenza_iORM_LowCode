@@ -11,11 +11,13 @@ type
   TCustomer = class(TInterfacedObject, ICustomer)
   private
     FID: Integer;
+    [ioWhereAttribute(coLike)]
     FName: String;
     FCity: String;
     FAddress: String;
     FPhoneNumber: String;
     // ID property
+    procedure SetID(const AValue: Integer);
     function GetID: Integer;
     // Name property
     procedure SetName(const AValue: String);
@@ -33,12 +35,13 @@ type
     function GetPhoneNumber: String;
   public
     constructor Create;
-    property ID: Integer read GetID;  // ReadOnly
+    property ID: Integer read GetID write SetID;  // ReadOnly
     property Name: String read GetName write SetName;
     property City: String read GetCity write SetCity;
     property Address: String read GetAddress write SetAddress;
-    property FullAddress: String read GetFullAddress;  // ReadOnly
     property PhoneNumber: String read GetPhoneNumber write SetPhoneNumber;
+    [ioWhereSkip]
+    property FullAddress: String read GetFullAddress;  // ReadOnly
   end;
 
 implementation
@@ -91,6 +94,11 @@ end;
 procedure TCustomer.SetCity(const AValue: String);
 begin
   FCity := AValue;
+end;
+
+procedure TCustomer.SetID(const AValue: Integer);
+begin
+  FID := AValue;
 end;
 
 procedure TCustomer.SetName(const AValue: String);

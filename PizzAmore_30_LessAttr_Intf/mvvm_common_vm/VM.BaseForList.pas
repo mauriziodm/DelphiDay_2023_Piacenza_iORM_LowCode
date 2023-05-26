@@ -21,6 +21,9 @@ type
     acShowOrSelect: TioVMActionBSShowOrSelect;
     acAdd: TioVMActionBSPersistenceAppend;
     acSelectCurrent: TioVMActionBSSelectCurrent;
+    BSWhere: TioModelPresenterMaster;
+    acWhereBuild: TioVMActionWhereBuild;
+    acWhereClear: TioVMActionWhereClear;
     procedure ioViewModelViewPairing(const Sender: TioViewModel);
   private
   public
@@ -35,6 +38,7 @@ implementation
 procedure TVMBaseForList.ioViewModelViewPairing(const Sender: TioViewModel);
 begin
   BSMaster.Open;
+  BSWhere.Open;
 end;
 
 end.

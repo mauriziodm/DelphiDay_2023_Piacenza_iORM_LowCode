@@ -78,7 +78,7 @@ object OrderForm: TOrderForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 677
+      Width = 673
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -331,13 +331,11 @@ object OrderForm: TOrderForm
     ParentColor = False
     TabOrder = 6
     ExplicitTop = 128
-    inherited DSCustomer: TioDataSetDetail [10]
+    inherited DSCustomer: TioDataSetDetail
       AsDefault = False
       MasterBindSource = DSOrder
       MasterPropertyName = 'Customer'
       Left = 275
-    end
-    inherited ActionListCustMView: TActionList [11]
     end
   end
   object ScrollBoxRows: TScrollBox

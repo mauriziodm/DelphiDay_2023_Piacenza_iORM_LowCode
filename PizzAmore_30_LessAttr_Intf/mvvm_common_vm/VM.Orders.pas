@@ -11,6 +11,7 @@ type
 
   [diViewModelFor(IOrder)]
   TVMOrders = class(TVMBaseForList)
+    acWhereShowHistory: TioVMActionBSShowOrSelect;
   private
   public
   end;

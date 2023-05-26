@@ -12,6 +12,7 @@ type
   private
     FID: Integer;
     FOrderDate: TDate;
+    FOrderState: TOrderState;
     FCustomer: ICustomer;
     FRows: TList<IOrderRow>;
     FNote: String;
@@ -20,6 +21,9 @@ type
     // OrderDate property
     procedure SetOrderDate(const AValue: TDate);
     function GetOrderDate: TDate;
+    // OrderState property
+    procedure SetOrderState(const AValue: TOrderState);
+    function GetOrderState: TOrderState;
     // Customer property
     procedure SetCustomer(const AValue: ICustomer);
     function GetCustomer: ICustomer;
@@ -36,6 +40,7 @@ type
     procedure AddPizza(const APizza: IPizza);
     property ID: Integer read GetID;  // ReadOnly
     property OrderDate: TDate read GetOrderDate Write SetOrderDate;
+    property OrderState: TOrderState read GetOrderState write SetOrderState;
     property Customer: ICustomer read GetCustomer write SetCustomer;
     property Rows: TList<IOrderRow> read GetRows; // ReadOnly
     property Note: String read GetNote write SetNote;
@@ -108,6 +113,11 @@ begin
   Result := FOrderDate;
 end;
 
+function TOrder.GetOrderState: TOrderState;
+begin
+  Result := FOrderState;
+end;
+
 function TOrder.GetRows: TList<IOrderRow>;
 begin
   Result := FRows;
@@ -126,6 +136,11 @@ end;
 procedure TOrder.SetOrderDate(const AValue: TDate);
 begin
   FOrderDate := AValue;
+end;
+
+procedure TOrder.SetOrderState(const AValue: TOrderState);
+begin
+  FOrderState := AValue;
 end;
 
 end.

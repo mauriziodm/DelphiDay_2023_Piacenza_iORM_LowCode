@@ -204,6 +204,9 @@ object OrdersForm: TOrdersForm
     TabOrder = 3
     ExplicitTop = 428
     ExplicitWidth = 527
+    DesignSize = (
+      531
+      92)
     object Label1: TLabel
       Left = 9
       Top = 7
@@ -255,6 +258,7 @@ object OrdersForm: TOrdersForm
       Width = 50
       Height = 45
       Action = acWhereBuild
+      Anchors = [akTop, akRight]
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
@@ -268,6 +272,7 @@ object OrdersForm: TOrdersForm
       Width = 50
       Height = 25
       Action = acWhereClear
+      Anchors = [akTop, akRight]
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
@@ -318,6 +323,7 @@ object OrdersForm: TOrdersForm
       Width = 50
       Height = 25
       Action = acWhereShowHistory
+      Anchors = [akTop, akRight]
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
@@ -506,9 +512,9 @@ object OrdersForm: TOrdersForm
     object acAdd: TioBSPersistenceAppend
       Category = 'iORM-BSPersistence'
       Caption = 'Add'
+      EntityTypeName = 'IOrder'
       ShowOrSelectAction = acShowOrSelect
       TargetBindSource = DSOrders
-      EntityTypeName = 'IOrder'
     end
     object acWhereBuild: TioBSWhereBuild
       Category = 'iORM-BSWhereBuilder'

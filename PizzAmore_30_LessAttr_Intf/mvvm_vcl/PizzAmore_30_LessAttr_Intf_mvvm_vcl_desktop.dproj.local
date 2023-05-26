@@ -9,6 +9,9 @@
     <File Path="..\common_model\Model.OrderRow.pas"/>
     <File Path="..\common_model\Model.Pizza.pas"/>
     <File Path="..\common_model\Utils.SampleData.pas"/>
+    <File Path="..\common_model\Model.Where.Interfaces.pas"/>
+    <File Path="..\common_model\Model.Where.Order.pas"/>
+    <File Path="..\common_model\Model.Where.Pizza.pas"/>
     <File Path="..\mvvm_common_vm"/>
     <File Path="..\mvvm_common_vm\VM.BaseForForm.pas"/>
     <File Path="..\mvvm_common_vm\VM.BaseForForm.dfm"/>
