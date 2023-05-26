@@ -99,8 +99,8 @@ inherited ViewOrders: TViewOrders
       Top = 44
       Width = 50
       Height = 25
+      Action = acWhereShowHistory
       Anchors = [akTop, akRight]
-      Caption = 'History'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13

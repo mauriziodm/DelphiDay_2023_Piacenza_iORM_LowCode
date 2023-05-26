@@ -7,6 +7,10 @@ inherited VMOrders: TVMOrders
   end
   inherited BSWhere: TioModelPresenterMaster
     TypeName = 'IWhereOrder'
+    OnAfterSelectionInterface = BSWhereAfterSelectionInterface
+  end
+  inherited acWhereBuild: TioVMActionWhereBuild
+    PersistAction = acWherePersist
   end
   object acWhereShowHistory: TioVMActionBSShowOrSelect
     Name = 'acWhereShowHistory'
@@ -16,5 +20,11 @@ inherited VMOrders: TVMOrders
     ViewContextBy = vcByDefaultViewContextProvider
     Left = 416
     Top = 176
+  end
+  object acWherePersist: TioVMActionBSPersistencePersist
+    Name = 'acWherePersist'
+    TargetBindSource = BSWhere
+    Left = 512
+    Top = 48
   end
 end

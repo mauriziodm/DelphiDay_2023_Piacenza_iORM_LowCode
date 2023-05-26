@@ -32,7 +32,9 @@ uses
   VM.Order.PizzaSel in '..\mvvm_common_vm\VM.Order.PizzaSel.pas' {VMOrderPizzaSel: TioViewModel},
   Model.Where.Interfaces in '..\common_model\Model.Where.Interfaces.pas',
   Model.Where.Order in '..\common_model\Model.Where.Order.pas',
-  Model.Where.Pizza in '..\common_model\Model.Where.Pizza.pas';
+  Model.Where.Pizza in '..\common_model\Model.Where.Pizza.pas',
+  VM.Where.OrderHistory in '..\mvvm_common_vm\VM.Where.OrderHistory.pas' {VMWhereOrderHistory: TioViewModel},
+  View.Where.OrderHistory in 'View.Where.OrderHistory.pas' {ViewWhereOrderHistory: TFrame};
 
 {$R *.res}
 {$STRONGLINKTYPES ON}
