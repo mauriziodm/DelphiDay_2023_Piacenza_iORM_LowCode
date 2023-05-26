@@ -28,9 +28,7 @@ type
     MDSMasterCity: TStringField;
     MDSMasterAddress: TStringField;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

@@ -53,9 +53,7 @@ type
     procedure VCProviderOrderAfterRequest(const Sender: TObject; const AView, AViewContext: TComponent);
     procedure FrameResize(Sender: TObject);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

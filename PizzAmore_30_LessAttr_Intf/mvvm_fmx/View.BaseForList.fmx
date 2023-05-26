@@ -59,7 +59,6 @@ object ViewBaseForList: TViewBaseForList
     Size.Height = 520.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 3
-    OnDblClick = ListViewDblClick
   end
   object Rectangle1: TRectangle
     Align = Bottom
@@ -124,11 +123,10 @@ object ViewBaseForList: TViewBaseForList
     end
     object acShowOrSelect: TioViewAction
       Category = 'iORM-MVVM'
-      Text = '---'
+      Text = 'Select'
       Enabled = True
       Visible = True
-      Caption = '---'
-      CaptionLinkedToVMAction = True
+      Caption = 'Select'
       VMActionName = 'acShowOrSelect'
     end
   end

@@ -26,20 +26,11 @@ type
     acShowOrSelect: TioViewAction;
     VMBridge: TioViewModelBridge;
     BSMaster: TioModelBindSource;
-    procedure ListViewDblClick(Sender: TObject);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation
 
 {$R *.fmx}
-
-procedure TViewBaseForList.ListViewDblClick(Sender: TObject);
-begin
-  VMBridge.VMAction['acShowOrSelect'].Execute;
-end;
-
 end.

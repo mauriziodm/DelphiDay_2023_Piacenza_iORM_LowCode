@@ -24,9 +24,7 @@ type
     VMBridge: TioViewModelBridge;
     BSMaster: TioModelBindSource;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

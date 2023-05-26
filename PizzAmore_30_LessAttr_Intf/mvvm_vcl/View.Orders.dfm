@@ -1,10 +1,8 @@
 inherited ViewOrders: TViewOrders
   inherited PanelTop: TPanel
     inherited LabelTitle: TLabel
-      Width = 700
-      Height = 40
       Caption = 'Orders'
-      ExplicitWidth = 700
+      ExplicitWidth = 50
     end
   end
   object GridOrders: TDBGrid [2]
@@ -20,7 +18,6 @@ inherited ViewOrders: TViewOrders
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
-    OnDblClick = GridOrdersDblClick
     Columns = <
       item
         Alignment = taCenter

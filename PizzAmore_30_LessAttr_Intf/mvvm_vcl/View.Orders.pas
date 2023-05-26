@@ -18,21 +18,12 @@ type
     BSMasterNote: TStringField;
     BSMasterCustomerName: TStringField;
     BSMasterGrandTotal: TCurrencyField;
-    procedure GridOrdersDblClick(Sender: TObject);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation
 
 {$R *.dfm}
-
-procedure TViewOrders.GridOrdersDblClick(Sender: TObject);
-begin
-  inherited;
-  VMBridge.VMAction['acShowOrSelect'].Execute;
-end;
 
 end.

@@ -47,9 +47,7 @@ type
     acShowPizzaSelector: TioViewAction;
     acDeleteRow: TioViewAction;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

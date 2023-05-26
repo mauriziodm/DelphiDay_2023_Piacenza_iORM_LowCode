@@ -44,8 +44,6 @@ type
     procedure VCProviderFormAfterRequest(const Sender: TObject; const AView, AViewContext: TComponent);
     procedure SQLiteConnAfterCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript,
       AWarnings: TStrings);
-    procedure SQLiteConnBeforeCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript,
-      AWarnings: TStrings; var AAbort: Boolean);
     procedure VCProviderTabAfterRequest(const Sender: TObject; const AView, AViewContext: TComponent);
     procedure RadioButtonVCFormClick(Sender: TObject);
   private
@@ -74,12 +72,6 @@ procedure TStartForm.SQLiteConnAfterCreateOrAlterDB(const Sender: TioCustomConne
   AWarnings: TStrings);
 begin
   TSampleData.CheckForSampleDataCreation;
-end;
-
-procedure TStartForm.SQLiteConnBeforeCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript,
-  AWarnings: TStrings; var AAbort: Boolean);
-begin
-  AScript.SaveToFile(TPath.Combine(TPath.GetDocumentsPath, 'iORM_Script.txt'));
 end;
 
 procedure TStartForm.VCProviderFormAfterRequest(const Sender: TObject; const AView, AViewContext: TComponent);

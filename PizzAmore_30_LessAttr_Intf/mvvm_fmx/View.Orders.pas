@@ -16,9 +16,7 @@ type
     BindingsList1: TBindingsList;
     LinkListControlToField1: TLinkListControlToField;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

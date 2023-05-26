@@ -19,21 +19,12 @@ type
     BSMasterName: TStringField;
     BSMasterPrice: TCurrencyField;
     BSMasterImage: TGraphicField;
-    procedure CtrlGridPizzasDblClick(Sender: TObject);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation
 
 {$R *.dfm}
-
-procedure TViewPizzas.CtrlGridPizzasDblClick(Sender: TObject);
-begin
-  inherited;
-  VMBridge.VMAction['acShowOrSelect'].Execute;
-end;
 
 end.

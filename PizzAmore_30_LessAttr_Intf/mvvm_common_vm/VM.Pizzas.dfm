@@ -1,11 +1,20 @@
 inherited VMPizzas: TVMPizzas
-  inherited BSMaster: TioModelPresenterMaster
-    TypeName = 'IPizza'
-  end
-  inherited acBack: TioVMActionBSCloseQuery
+  inherited acDelete: TioVMActionBSPersistenceDelete [0]
     TargetBindSource = nil
   end
-  inherited acAdd: TioVMActionBSPersistenceAppend
+  inherited acBack: TioVMActionBSCloseQuery [1]
+    TargetBindSource = nil
+  end
+  inherited acAdd: TioVMActionBSPersistenceAppend [2]
     EntityTypeName = 'IPizza'
+    ShowOrSelectAction = nil
+    TargetBindSource = nil
+  end
+  inherited acSelectCurrent: TioVMActionBSSelectCurrent [3]
+  end
+  inherited BSMaster: TioModelPresenterMaster [4]
+    TypeName = 'IPizza'
+  end
+  inherited acShowOrSelect: TioVMActionBSShowOrSelect [5]
   end
 end

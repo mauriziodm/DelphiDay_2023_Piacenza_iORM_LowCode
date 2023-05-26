@@ -22,9 +22,7 @@ type
     acNextPage: TioViewAction;
     acPrevPage: TioViewAction;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

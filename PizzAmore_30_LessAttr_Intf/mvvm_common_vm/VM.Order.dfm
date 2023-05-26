@@ -37,7 +37,7 @@ inherited VMOrder: TVMOrder
     Name = 'acShowPizzaSelector'
     EntityTypeName = 'IPizza'
     ParentCloseQueryAction = acBack
-    ShowMode = smBSCurrent
+    ShowMode = smEntityTypeNameAsSelector
     TargetBindSource = BSMaster
     ViewContextBy = vcByDefaultViewContextProvider
     Left = 328

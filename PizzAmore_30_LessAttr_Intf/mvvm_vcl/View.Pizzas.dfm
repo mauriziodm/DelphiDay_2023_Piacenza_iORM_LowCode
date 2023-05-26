@@ -18,7 +18,6 @@ inherited ViewPizzas: TViewPizzas
     RowCount = 4
     SelectedColor = 13828095
     ShowFocus = False
-    OnDblClick = CtrlGridPizzasDblClick
     object DBTextName: TDBText
       Left = 99
       Top = 20
@@ -32,7 +31,6 @@ inherited ViewPizzas: TViewPizzas
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      OnDblClick = CtrlGridPizzasDblClick
     end
     object DBTextPrice: TDBText
       Left = 99
@@ -47,7 +45,6 @@ inherited ViewPizzas: TViewPizzas
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      OnDblClick = CtrlGridPizzasDblClick
     end
     object DBImage: TDBImage
       Left = 7
@@ -61,7 +58,6 @@ inherited ViewPizzas: TViewPizzas
       Proportional = True
       Stretch = True
       TabOrder = 0
-      OnDblClick = CtrlGridPizzasDblClick
     end
   end
   inherited BSMaster: TioModelDataSet

@@ -39,9 +39,7 @@ type
     procedure VCProviderRelease(const Sender: TObject; const AView, AViewContext: TComponent);
     procedure VCProviderAfterRequest(const Sender: TObject; const AView, AViewContext: TComponent);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 var

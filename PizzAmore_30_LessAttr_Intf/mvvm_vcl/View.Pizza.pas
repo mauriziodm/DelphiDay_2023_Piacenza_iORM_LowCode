@@ -25,9 +25,7 @@ type
     DBEditPrice: TDBEdit;
     DBImage: TDBImage;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

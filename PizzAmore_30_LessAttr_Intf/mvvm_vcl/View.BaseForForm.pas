@@ -24,9 +24,7 @@ type
     VMBridge: TioViewModelBridge;
     SourceMaster: TDataSource;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation
