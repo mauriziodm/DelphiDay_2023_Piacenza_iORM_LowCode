@@ -310,6 +310,19 @@
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
+        <DCCReference Include="..\common_model\Model.Where.Interfaces.pas"/>
+        <DCCReference Include="..\common_model\Model.Where.Order.pas"/>
+        <DCCReference Include="..\common_model\Model.Where.Pizza.pas"/>
+        <DCCReference Include="..\mvvm_common_vm\VM.Where.OrderHistory.pas">
+            <Form>VMWhereOrderHistory</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TioViewModel</DesignClass>
+        </DCCReference>
+        <DCCReference Include="View.Where.OrderHistory.pas">
+            <Form>ViewWhereOrderHistory</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -557,6 +570,12 @@
                 <DeployFile LocalName="Android\Release\styles-v21.xml" Configuration="Release" Class="AndroidSplashStylesV21"/>
                 <DeployFile LocalName="Android\Release\styles.xml" Configuration="Release" Class="AndroidSplashStyles"/>
                 <DeployFile LocalName="Win32\Debug\PizzAmore_30_LessAttr_Intf_mvvm_fmx_mobile.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="Win32\Debug\PizzAmore_30_LessAttr_Intf_mvvm_fmx_mobile.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>PizzAmore_30_LessAttr_Intf_mvvm_fmx_mobile.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="iOSSimulator">
                         <Operation>1</Operation>

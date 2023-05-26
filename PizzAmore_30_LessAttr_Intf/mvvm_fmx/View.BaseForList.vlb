@@ -1,9 +1,6 @@
 ﻿[ButtonSelect]
 Coordinates=271,10,77,51
 
-[Rectangle1]
-Coordinates=192,179,69,33
-
 [RectangleTitle]
 Coordinates=98,179,84,33
 
@@ -42,4 +39,7 @@ Coordinates=324,261,70,33
 
 [BSMaster]
 Coordinates=191,10,70,51
+
+[RectangleBottom]
+Coordinates=192,179,69,33
 

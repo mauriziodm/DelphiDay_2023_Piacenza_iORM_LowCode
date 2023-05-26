@@ -56,11 +56,11 @@ object ViewBaseForList: TViewBaseForList
     FooterAppearanceClassName = 'TListHeaderObjects'
     Align = Client
     Size.Width = 400.000000000000000000
-    Size.Height = 520.000000000000000000
+    Size.Height = 440.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 3
   end
-  object Rectangle1: TRectangle
+  object RectangleBottom: TRectangle
     Align = Bottom
     Fill.Color = xFFF2F2F2
     Position.Y = 560.000000000000000000
@@ -92,6 +92,52 @@ object ViewBaseForList: TViewBaseForList
       Size.PlatformDefault = False
       StyleLookup = 'addtoolbutton'
       TextSettings.FontColor = claAliceblue
+    end
+  end
+  object RectangleWhere: TRectangle
+    Align = Bottom
+    Fill.Color = xFFF2F2F2
+    Position.Y = 480.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object RectangleWhereButtons: TRectangle
+      Align = MostRight
+      Fill.Color = xFFF2F2F2
+      Position.X = 360.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 80.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object ButtonSearch: TSpeedButton
+        Action = acWhereBuild
+        Align = Top
+        CanFocus = True
+        CanParentFocus = True
+        Enabled = True
+        StyledSettings = [Family, Size, Style]
+        ImageIndex = -1
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'searchtoolbutton'
+        TextSettings.FontColor = claAliceblue
+      end
+      object ButtonClear: TSpeedButton
+        Action = acWhereClear
+        Align = Bottom
+        CanFocus = True
+        Enabled = True
+        StyledSettings = [Family, Size, Style]
+        ImageIndex = -1
+        Position.Y = 40.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'stoptoolbutton'
+        TextSettings.FontColor = claAliceblue
+      end
     end
   end
   object ActionList1: TActionList
@@ -129,6 +175,22 @@ object ViewBaseForList: TViewBaseForList
       Caption = 'Select'
       VMActionName = 'acShowOrSelect'
     end
+    object acWhereBuild: TioViewAction
+      Category = 'iORM-MVVM'
+      Text = 'Search'
+      Enabled = True
+      Visible = True
+      Caption = 'Search'
+      VMActionName = 'acWhereBuild'
+    end
+    object acWhereClear: TioViewAction
+      Category = 'iORM-MVVM'
+      Text = 'Clear'
+      Enabled = True
+      Visible = True
+      Caption = 'Clear'
+      VMActionName = 'acWhereClear'
+    end
   end
   object VMBridge: TioViewModelBridge
     Left = 202
@@ -142,5 +204,15 @@ object ViewBaseForList: TViewBaseForList
     ViewModelBridge = VMBridge
     Left = 200
     Top = 272
+  end
+  object BSWhere: TioModelBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <>
+    ScopeMappings = <>
+    ModelPresenter = 'BSWhere'
+    ViewModelBridge = VMBridge
+    Left = 200
+    Top = 424
   end
 end

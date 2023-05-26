@@ -29,7 +29,12 @@ uses
   RegisterClasses in 'RegisterClasses.pas',
   View.Pizza in 'View.Pizza.pas' {ViewPizza: TFrame},
   View.Orders in 'View.Orders.pas' {ViewOrders: TFrame},
-  View.Order in 'View.Order.pas' {ViewOrder: TFrame};
+  View.Order in 'View.Order.pas' {ViewOrder: TFrame},
+  Model.Where.Interfaces in '..\common_model\Model.Where.Interfaces.pas',
+  Model.Where.Order in '..\common_model\Model.Where.Order.pas',
+  Model.Where.Pizza in '..\common_model\Model.Where.Pizza.pas',
+  VM.Where.OrderHistory in '..\mvvm_common_vm\VM.Where.OrderHistory.pas' {VMWhereOrderHistory: TioViewModel},
+  View.Where.OrderHistory in 'View.Where.OrderHistory.pas' {ViewWhereOrderHistory: TFrame};
 
 {$R *.res}
 {$STRONGLINKTYPES ON}
