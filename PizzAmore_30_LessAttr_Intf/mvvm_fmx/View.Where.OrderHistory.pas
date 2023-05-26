@@ -25,9 +25,6 @@ type
     { Public declarations }
   end;
 
-var
-  ViewWhereOrderHistory: TViewWhereOrderHistory;
-
 implementation
 
 {$R *.fmx}
