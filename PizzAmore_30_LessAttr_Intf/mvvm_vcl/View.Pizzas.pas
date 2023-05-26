@@ -33,10 +33,19 @@ type
     BSWhereToPrice: TCurrencyField;
   private
   public
+    constructor Create(AOwner: TComponent); override;
   end;
 
 implementation
 
 {$R *.dfm}
+
+{ TViewPizzas }
+
+constructor TViewPizzas.Create(AOwner: TComponent);
+begin
+  inherited;
+  PanelWhere.Visible := acBack.Visible;
+end;
 
 end.

@@ -91,6 +91,21 @@ inherited ViewOrder: TViewOrder
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object Label7: TLabel [6]
+      Left = 220
+      Top = 56
+      Width = 75
+      Height = 25
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'Status'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     inherited PanelTop: TPanel
       Width = 449
       ExplicitWidth = 449
@@ -347,6 +362,27 @@ inherited ViewOrder: TViewOrder
           Visible = True
         end>
     end
+    object DBComboBoxOrderState: TDBComboBox
+      Left = 301
+      Top = 53
+      Width = 120
+      Height = 29
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      Color = clInactiveBorder
+      Ctl3D = False
+      DataField = 'OrderState'
+      DataSource = SourceMaster
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      Sorted = True
+      TabOrder = 10
+    end
   end
   object PanelPizzas: TPanel [1]
     Left = 449
@@ -388,6 +424,10 @@ inherited ViewOrder: TViewOrder
     end
     object MDSMasterGrandTotal: TCurrencyField
       FieldName = 'GrandTotal'
+    end
+    object BSMasterOrderState: TStringField
+      FieldName = 'OrderState'
+      Size = 100
     end
   end
   inherited SourceMaster: TDataSource

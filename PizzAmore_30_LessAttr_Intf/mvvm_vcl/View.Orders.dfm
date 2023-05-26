@@ -62,6 +62,7 @@ inherited ViewOrders: TViewOrders
       item
         Expanded = False
         FieldName = 'GrandTotal'
+        Title.Alignment = taCenter
         Title.Caption = 'Grand total'
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clNavy
@@ -69,6 +70,20 @@ inherited ViewOrders: TViewOrders
         Title.Font.Name = 'Segoe UI'
         Title.Font.Style = [fsBold]
         Width = 90
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'OrderState'
+        Title.Alignment = taCenter
+        Title.Caption = 'Status'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clNavy
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Width = 100
         Visible = True
       end
       item
@@ -85,14 +100,14 @@ inherited ViewOrders: TViewOrders
         Title.Font.Height = -13
         Title.Font.Name = 'Segoe UI'
         Title.Font.Style = [fsBold]
-        Width = 300
+        Width = 200
         Visible = True
       end>
   end
   inherited PanelWhere: TPanel
     Top = 468
     Height = 92
-    ExplicitTop = 474
+    ExplicitTop = 468
     ExplicitHeight = 92
     object ButtonHistory: TSpeedButton [1]
       Left = 750
@@ -305,6 +320,10 @@ inherited ViewOrders: TViewOrders
     end
     object BSMasterOrderDate: TDateTimeField
       FieldName = 'OrderDate'
+    end
+    object BSMasterOrderState: TStringField
+      FieldName = 'OrderState'
+      Size = 100
     end
     object BSMasterNote: TStringField
       FieldName = 'Note'

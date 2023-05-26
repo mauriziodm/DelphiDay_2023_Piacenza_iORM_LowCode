@@ -22,7 +22,6 @@ object ViewBaseForForm: TViewBaseForForm
       Height = 40
       Align = alTop
       BevelOuter = bvNone
-      Caption = 'Back'
       Color = clNavy
       ParentBackground = False
       TabOrder = 0

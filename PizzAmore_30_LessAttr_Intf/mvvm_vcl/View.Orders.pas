@@ -36,6 +36,7 @@ type
     BSWhereFromDate: TDateField;
     acWhereShowHistory: TioViewAction;
     BSWhereToDate: TDateField;
+    BSMasterOrderState: TStringField;
   private
   public
     constructor Create(AOwner: TComponent); override;

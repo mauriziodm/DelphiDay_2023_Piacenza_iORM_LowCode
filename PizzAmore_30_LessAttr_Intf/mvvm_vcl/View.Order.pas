@@ -49,16 +49,29 @@ type
     acDeleteRow: TioViewAction;
     VCProviderOrder: TioViewContextProvider;
     acShowCustomerSelector: TioViewAction;
+    BSMasterOrderState: TStringField;
+    Label7: TLabel;
+    DBComboBoxOrderState: TDBComboBox;
     procedure VCProviderOrderRequest(const Sender: TObject; out ResultViewContext: TComponent);
     procedure VCProviderOrderAfterRequest(const Sender: TObject; const AView, AViewContext: TComponent);
     procedure FrameResize(Sender: TObject);
   private
   public
+    constructor Create(AOwner: TComponent); override;
   end;
 
 implementation
 
+uses
+  Model.Interfaces;
+
 {$R *.dfm}
+
+constructor TViewOrder.Create(AOwner: TComponent);
+begin
+  inherited;
+  io.Enums.FillStrings<TOrderState>(DBComboBoxOrderState.Items);
+end;
 
 procedure TViewOrder.FrameResize(Sender: TObject);
 begin
