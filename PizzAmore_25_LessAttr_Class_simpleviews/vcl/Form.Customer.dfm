@@ -98,10 +98,10 @@ object CustomerForm: TCustomerForm
     Height = 40
     Align = alTop
     BevelOuter = bvNone
-    Caption = 'Back'
     Color = clNavy
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 580
     DesignSize = (
       584
       40)
@@ -122,7 +122,7 @@ object CustomerForm: TCustomerForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 481
+      Width = 473
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -135,6 +135,7 @@ object CustomerForm: TCustomerForm
       Font.Style = [fsBold]
       ParentFont = False
       Layout = tlCenter
+      ExplicitWidth = 481
     end
   end
   object PanelBottom: TPanel
@@ -147,6 +148,8 @@ object CustomerForm: TCustomerForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 262
+    ExplicitWidth = 580
     object ButtonRevert: TSpeedButton
       Left = 0
       Top = 0

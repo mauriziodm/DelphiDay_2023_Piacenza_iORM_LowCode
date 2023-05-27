@@ -1,2 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/05/26 16:23:06.000.276,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_common_vm\VM.Where.OrderHistory.pas</Transaction>
+    <Transaction>2023/05/26 16:23:37.000.168,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\Unit1.pas</Transaction>
+    <Transaction>2023/05/26 16:24:08.000.967,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\View.Where.OrderHistory.fmx=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\Unit1.fmx</Transaction>
+    <Transaction>2023/05/26 16:24:08.000.967,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\View.Where.OrderHistory.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

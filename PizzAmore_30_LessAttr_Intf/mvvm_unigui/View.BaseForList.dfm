@@ -3,149 +3,153 @@ object ViewBaseForList: TViewBaseForList
   Top = 0
   Width = 800
   Height = 600
-  Color = clWhite
-  ParentBackground = False
-  ParentColor = False
+  Color = clMenu
   TabOrder = 0
-  object PanelTop: TPanel
+  ParentColor = False
+  ParentBackground = False
+  object PanelTop: TUniPanel
     Left = 0
     Top = 0
     Width = 800
     Height = 40
+    Hint = ''
     Align = alTop
-    BevelOuter = bvNone
-    Color = clNavy
-    ParentBackground = False
     TabOrder = 0
-    object ButtonSelect: TSpeedButton
-      Left = 750
-      Top = 0
-      Width = 50
-      Height = 40
-      Action = acShowOrSelect
-      Align = alRight
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      ExplicitLeft = 756
-    end
-    object ButtonBack: TSpeedButton
+    BorderStyle = ubsNone
+    Caption = ''
+    Color = clNavy
+    object ButtonBack: TUniSpeedButton
       Left = 0
       Top = 0
       Width = 50
       Height = 40
       Action = acBack
       Align = alLeft
-      Font.Charset = DEFAULT_CHARSET
+      ParentFont = False
       Font.Color = clNavy
       Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
+      ParentColor = False
+      TabOrder = 1
     end
-    object LabelTitle: TLabel
-      Left = 50
-      Top = 0
-      Width = 700
-      Height = 40
-      Align = alClient
-      Alignment = taCenter
-      Caption = 'Title'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      Layout = tlCenter
-      ExplicitWidth = 34
-      ExplicitHeight = 21
-    end
-  end
-  object PanelBottom: TPanel
-    Left = 0
-    Top = 560
-    Width = 800
-    Height = 40
-    Align = alBottom
-    BevelOuter = bvNone
-    Color = clMenu
-    ParentBackground = False
-    TabOrder = 1
-    object ButtonAdd: TSpeedButton
+    object ButtonSelect: TUniSpeedButton
       Left = 750
       Top = 0
       Width = 50
       Height = 40
-      Action = acAdd
+      Action = acShowOrSelect
       Align = alRight
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clGreen
-      Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 264
+      Font.Color = clNavy
+      Font.Height = -13
+      ParentColor = False
+      TabOrder = 2
     end
-    object ButtonDelete: TSpeedButton
+    object LabelTitle: TUniLabel
+      Left = 50
+      Top = 0
+      Width = 700
+      Height = 40
+      Hint = ''
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Title'
+      Align = alClient
+      ParentFont = False
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      Color = clWhite
+      TabOrder = 3
+    end
+  end
+  object PanelBottom: TUniPanel
+    Left = 0
+    Top = 560
+    Width = 800
+    Height = 40
+    Hint = ''
+    Align = alBottom
+    TabOrder = 1
+    BorderStyle = ubsNone
+    Caption = ''
+    Color = clMenu
+    object ButtonDelete: TUniSpeedButton
       Left = 0
       Top = 0
       Width = 50
       Height = 40
       Action = acDelete
       Align = alLeft
-      Font.Charset = DEFAULT_CHARSET
+      ParentFont = False
       Font.Color = clRed
       Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = []
+      ParentColor = False
+      TabOrder = 1
+    end
+    object ButtonAdd: TUniSpeedButton
+      Left = 740
+      Top = 0
+      Width = 60
+      Height = 40
+      Action = acAdd
+      Align = alRight
       ParentFont = False
-      ExplicitLeft = 8
+      Font.Color = clGreen
+      Font.Height = -13
+      Font.Style = [fsBold]
+      ParentColor = False
+      TabOrder = 2
     end
   end
-  object PanelWhere: TPanel
+  object PanelWhere: TUniPanel
     Left = 0
-    Top = 481
+    Top = 480
     Width = 800
-    Height = 79
+    Height = 80
+    Hint = ''
     Align = alBottom
-    BevelOuter = bvNone
-    Color = clMenu
-    ParentBackground = False
     TabOrder = 2
-    DesignSize = (
-      800
-      79)
-    object ButtonSearch: TSpeedButton
-      Left = 750
+    BorderStyle = ubsNone
+    Caption = ''
+    Color = clMenu
+    object PanelWhereButtons: TUniPanel
+      Left = 740
       Top = 0
-      Width = 50
-      Height = 45
-      Action = acWhereBuild
-      Anchors = [akTop, akRight]
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object ButtonClear: TSpeedButton
-      Left = 750
-      Top = 51
-      Width = 50
-      Height = 25
-      Action = acWhereClear
-      Anchors = [akTop, akRight]
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
+      Width = 60
+      Height = 80
+      Hint = ''
+      Align = alRight
+      TabOrder = 1
+      BorderStyle = ubsNone
+      Caption = ''
+      object ButtonSearch: TUniSpeedButton
+        Left = 0
+        Top = 0
+        Width = 60
+        Height = 40
+        Action = acWhereBuild
+        Align = alTop
+        ParentFont = False
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Style = [fsBold]
+        ParentColor = False
+        TabOrder = 1
+      end
+      object ButtonClear: TUniSpeedButton
+        Left = 0
+        Top = 40
+        Width = 60
+        Height = 40
+        Action = acWhereClear
+        Align = alBottom
+        ParentFont = False
+        Font.Color = clBlack
+        Font.Height = -13
+        ParentColor = False
+        TabOrder = 2
+      end
     end
   end
   object ActionList1: TActionList

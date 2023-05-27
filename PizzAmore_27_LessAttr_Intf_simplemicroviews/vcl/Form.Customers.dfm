@@ -230,8 +230,7 @@ object CustomersForm: TCustomersForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 641
-    ExplicitWidth = 380
+    ExplicitTop = 636
     object Label1: TLabel
       Left = 8
       Top = 7
@@ -390,18 +389,18 @@ object CustomersForm: TCustomersForm
     object acAddPrivateCustomer: TioBSPersistenceAppend
       Category = 'iORM-BSPersistence'
       Caption = 'Private customer'
-      ShowOrSelectAction = acShowOrSelect
-      TargetBindSource = DSCustomers
       EntityTypeAlias = 'Private'
       EntityTypeName = 'IGenericCustomer'
+      ShowOrSelectAction = acShowOrSelect
+      TargetBindSource = DSCustomers
     end
     object acAddBusinessCustomer: TioBSPersistenceAppend
       Category = 'iORM-BSPersistence'
       Caption = 'Business customer'
-      ShowOrSelectAction = acShowOrSelect
-      TargetBindSource = DSCustomers
       EntityTypeAlias = 'Business'
       EntityTypeName = 'IGenericCustomer'
+      ShowOrSelectAction = acShowOrSelect
+      TargetBindSource = DSCustomers
     end
     object acSelectCurrent: TioBSSelectCurrent
       Category = 'iORM-BS'

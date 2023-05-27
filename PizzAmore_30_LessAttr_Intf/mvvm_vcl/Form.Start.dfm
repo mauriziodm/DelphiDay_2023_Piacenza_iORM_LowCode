@@ -37,7 +37,7 @@ object StartForm: TStartForm
         Color = clWhite
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 510
+        StyleElements = []
         object LabelTitlePizz: TLabel
           Left = 80
           Top = 32
@@ -50,6 +50,7 @@ object StartForm: TStartForm
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
+          StyleElements = []
         end
         object LabelTitleAmore: TLabel
           Left = 162
@@ -63,6 +64,7 @@ object StartForm: TStartForm
           Font.Name = 'Segoe UI'
           Font.Style = [fsItalic]
           ParentFont = False
+          StyleElements = []
         end
         object ImagePizza: TImage
           Left = 43
@@ -8523,8 +8525,7 @@ object StartForm: TStartForm
         Color = clNavy
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 411
-        ExplicitHeight = 510
+        StyleElements = []
         DesignSize = (
           415
           511)
@@ -8542,7 +8543,7 @@ object StartForm: TStartForm
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitWidth = 277
+          StyleElements = []
         end
         object ButtonCustomers: TButton
           Left = 72
@@ -8558,7 +8559,7 @@ object StartForm: TStartForm
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 1
-          ExplicitWidth = 277
+          StyleElements = []
         end
         object ButtonPizzas: TButton
           Left = 72
@@ -8574,7 +8575,7 @@ object StartForm: TStartForm
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 2
-          ExplicitWidth = 277
+          StyleElements = []
         end
         object ButtonQuit: TButton
           Left = 72
@@ -8590,8 +8591,7 @@ object StartForm: TStartForm
           Font.Style = []
           ParentFont = False
           TabOrder = 3
-          ExplicitTop = 439
-          ExplicitWidth = 277
+          StyleElements = []
         end
       end
     end
@@ -8606,7 +8606,7 @@ object StartForm: TStartForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 780
+    StyleElements = []
     object Label1: TLabel
       Left = 16
       Top = 11
