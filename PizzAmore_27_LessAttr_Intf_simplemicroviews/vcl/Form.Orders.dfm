@@ -253,7 +253,7 @@ object OrdersForm: TOrdersForm
       ParentFont = False
     end
     object ButtonSearch: TSpeedButton
-      Left = 481
+      Left = 477
       Top = 0
       Width = 50
       Height = 45
@@ -265,9 +265,10 @@ object OrdersForm: TOrdersForm
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 481
     end
     object ButtonClear: TSpeedButton
-      Left = 481
+      Left = 477
       Top = 68
       Width = 50
       Height = 25
@@ -279,6 +280,7 @@ object OrdersForm: TOrdersForm
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+      ExplicitLeft = 481
     end
     object Label4: TLabel
       Left = 303
@@ -318,7 +320,7 @@ object OrdersForm: TOrdersForm
       Pen.Color = clGray
     end
     object ButtonHistory: TSpeedButton
-      Left = 481
+      Left = 477
       Top = 44
       Width = 50
       Height = 25
@@ -330,6 +332,7 @@ object OrdersForm: TOrdersForm
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+      ExplicitLeft = 481
     end
     object DBEditWhereID: TDBEdit
       Left = 54

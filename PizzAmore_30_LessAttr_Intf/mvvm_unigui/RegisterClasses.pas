@@ -19,7 +19,7 @@ uses
 class procedure TRegisterClasses.RegisterClasses;
 begin
   // ViewModel for TOrder
-//  io.di.RegisterClass<TVMOrderPizzaSel>.AsViewModelFor<TOrder>.Execute;
+  io.di.RegisterClass<TVMOrderPizzaSel>.AsViewModelFor<TOrder>.Execute;
   // ViewModel for IPizza (embedded or not)
   io.di.RegisterClass<TVMPizzas>.AsViewModelFor<IPizza>.Execute;
 //  io.di.RegisterClass<TVMPizzas>.AsViewModelFor<IPizza>('embedded').InjectProperty('Embedded', True).Execute;
