@@ -35,7 +35,8 @@ uses
   RegisterClasses in 'RegisterClasses.pas',
   View.Pizza in 'View.Pizza.pas' {ViewPizza: TUniFrame},
   View.Orders in 'View.Orders.pas' {ViewOrders: TUniFrame},
-  View.Order in 'View.Order.pas' {ViewOrder: TUniFrame};
+  View.Order in 'View.Order.pas' {ViewOrder: TUniFrame},
+  View.Where.OrderHistory in 'View.Where.OrderHistory.pas' {ViewWhereOrderHistory: TFrame};
 
 {$R *.res}
 {$STRONGLINKTYPES ON}

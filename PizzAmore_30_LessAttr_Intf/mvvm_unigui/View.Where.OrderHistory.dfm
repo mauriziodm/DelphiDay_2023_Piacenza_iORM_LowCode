@@ -1,111 +1,97 @@
 inherited ViewWhereOrderHistory: TViewWhereOrderHistory
-  inherited PanelTop: TPanel
-    inherited LabelTitle: TLabel
+  inherited PanelTop: TUniPanel
+    inherited LabelTitle: TUniLabel
       Caption = 'Where history'
-      ExplicitWidth = 108
     end
   end
-  inherited PanelWhere: TPanel
+  inherited PanelWhere: TUniPanel
     Visible = False
   end
-  object GridCustomers: TDBGrid [3]
+  object GridCustomers: TUniDBGrid [3]
     Left = 0
     Top = 40
     Width = 800
-    Height = 441
-    Align = alClient
+    Height = 440
+    Hint = ''
+    BodyRTL = False
     DataSource = SourceMaster
+    ReadOnly = True
+    WebOptions.PageSize = 50
+    WebOptions.RetainCursorOnSort = True
+    LoadMask.Message = 'Loading data...'
+    BorderStyle = ubsNone
+    Align = alClient
+    Font.Height = -13
+    ParentFont = False
     TabOrder = 3
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
     Columns = <
       item
-        Alignment = taCenter
-        Expanded = False
         FieldName = 'OrderID'
         Title.Alignment = taCenter
         Title.Caption = 'ID'
-        Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clNavy
         Title.Font.Height = -13
-        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = [fsBold]
-        Width = 30
-        Visible = True
+        Width = 50
+        Alignment = taCenter
       end
       item
-        Alignment = taCenter
-        Expanded = False
         FieldName = 'OrderState'
         Title.Alignment = taCenter
         Title.Caption = 'Status'
-        Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clNavy
         Title.Font.Height = -13
-        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = [fsBold]
-        Width = 95
-        Visible = True
+        Width = 100
+        Alignment = taCenter
       end
       item
-        Expanded = False
         FieldName = 'FromDate'
         Title.Alignment = taCenter
-        Title.Caption = 'From date'
-        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Caption = 'FromDate'
         Title.Font.Color = clNavy
         Title.Font.Height = -13
-        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = [fsBold]
-        Width = 80
-        Visible = True
+        Width = 120
+        Alignment = taCenter
       end
       item
-        Alignment = taCenter
-        Expanded = False
         FieldName = 'ToDate'
         Title.Alignment = taCenter
         Title.Caption = 'To date'
-        Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clNavy
         Title.Font.Height = -13
-        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = [fsBold]
-        Width = 80
-        Visible = True
+        Width = 120
+        Alignment = taCenter
       end
       item
-        Expanded = False
         FieldName = 'Note'
-        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Alignment = taCenter
+        Title.Caption = 'Note'
         Title.Font.Color = clNavy
         Title.Font.Height = -13
-        Title.Font.Name = 'Segoe UI'
         Title.Font.Style = [fsBold]
-        Width = 450
-        Visible = True
+        Width = 300
       end>
   end
   inherited BSMaster: TioModelDataSet
     object BSMasterOrderID: TIntegerField
       FieldName = 'OrderID'
     end
-    object BSMasterFromDate: TDateField
-      FieldName = 'FromDate'
-    end
-    object BSMasterToDate: TDateField
-      FieldName = 'ToDate'
+    object BSMasterOrderState: TStringField
+      FieldName = 'OrderState'
+      Size = 100
     end
     object BSMasterNote: TStringField
       FieldName = 'Note'
       Size = 100
     end
-    object BSMasterOrderState: TStringField
-      FieldName = 'OrderState'
-      Size = 100
+    object BSMasterFromDate: TDateField
+      FieldName = 'FromDate'
+    end
+    object BSMasterToDate: TDateField
+      FieldName = 'ToDate'
     end
   end
 end

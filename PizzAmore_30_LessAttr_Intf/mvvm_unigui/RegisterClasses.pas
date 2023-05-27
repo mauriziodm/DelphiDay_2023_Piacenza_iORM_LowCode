@@ -23,7 +23,7 @@ begin
   io.di.RegisterClass<TVMOrder>.AsViewModelFor<TOrder>.Execute;
   // ViewModel for IPizza (embedded or not)
   io.di.RegisterClass<TVMPizzas>.AsViewModelFor<IPizza>.Execute;
-  io.di.RegisterClass<TVMPizzas>.AsViewModelFor<IPizza>('embedded').InjectProperty('Embedded', True).Execute;
+//  io.di.RegisterClass<TVMPizzas>.AsViewModelFor<IPizza>('embedded').InjectProperty('Embedded', True).Execute;
 end;
 
 end.

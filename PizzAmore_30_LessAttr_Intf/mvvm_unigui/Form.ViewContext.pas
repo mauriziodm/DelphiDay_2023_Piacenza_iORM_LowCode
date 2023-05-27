@@ -11,9 +11,7 @@ type
   TViewContextForm = class(TUniForm)
     ioCloseQueryRepeater1: TioCloseQueryRepeater;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

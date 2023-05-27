@@ -147,7 +147,7 @@ inherited ViewOrders: TViewOrders
       Width = 120
       Height = 25
       Hint = ''
-      DataField = 'ToDate'
+      DataField = 'FromDate'
       DataSource = SourceWhere
       DateTime = 45073.000000000000000000
       DateFormat = 'dd/MM/yyyy'
