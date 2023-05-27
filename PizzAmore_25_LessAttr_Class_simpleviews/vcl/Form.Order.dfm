@@ -151,7 +151,7 @@ object OrderForm: TOrderForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 677
+      Width = 673
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -681,7 +681,7 @@ object OrderForm: TOrderForm
     end
     object acSelectPizza: TioBSSelectCurrent
       Category = 'iORM-BS'
-      Caption = 'Add'
+      Caption = 'Select'
       TargetBindSource = DSPizzas
     end
     object acDeleteRow: TDataSetDelete

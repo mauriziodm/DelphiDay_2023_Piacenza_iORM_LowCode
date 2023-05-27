@@ -12,17 +12,18 @@ type
 implementation
 
 uses
-  iORM, VM.Order.PizzaSel, Model.Order, VM.Pizzas, Model.Interfaces;
+  iORM, VM.Order, VM.Order.PizzaSel, Model.Order, VM.Pizzas, Model.Interfaces;
 
 { TRegisterClasses }
 
 class procedure TRegisterClasses.RegisterClasses;
 begin
   // ViewModel for TOrder
-  io.di.RegisterClass<TVMOrderPizzaSel>.AsViewModelFor<TOrder>.Execute;
+//  io.di.RegisterClass<TVMOrderPizzaSel>.AsViewModelFor<TOrder>.Execute;
+  io.di.RegisterClass<TVMOrder>.AsViewModelFor<TOrder>.Execute;
   // ViewModel for IPizza (embedded or not)
   io.di.RegisterClass<TVMPizzas>.AsViewModelFor<IPizza>.Execute;
-//  io.di.RegisterClass<TVMPizzas>.AsViewModelFor<IPizza>('embedded').InjectProperty('Embedded', True).Execute;
+  io.di.RegisterClass<TVMPizzas>.AsViewModelFor<IPizza>('embedded').InjectProperty('Embedded', True).Execute;
 end;
 
 end.

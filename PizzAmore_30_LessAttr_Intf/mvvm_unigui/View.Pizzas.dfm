@@ -1,10 +1,11 @@
 inherited ViewPizzas: TViewPizzas
-  inherited PanelTop: TUniPanel
-    inherited LabelTitle: TUniLabel
+  inherited PanelTop: TPanel
+    inherited LabelTitle: TLabel
       Caption = 'Pizzas'
+      ExplicitWidth = 47
     end
   end
-  inherited PanelWhere: TUniPanel
+  inherited PanelWhere: TPanel
     object UniLabel1: TUniLabel
       Left = 10
       Top = 6
@@ -16,7 +17,7 @@ inherited ViewPizzas: TViewPizzas
       Font.Color = clGray
       Font.Height = -16
       Font.Style = [fsBold]
-      TabOrder = 2
+      TabOrder = 0
     end
     object DBEditWhereID: TUniDBEdit
       Left = 60
@@ -28,7 +29,7 @@ inherited ViewPizzas: TViewPizzas
       DataSource = SourceWhere
       ParentFont = False
       Font.Height = -16
-      TabOrder = 3
+      TabOrder = 1
       BorderStyle = ubsNone
     end
     object UniLabel2: TUniLabel
@@ -42,7 +43,7 @@ inherited ViewPizzas: TViewPizzas
       Font.Color = clGray
       Font.Height = -16
       Font.Style = [fsBold]
-      TabOrder = 4
+      TabOrder = 2
     end
     object DBEditWhereName: TUniDBEdit
       Left = 182
@@ -54,7 +55,7 @@ inherited ViewPizzas: TViewPizzas
       DataSource = SourceWhere
       ParentFont = False
       Font.Height = -16
-      TabOrder = 5
+      TabOrder = 3
       BorderStyle = ubsNone
     end
     object UniLabel3: TUniLabel
@@ -68,7 +69,7 @@ inherited ViewPizzas: TViewPizzas
       Font.Color = clGray
       Font.Height = -16
       Font.Style = [fsBold]
-      TabOrder = 6
+      TabOrder = 5
     end
     object DBEditWhereFromPrice: TUniDBEdit
       Left = 100
@@ -94,7 +95,7 @@ inherited ViewPizzas: TViewPizzas
       Font.Color = clGray
       Font.Height = -16
       Font.Style = [fsBold]
-      TabOrder = 8
+      TabOrder = 4
     end
     object DBEditWhereToPrice: TUniDBEdit
       Left = 287
@@ -106,7 +107,7 @@ inherited ViewPizzas: TViewPizzas
       DataSource = SourceWhere
       ParentFont = False
       Font.Height = -16
-      TabOrder = 9
+      TabOrder = 6
       BorderStyle = ubsNone
     end
   end
@@ -114,7 +115,7 @@ inherited ViewPizzas: TViewPizzas
     Left = 0
     Top = 40
     Width = 500
-    Height = 440
+    Height = 441
     Hint = ''
     BodyRTL = False
     DataSource = SourceMaster
@@ -161,7 +162,7 @@ inherited ViewPizzas: TViewPizzas
     Left = 500
     Top = 40
     Width = 300
-    Height = 440
+    Height = 441
     Hint = ''
     Align = alRight
     TabOrder = 4

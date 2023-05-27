@@ -1,10 +1,12 @@
 inherited ViewCustomer: TViewCustomer
-  inherited PanelTop: TUniPanel
-    inherited LabelTitle: TUniLabel
-      Caption = 'Customer'
+  inherited PanelMain: TPanel
+    inherited PanelTop: TPanel
+      inherited LabelTitle: TLabel
+        Caption = 'Customer'
+      end
     end
   end
-  object UniLabel1: TUniLabel [2]
+  object UniLabel1: TUniLabel [1]
     Left = 10
     Top = 60
     Width = 100
@@ -17,22 +19,21 @@ inherited ViewCustomer: TViewCustomer
     Font.Color = clNavy
     Font.Height = -16
     Font.Style = [fsBold]
-    TabOrder = 2
+    TabOrder = 1
   end
-  object DBEditID: TUniDBEdit [3]
+  object DBEditID: TUniDBEdit [2]
     Left = 125
     Top = 60
     Width = 55
     Height = 25
     Hint = ''
     DataField = 'ID'
-    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
-    TabOrder = 3
+    TabOrder = 2
     BorderStyle = ubsNone
   end
-  object UniLabel2: TUniLabel [4]
+  object UniLabel2: TUniLabel [3]
     Left = 10
     Top = 100
     Width = 100
@@ -45,22 +46,21 @@ inherited ViewCustomer: TViewCustomer
     Font.Color = clNavy
     Font.Height = -16
     Font.Style = [fsBold]
-    TabOrder = 4
+    TabOrder = 3
   end
-  object DBEditName: TUniDBEdit [5]
+  object DBEditName: TUniDBEdit [4]
     Left = 125
     Top = 100
     Width = 636
     Height = 25
     Hint = ''
     DataField = 'Name'
-    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
-    TabOrder = 5
+    TabOrder = 4
     BorderStyle = ubsNone
   end
-  object UniLabel3: TUniLabel [6]
+  object UniLabel3: TUniLabel [5]
     Left = 10
     Top = 140
     Width = 100
@@ -73,22 +73,21 @@ inherited ViewCustomer: TViewCustomer
     Font.Color = clNavy
     Font.Height = -16
     Font.Style = [fsBold]
-    TabOrder = 6
+    TabOrder = 5
   end
-  object DBEditPhone: TUniDBEdit [7]
+  object DBEditPhone: TUniDBEdit [6]
     Left = 125
     Top = 140
     Width = 636
     Height = 25
     Hint = ''
     DataField = 'PhoneNumber'
-    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
-    TabOrder = 7
+    TabOrder = 6
     BorderStyle = ubsNone
   end
-  object UniLabel4: TUniLabel [8]
+  object UniLabel4: TUniLabel [7]
     Left = 10
     Top = 180
     Width = 100
@@ -101,22 +100,21 @@ inherited ViewCustomer: TViewCustomer
     Font.Color = clNavy
     Font.Height = -16
     Font.Style = [fsBold]
-    TabOrder = 8
+    TabOrder = 7
   end
-  object DBEditCity: TUniDBEdit [9]
+  object DBEditCity: TUniDBEdit [8]
     Left = 125
     Top = 180
     Width = 636
     Height = 25
     Hint = ''
     DataField = 'City'
-    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
-    TabOrder = 9
+    TabOrder = 8
     BorderStyle = ubsNone
   end
-  object UniLabel5: TUniLabel [10]
+  object UniLabel5: TUniLabel [9]
     Left = 10
     Top = 220
     Width = 100
@@ -131,17 +129,16 @@ inherited ViewCustomer: TViewCustomer
     Font.Style = [fsBold]
     TabOrder = 10
   end
-  object DBEditAddress: TUniDBEdit [11]
+  object DBEditAddress: TUniDBEdit [10]
     Left = 125
     Top = 220
     Width = 636
     Height = 25
     Hint = ''
     DataField = 'Address'
-    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
-    TabOrder = 11
+    TabOrder = 9
     BorderStyle = ubsNone
   end
   inherited BSMaster: TioModelDataSet

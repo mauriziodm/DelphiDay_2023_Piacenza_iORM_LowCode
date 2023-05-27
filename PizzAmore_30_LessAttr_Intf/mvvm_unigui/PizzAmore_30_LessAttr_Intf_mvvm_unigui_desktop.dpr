@@ -34,7 +34,8 @@ uses
   View.Pizzas in 'View.Pizzas.pas' {ViewPizzas: TUniFrame},
   RegisterClasses in 'RegisterClasses.pas',
   View.Pizza in 'View.Pizza.pas' {ViewPizza: TUniFrame},
-  View.Orders in 'View.Orders.pas' {ViewOrders: TUniFrame};
+  View.Orders in 'View.Orders.pas' {ViewOrders: TUniFrame},
+  View.Order in 'View.Order.pas' {ViewOrder: TUniFrame};
 
 {$R *.res}
 {$STRONGLINKTYPES ON}
