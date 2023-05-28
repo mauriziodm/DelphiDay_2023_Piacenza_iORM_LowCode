@@ -1,11 +1,13 @@
 inherited ViewPizzas: TViewPizzas
-  inherited PanelTop: TPanel
-    inherited LabelTitle: TLabel
+  inherited PanelTop: TUniPanel
+    inherited LabelTitle: TUniLabel
       Caption = 'Pizzas'
-      ExplicitWidth = 47
     end
   end
-  inherited PanelWhere: TPanel
+  inherited PanelWhere: TUniPanel
+    inherited PanelWhereButtons: TUniPanel
+      TabOrder = 9
+    end
     object UniLabel1: TUniLabel
       Left = 10
       Top = 6
@@ -115,7 +117,7 @@ inherited ViewPizzas: TViewPizzas
     Left = 0
     Top = 40
     Width = 500
-    Height = 441
+    Height = 440
     Hint = ''
     BodyRTL = False
     DataSource = SourceMaster
@@ -162,7 +164,7 @@ inherited ViewPizzas: TViewPizzas
     Left = 500
     Top = 40
     Width = 300
-    Height = 441
+    Height = 440
     Hint = ''
     Align = alRight
     TabOrder = 4

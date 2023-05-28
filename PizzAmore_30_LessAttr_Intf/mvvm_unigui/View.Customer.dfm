@@ -1,11 +1,4 @@
 inherited ViewCustomer: TViewCustomer
-  inherited PanelMain: TPanel
-    inherited PanelTop: TPanel
-      inherited LabelTitle: TLabel
-        Caption = 'Customer'
-      end
-    end
-  end
   object UniLabel1: TUniLabel [1]
     Left = 10
     Top = 60
@@ -19,15 +12,16 @@ inherited ViewCustomer: TViewCustomer
     Font.Color = clNavy
     Font.Height = -16
     Font.Style = [fsBold]
-    TabOrder = 1
+    TabOrder = 11
   end
   object DBEditID: TUniDBEdit [2]
     Left = 125
-    Top = 60
+    Top = 69
     Width = 55
     Height = 25
     Hint = ''
     DataField = 'ID'
+    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
     TabOrder = 2
@@ -55,6 +49,7 @@ inherited ViewCustomer: TViewCustomer
     Height = 25
     Hint = ''
     DataField = 'Name'
+    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
     TabOrder = 4
@@ -82,6 +77,7 @@ inherited ViewCustomer: TViewCustomer
     Height = 25
     Hint = ''
     DataField = 'PhoneNumber'
+    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
     TabOrder = 6
@@ -109,6 +105,7 @@ inherited ViewCustomer: TViewCustomer
     Height = 25
     Hint = ''
     DataField = 'City'
+    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
     TabOrder = 8
@@ -136,6 +133,7 @@ inherited ViewCustomer: TViewCustomer
     Height = 25
     Hint = ''
     DataField = 'Address'
+    DataSource = BSSource
     ParentFont = False
     Font.Height = -16
     TabOrder = 9
