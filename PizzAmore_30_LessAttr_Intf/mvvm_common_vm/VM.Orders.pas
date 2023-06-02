@@ -13,8 +13,7 @@ type
   TVMOrders = class(TVMBaseForList)
     acWhereShowHistory: TioVMActionBSShowOrSelect;
     acWherePersist: TioVMActionBSPersistencePersist;
-    procedure BSWhereAfterSelectionInterface(const ASender: TObject;
-      var ASelected: IInterface; var ASelectionType: TioSelectionType);
+    procedure BSWhereAfterSelectionInterface(const ASender: TObject; var ASelected: IInterface; var ASelectionType: TioSelectionType);
   private
   public
   end;
@@ -23,8 +22,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TVMOrders.BSWhereAfterSelectionInterface(const ASender: TObject;
-  var ASelected: IInterface; var ASelectionType: TioSelectionType);
+procedure TVMOrders.BSWhereAfterSelectionInterface(const ASender: TObject; var ASelected: IInterface; var ASelectionType: TioSelectionType);
 begin
   BSWhere.WhereBuild;
 end;

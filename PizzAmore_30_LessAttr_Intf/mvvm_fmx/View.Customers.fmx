@@ -160,7 +160,26 @@ inherited ViewCustomers: TViewCustomers
       end>
     Preview = True
   end
-  object BindingsList1: TBindingsList [7]
+  inherited BSWhere: TioModelBindSource
+    FieldDefs = <
+      item
+        Name = 'ID'
+        FieldType = ftInteger
+        Generator = 'Integers'
+        ReadOnly = False
+      end
+      item
+        Name = 'Name'
+        Generator = 'ContactNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'City'
+        Generator = 'LoremIpsum'
+        ReadOnly = False
+      end>
+  end
+  object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
     Left = 20
@@ -206,26 +225,5 @@ inherited ViewCustomers: TViewCustomers
       Control = EditWhereName
       Track = False
     end
-  end
-  inherited BSWhere: TioModelBindSource
-    AutoActivate = False
-    AutoPost = True
-    FieldDefs = <
-      item
-        Name = 'ID'
-        FieldType = ftInteger
-        Generator = 'Integers'
-        ReadOnly = False
-      end
-      item
-        Name = 'Name'
-        Generator = 'ContactNames'
-        ReadOnly = False
-      end
-      item
-        Name = 'City'
-        Generator = 'LoremIpsum'
-        ReadOnly = False
-      end>
   end
 end

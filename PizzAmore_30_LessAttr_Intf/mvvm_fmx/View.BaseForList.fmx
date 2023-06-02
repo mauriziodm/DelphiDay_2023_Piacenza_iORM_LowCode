@@ -206,8 +206,7 @@ object ViewBaseForList: TViewBaseForList
     Top = 272
   end
   object BSWhere: TioModelBindSource
-    AutoActivate = True
-    AutoPost = False
+    AutoActivate = False
     FieldDefs = <>
     ScopeMappings = <>
     ModelPresenter = 'BSWhere'

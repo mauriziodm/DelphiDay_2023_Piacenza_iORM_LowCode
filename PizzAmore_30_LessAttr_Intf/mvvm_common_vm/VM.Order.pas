@@ -37,9 +37,9 @@ end;
 
 procedure TVMOrder.MPMasterSelectionInterface(const ASender: TObject; var ASelected: IInterface; var ASelectionType: TioSelectionType; var ADone: Boolean);
 begin
-    BSMaster.CurrentAs<IOrder>.AddPizza(ASelected as IPizza);
-    BSMaster.Refresh;
-    ADone := True;
+  BSMaster.CurrentAs<IOrder>.AddPizza(ASelected as IPizza);
+  BSMaster.Refresh;
+  ADone := True;
 end;
 
 end.

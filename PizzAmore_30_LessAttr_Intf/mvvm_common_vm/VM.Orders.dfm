@@ -7,7 +7,7 @@ inherited VMOrders: TVMOrders
   end
   inherited BSWhere: TioModelPresenterMaster
     TypeName = 'IWhereOrder'
-    OnAfterSelectionInterface = BSWhereAfterSelectionInterface
+    AfterSelectionInterface = BSWhereAfterSelectionInterface
   end
   inherited acWhereBuild: TioVMActionWhereBuild
     PersistAction = acWherePersist
