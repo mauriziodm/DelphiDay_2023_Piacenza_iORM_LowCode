@@ -32,8 +32,7 @@ type
     ButtonWhereHistory: TSpeedButton;
     acWhereShowHistory: TioBSShowOrSelect;
     acWherePersist: TioBSPersistencePersist;
-    procedure BSWhereAfterSelectionObject(const ASender: TObject;
-      var ASelected: TObject; var ASelectionType: TioSelectionType);
+    procedure BSWhereAfterSelectionObject(const ASender: TObject; var ASelected: TObject; var ASelectionType: TioSelectionType);
   private
   public
     constructor Create(AOwner: TComponent); override;
@@ -45,8 +44,7 @@ implementation
 
 { TViewOrders }
 
-procedure TViewOrders.BSWhereAfterSelectionObject(const ASender: TObject;
-  var ASelected: TObject; var ASelectionType: TioSelectionType);
+procedure TViewOrders.BSWhereAfterSelectionObject(const ASender: TObject; var ASelected: TObject; var ASelectionType: TioSelectionType);
 begin
   BSWhere.WhereBuild;
 end;

@@ -47,6 +47,21 @@ object OrderForm: TOrderForm
     Font.Style = [fsBold]
     ParentFont = False
   end
+  object Label7: TLabel
+    Left = 210
+    Top = 57
+    Width = 75
+    Height = 25
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Status'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object PanelTop: TPanel
     Left = 0
     Top = 0
@@ -78,7 +93,7 @@ object OrderForm: TOrderForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 673
+      Width = 669
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -288,7 +303,7 @@ object OrderForm: TOrderForm
     TabOrder = 3
   end
   object DBEditDate: TDBEdit
-    Left = 140
+    Left = 129
     Top = 57
     Width = 100
     Height = 25
@@ -331,6 +346,11 @@ object OrderForm: TOrderForm
     ParentColor = False
     TabOrder = 6
     ExplicitTop = 128
+    inherited ActionListCustMView: TActionList
+      inherited acShow: TioBSShowOrSelect
+        ParentCloseQueryAction = acBack
+      end
+    end
     inherited DSCustomer: TioDataSetDetail
       AsDefault = False
       MasterBindSource = DSOrder
@@ -351,6 +371,27 @@ object OrderForm: TOrderForm
     ParentColor = False
     ParentCtl3D = False
     TabOrder = 7
+  end
+  object DBComboBoxOrderState: TDBComboBox
+    Left = 291
+    Top = 54
+    Width = 127
+    Height = 29
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    Color = clInactiveBorder
+    Ctl3D = False
+    DataField = 'OrderState'
+    DataSource = SourceOrder
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentCtl3D = False
+    ParentFont = False
+    Sorted = True
+    TabOrder = 8
   end
   object DSPizzas: TioDataSetMaster
     AsDefault = False
@@ -401,6 +442,10 @@ object OrderForm: TOrderForm
     end
     object DSOrderGrandTotal: TCurrencyField
       FieldName = 'GrandTotal'
+    end
+    object DSOrderOrderState: TStringField
+      FieldName = 'OrderState'
+      Size = 100
     end
   end
   object SourceOrder: TDataSource

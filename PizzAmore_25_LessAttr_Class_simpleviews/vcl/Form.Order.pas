@@ -3,10 +3,9 @@ unit Form.Order;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.DBCGrids, iORM, iORM.Attributes, iORM.CommonTypes,
-  iORM.Where.Interfaces, Data.DB, iORM.DB.DataSet.Base, iORM.DB.DataSet.Custom, iORM.DB.DataSet.Master, Vcl.Mask, Vcl.Grids, Vcl.DBGrids, iORM.DB.DataSet.Detail,
-  iORM.StdActions.Vcl, System.Actions, Vcl.ActnList, Vcl.DBActns, Model.Order;
+  Vcl.Forms, Data.DB, iORM, iORM.Attributes, iORM.CommonTypes, iORM.Where.Interfaces, iORM.StdActions.Vcl, Vcl.DBActns, Vcl.ActnList, System.Classes,
+  System.Actions, iORM.DB.DataSet.Detail, iORM.DB.DataSet.Base, iORM.DB.DataSet.Custom, iORM.DB.DataSet.Master, Vcl.Controls, Vcl.StdCtrls, Vcl.DBCtrls,
+  Vcl.Grids, Vcl.DBGrids, Vcl.DBCGrids, Vcl.Mask, Vcl.ExtCtrls, Vcl.Buttons, Model.Order;
 
 type
 
@@ -74,13 +73,11 @@ type
     Label7: TLabel;
     DBComboBoxOrderState: TDBComboBox;
     DSOrderOrderState: TStringField;
-    procedure DSOrderSelectionObject(const ASender: TObject; var ASelected: TObject; var ASelectionType: TioSelectionType; var ADone: Boolean);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure DSOrderSelectionObject(const ASender: TObject; var ASelected: TObject; var ASelectionType: TioSelectionType; var ADone: Boolean);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

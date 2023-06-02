@@ -12,7 +12,7 @@ type
   TCustomer = class
   private
     FID: Integer;
-    [ioWhereAttribute(coLike)]
+    [ioWhere(coLike)]
     FName: String;
     FCity: String;
     FAddress: String;

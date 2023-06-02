@@ -11,7 +11,7 @@ type
   TWherePizza = class
   private
     FID: Integer;
-    [ioWhereAttribute(coLike)]
+    [ioWhere(coLike)]
     FName: String;
     [ioWhereGroup('Price'), ioWhere('Price', coGreaterOrEqual)]
     FFromPrice: Currency;

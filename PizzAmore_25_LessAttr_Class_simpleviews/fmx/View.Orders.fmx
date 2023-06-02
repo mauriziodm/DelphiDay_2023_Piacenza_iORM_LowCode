@@ -197,7 +197,7 @@ inherited ViewOrders: TViewOrders
         ReadOnly = False
       end>
     TypeName = 'TWhereOrder'
-    OnAfterSelectionObject = BSWhereAfterSelectionObject
+    AfterSelectionObject = BSWhereAfterSelectionObject
     OnReceiveSelectionFreeObject = False
   end
   object BindingsList1: TBindingsList

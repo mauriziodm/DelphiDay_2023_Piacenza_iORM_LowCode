@@ -510,7 +510,7 @@ object OrdersForm: TOrdersForm
     TypeOfCollection = tcSingleObject
     Paging.CurrentPageOfFormat = '%d/%d'
     WhereBuilderFor = DSOrders
-    OnAfterSelectionObject = DSWhereAfterSelectionObject
+    AfterSelectionObject = DSWhereAfterSelectionObject
     OnReceiveSelectionFreeObject = False
     Left = 223
     Top = 512

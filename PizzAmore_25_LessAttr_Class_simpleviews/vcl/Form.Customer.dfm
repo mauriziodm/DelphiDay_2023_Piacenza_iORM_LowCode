@@ -122,7 +122,7 @@ object CustomerForm: TCustomerForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 473
+      Width = 465
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]

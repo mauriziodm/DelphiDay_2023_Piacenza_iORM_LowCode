@@ -8504,7 +8504,7 @@ object MainForm: TMainForm
   object ButtonOrders: TButton
     Left = 32
     Top = 335
-    Width = 209
+    Width = 205
     Height = 44
     Action = acShowOrders
     Anchors = [akLeft, akRight, akBottom]
@@ -8515,11 +8515,13 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
+    ExplicitTop = 334
+    ExplicitWidth = 201
   end
   object ButtonCustomers: TButton
     Left = 32
     Top = 387
-    Width = 209
+    Width = 205
     Height = 44
     Action = acShowCustomers
     Anchors = [akLeft, akRight, akBottom]
@@ -8530,11 +8532,13 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    ExplicitTop = 386
+    ExplicitWidth = 201
   end
   object ButtonPizzas: TButton
     Left = 32
     Top = 439
-    Width = 209
+    Width = 205
     Height = 44
     Action = acShowPizzas
     Anchors = [akLeft, akRight, akBottom]
@@ -8545,11 +8549,13 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 438
+    ExplicitWidth = 201
   end
   object ButtonQuit: TButton
     Left = 32
     Top = 502
-    Width = 209
+    Width = 205
     Height = 32
     Action = acQuit
     Anchors = [akLeft, akRight, akBottom]
@@ -8561,7 +8567,7 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 3
     ExplicitTop = 501
-    ExplicitWidth = 205
+    ExplicitWidth = 201
   end
   object ioVCL1: TioVCL
     Left = 8

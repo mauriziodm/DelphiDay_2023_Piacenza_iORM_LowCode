@@ -33,8 +33,7 @@ type
     LinkControlToField3: TLinkControlToField;
     acWherePersist: TioBSPersistencePersist;
     acWhereShowHistory: TioBSShowOrSelect;
-    procedure BSWhereAfterSelectionInterface(const ASender: TObject;
-      var ASelected: IInterface; var ASelectionType: TioSelectionType);
+    procedure BSWhereAfterSelectionInterface(const ASender: TObject; var ASelected: IInterface; var ASelectionType: TioSelectionType);
   private
   public
     constructor Create(AOwner: TComponent); override;
@@ -46,16 +45,15 @@ implementation
 
 { TViewOrders }
 
+procedure TViewOrders.BSWhereAfterSelectionInterface(const ASender: TObject; var ASelected: IInterface; var ASelectionType: TioSelectionType);
+begin
+  BSWhere.WhereBuild;
+end;
+
 constructor TViewOrders.Create(AOwner: TComponent);
 begin
   inherited;
   io.Enums.FillStrings<TOrderState>(ComboBoxWhereState.Items);
-end;
-
-procedure TViewOrders.BSWhereAfterSelectionInterface(const ASender: TObject;
-  var ASelected: IInterface; var ASelectionType: TioSelectionType);
-begin
-  BSWhere.WhereBuild;
 end;
 
 end.

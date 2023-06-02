@@ -55,9 +55,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

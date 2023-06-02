@@ -53,6 +53,9 @@ type
     SpeedButton1: TSpeedButton;
     acAddCustomPizza: TAction;
     acBack: TioBSCloseQuery;
+    Label7: TLabel;
+    DBComboBoxOrderState: TDBComboBox;
+    DSOrderOrderState: TStringField;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure VCProviderOrderRowsRequest(const Sender: TObject; out ResultViewContext: TComponent);
@@ -61,18 +64,13 @@ type
     procedure DSOrderSelectionInterface(const ASender: TObject; var ASelected: IInterface; var ASelectionType: TioSelectionType; var ADone: Boolean);
     procedure acAddCustomPizzaExecute(Sender: TObject);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
-
-var
-  OrderForm: TOrderForm;
 
 implementation
 
 uses
-  Model.Pizza, Form.Customers, Model.Interfaces, System.Rtti;
+  Model.Interfaces, System.Rtti;
 
 {$R *.dfm}
 
@@ -115,6 +113,7 @@ end;
 
 procedure TOrderForm.FormShow(Sender: TObject);
 begin
+  io.Enums.FillStrings<TOrderState>(DBComboBoxOrderState.Items);
   DSPizzas.Open;
 end;
 

@@ -297,6 +297,7 @@ inherited ViewOrder: TViewOrder
   object BSRows: TioPrototypeBindSourceDetail
     FieldDefs = <>
     ScopeMappings = <>
+    AsDefault = False
     MasterBindSource = BSMaster
     MasterPropertyName = 'Rows'
     AfterOpen = BSRowsAfterOpen

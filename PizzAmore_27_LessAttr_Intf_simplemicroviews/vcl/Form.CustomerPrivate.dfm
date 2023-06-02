@@ -113,7 +113,6 @@ object PrivateCustomerForm: TPrivateCustomerForm
     Height = 40
     Align = alTop
     BevelOuter = bvNone
-    Caption = 'Back'
     Color = clNavy
     ParentBackground = False
     TabOrder = 0
@@ -138,7 +137,7 @@ object PrivateCustomerForm: TPrivateCustomerForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 477
+      Width = 465
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]

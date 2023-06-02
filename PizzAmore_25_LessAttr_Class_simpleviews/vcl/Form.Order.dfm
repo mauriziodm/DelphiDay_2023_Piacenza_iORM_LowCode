@@ -151,7 +151,7 @@ object OrderForm: TOrderForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 673
+      Width = 657
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]

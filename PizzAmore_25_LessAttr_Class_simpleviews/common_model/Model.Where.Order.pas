@@ -15,7 +15,7 @@ type
     [ioWhere('ID')]
     FOrderID: Integer;
     FOrderState: TOrderState;
-    [ioWhereAttribute(coLike)]
+    [ioWhere(coLike)]
     FNote: String;
     [ioWhereGroup('Date'), ioWhere('OrderDate', coGreaterOrEqual)]
     FFromDate: TDate;

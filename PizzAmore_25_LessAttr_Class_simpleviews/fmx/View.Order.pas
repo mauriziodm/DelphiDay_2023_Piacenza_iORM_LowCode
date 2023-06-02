@@ -49,9 +49,7 @@ type
     acShowPizzaSelector: TioBSShowOrSelect;
     procedure BSMasterSelectionObject(const ASender: TObject; var ASelected: TObject; var ASelectionType: TioSelectionType; var ADone: Boolean);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 implementation

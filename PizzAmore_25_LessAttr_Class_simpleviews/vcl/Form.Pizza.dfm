@@ -99,6 +99,7 @@ object PizzaForm: TPizzaForm
     Color = clNavy
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 409
     DesignSize = (
       413
       40)
@@ -119,7 +120,7 @@ object PizzaForm: TPizzaForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 310
+      Width = 302
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -145,6 +146,8 @@ object PizzaForm: TPizzaForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 460
+    ExplicitWidth = 409
     object ButtonRevert: TSpeedButton
       Left = 0
       Top = 0

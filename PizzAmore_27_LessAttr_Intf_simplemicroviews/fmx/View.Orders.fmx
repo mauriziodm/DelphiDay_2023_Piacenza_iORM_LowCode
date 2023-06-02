@@ -223,7 +223,7 @@ inherited ViewOrders: TViewOrders
       end>
     Preview = True
     TypeName = 'IWhereOrder'
-    OnAfterSelectionInterface = BSWhereAfterSelectionInterface
+    AfterSelectionInterface = BSWhereAfterSelectionInterface
   end
   object BindingsList1: TBindingsList
     Methods = <>
