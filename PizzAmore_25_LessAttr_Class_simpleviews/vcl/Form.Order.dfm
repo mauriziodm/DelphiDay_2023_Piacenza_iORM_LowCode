@@ -92,8 +92,8 @@ object OrderForm: TOrderForm
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object ButtonSelectCustomer: TSpeedButton
-    Left = 392
+  object ButtonShowCustomer: TSpeedButton
+    Left = 353
     Top = 137
     Width = 25
     Height = 25
@@ -118,6 +118,19 @@ object OrderForm: TOrderForm
     Font.Height = -16
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 379
+    Top = 137
+    Width = 38
+    Height = 25
+    Action = acShowCustomer
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentFont = False
   end
   object PanelTop: TPanel
@@ -415,7 +428,7 @@ object OrderForm: TOrderForm
   object DBEditCustName: TDBEdit
     Left = 128
     Top = 137
-    Width = 261
+    Width = 226
     Height = 25
     BorderStyle = bsNone
     Color = clInactiveBorder
@@ -705,6 +718,14 @@ object OrderForm: TOrderForm
       ShowMode = smEntityTypeNameAsSelector
       TargetBindSource = DSCustomer
       VVMTypeAlias = 'LIST'
+      ViewContextBy = vcByDefaultViewContextProvider
+    end
+    object acShowCustomer: TioBSShowOrSelect
+      Category = 'iORM-BS'
+      Caption = 'Show'
+      ParentCloseQueryAction = acBack
+      ShowMode = smBSCurrent
+      TargetBindSource = DSCustomer
       ViewContextBy = vcByDefaultViewContextProvider
     end
   end

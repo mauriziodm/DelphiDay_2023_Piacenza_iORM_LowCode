@@ -125,9 +125,6 @@ Coordinates=10,302,68,36
 [DSPizzasPrice]
 Coordinates=278,681,100,36
 
-[ButtonSelectCustomer]
-Coordinates=504,234,143,36
-
 [DBECustPhone]
 Coordinates=390,234,104,36
 
@@ -172,4 +169,7 @@ Coordinates=654,166,119,36
 
 [acRevertOrDelete]
 Coordinates=488,320,66,36
+
+[ButtonShowCustomer]
+Coordinates=504,234,143,36
 

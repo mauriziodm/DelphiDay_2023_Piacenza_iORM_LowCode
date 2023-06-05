@@ -39,7 +39,7 @@ type
     DBEditCustAddress: TDBEdit;
     Label5: TLabel;
     DBECustPhone: TDBEdit;
-    ButtonSelectCustomer: TSpeedButton;
+    ButtonShowCustomer: TSpeedButton;
     GridRows: TDBGrid;
     Label6: TLabel;
     DBEditGrandTotal: TDBEdit;
@@ -73,6 +73,8 @@ type
     Label7: TLabel;
     DBComboBoxOrderState: TDBComboBox;
     DSOrderOrderState: TStringField;
+    SpeedButton1: TSpeedButton;
+    acShowCustomer: TioBSShowOrSelect;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure DSOrderSelectionObject(const ASender: TObject; var ASelected: TObject; var ASelectionType: TioSelectionType; var ADone: Boolean);
