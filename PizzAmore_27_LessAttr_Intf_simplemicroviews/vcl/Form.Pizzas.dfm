@@ -385,9 +385,9 @@ object PizzasForm: TPizzasForm
     object acAdd: TioBSPersistenceAppend
       Category = 'iORM-BSPersistence'
       Caption = 'Add'
+      EntityTypeName = 'IPizza'
       ShowOrSelectAction = acShowOrSelect
       TargetBindSource = DSPizzas
-      EntityTypeName = 'IPizza'
     end
     object acWhereBuild: TioBSWhereBuild
       Category = 'iORM-BSWhereBuilder'

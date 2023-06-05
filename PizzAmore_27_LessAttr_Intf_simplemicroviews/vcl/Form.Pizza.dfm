@@ -120,7 +120,7 @@ object PizzaForm: TPizzaForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 306
+      Width = 302
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]

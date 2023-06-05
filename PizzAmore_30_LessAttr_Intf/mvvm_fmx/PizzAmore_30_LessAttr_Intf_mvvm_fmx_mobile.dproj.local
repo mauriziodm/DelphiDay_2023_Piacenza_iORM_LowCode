@@ -5,7 +5,8 @@
     <Transaction>2023/05/26 16:23:37.000.168,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\Unit1.pas</Transaction>
     <Transaction>2023/05/26 16:24:08.000.967,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\Unit1.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\View.Where.OrderHistory.pas</Transaction>
     <Transaction>2023/05/26 16:24:08.000.967,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\Unit1.fmx=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_30_LessAttr_Intf\mvvm_fmx\View.Where.OrderHistory.fmx</Transaction>
-  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="annotation-1.2.0.dex.jar"/>
     <File Path="asynclayoutinflater-1.0.0.dex.jar"/>
     <File Path="billing-4.0.0.dex.jar"/>
