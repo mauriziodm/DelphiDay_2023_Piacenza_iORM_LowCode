@@ -142,6 +142,7 @@ inherited ViewCustomers: TViewCustomers
     ReadOnly = True
     WebOptions.PageSize = 50
     LoadMask.Message = 'Loading data...'
+    BufferedStore.Enabled = True
     BorderStyle = ubsNone
     Align = alClient
     TabOrder = 3

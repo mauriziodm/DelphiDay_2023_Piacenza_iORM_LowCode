@@ -19,6 +19,7 @@ inherited ViewWhereOrderHistory: TViewWhereOrderHistory
     WebOptions.PageSize = 50
     WebOptions.RetainCursorOnSort = True
     LoadMask.Message = 'Loading data...'
+    BufferedStore.Enabled = True
     BorderStyle = ubsNone
     Align = alClient
     Font.Height = -13

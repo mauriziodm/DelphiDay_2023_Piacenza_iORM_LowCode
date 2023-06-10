@@ -249,6 +249,7 @@ inherited ViewOrder: TViewOrder
     WebOptions.PageSize = 50
     WebOptions.RetainCursorOnSort = True
     LoadMask.Message = 'Loading data...'
+    BufferedStore.Enabled = True
     BorderStyle = ubsNone
     Font.Height = -13
     ParentFont = False
