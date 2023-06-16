@@ -21,6 +21,10 @@ type
     FFromDate: TDate;
     [ioWhereGroup('Date'), ioWhere('OrderDate', coLowerOrEqual)]
     FToDate: TDate;
+    [ioWhere('Customer.Name', coLike)]
+    FCustomerName: String;
+    [ioWhere('Customer.State.Name', coLike)]
+    FCustomerStateName: String;
   public
     constructor Create;
     property OrderID: Integer read FOrderID write FOrderID;
@@ -28,6 +32,8 @@ type
     property Note: String read FNote write FNote;
     property FromDate: TDate read FFromDate Write FFromDate;
     property ToDate: TDate read FToDate Write FToDate;
+    property CustomerName: String read FCustomerName write FCustomerName;
+    property CustomerStateName: String read FCustomerStateName write FCustomerStateName;
   end;
 
 implementation

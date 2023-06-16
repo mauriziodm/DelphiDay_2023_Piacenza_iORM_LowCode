@@ -16,7 +16,8 @@ uses
   Form.Order in 'Form.Order.pas' {OrderForm},
   Model.Where.Order in '..\common_model\Model.Where.Order.pas',
   Model.Where.Pizza in '..\common_model\Model.Where.Pizza.pas',
-  Form.Where.OrderHistory in 'Form.Where.OrderHistory.pas' {OrderWhereHistoryForm};
+  Form.Where.OrderHistory in 'Form.Where.OrderHistory.pas' {OrderWhereHistoryForm},
+  Model.State in '..\common_model\Model.State.pas';
 
 {$R *.res}
 {$STRONGLINKTYPES ON}

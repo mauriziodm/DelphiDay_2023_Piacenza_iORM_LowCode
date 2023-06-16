@@ -10,6 +10,7 @@ type
     class procedure CreateOtherCustomers;
     class procedure CreatePizzas;
     class procedure CreateOrders;
+    class procedure CreateStates;
   public
     class procedure CheckForSampleDataCreation;
   end;
@@ -17,7 +18,8 @@ type
 implementation
 
 uses
-  iORM, Model.Order, Model.OrderRow, Model.Pizza, Model.Customer, SysUtils, System.IOUtils;
+  iORM, Model.Order, Model.OrderRow, Model.Pizza, Model.Customer, SysUtils, System.IOUtils,
+  Model.State;
 
 { TSampleData }
 
@@ -28,6 +30,7 @@ begin
     io.StartTransaction;
     try
       CreatePizzas;
+      CreateStates;
       CreateRealCustomers;
       CreateOtherCustomers;
       CreateOrders;
@@ -86,17 +89,19 @@ begin
   // Mr. Maurizio Del Magno
   LCustomer := TCustomer.Create;
   LCustomer.Name := 'Maurizio Del Magno';
-  LCustomer.City := 'New York';
+  LCustomer.City := 'New York City';
   LCustomer.Address := '301 Park Ave';
   LCustomer.PhoneNumber := '(555) 555-1234';
+  LCustomer.State := io.LoadObject<TState>(1);
   io.Persist(LCustomer);
   FreeAndnil(LCustomer);
   // Mr. Omar Bossoni
   LCustomer := TCustomer.Create;
   LCustomer.Name := 'Omar Bossoni';
-  LCustomer.City := 'New York';
+  LCustomer.City := 'New York City';
   LCustomer.Address := '111 E 48th St';
   LCustomer.PhoneNumber := '(444) 444-1234';
+  LCustomer.State := io.LoadObject<TState>(1);
   io.Persist(LCustomer);
   FreeAndnil(LCustomer);
   // Mr. Marco Mottadelli
@@ -105,8 +110,35 @@ begin
   LCustomer.City := 'Union City';
   LCustomer.Address := '3501 Bergenline Ave';
   LCustomer.PhoneNumber := '(333) 333-1234';
+  LCustomer.State := io.LoadObject<TState>(2);
   io.Persist(LCustomer);
   FreeAndnil(LCustomer);
+end;
+
+class procedure TSampleData.CreateStates;
+var
+  LState: TState;
+begin
+  // New York
+  LState := TState.Create;
+  LState.Name := 'New York';
+  io.Persist(LState);
+  FreeAndnil(LState);
+  // New Jersey
+  LState := TState.Create;
+  LState.Name := 'New Jersey';
+  io.Persist(LState);
+  FreeAndnil(LState);
+  // California
+  LState := TState.Create;
+  LState.Name := 'California';
+  io.Persist(LState);
+  FreeAndnil(LState);
+  // Tennessee
+  LState := TState.Create;
+  LState.Name := 'Tennessee';
+  io.Persist(LState);
+  FreeAndnil(LState);
 end;
 
 class procedure TSampleData.CreateOtherCustomers;
@@ -121,6 +153,7 @@ begin
     LCustomer.City := Format('city %d', [LCounter]);
     LCustomer.Address := Format('address %d', [LCounter]);
     LCustomer.PhoneNumber := Format('phone number %d', [LCounter]);
+  LCustomer.State := io.LoadObject<TState>(3);
     io.Persist(LCustomer);
     FreeAndnil(LCustomer);
   end;

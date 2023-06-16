@@ -58,16 +58,62 @@ type
     acWherePersist: TioBSPersistencePersist;
     ButtonHistory: TSpeedButton;
     acWhereShowHistory: TioBSShowOrSelect;
+    Label6: TLabel;
+    DBEditWhereCustName: TDBEdit;
+    DSWhereCustomerName: TStringField;
+    ButtonSearchCustomerName: TButton;
+    DSWhereCustomerStateName: TStringField;
+    ButtonSearchCustomerStateName: TButton;
+    ButtonSearchRowDescription: TButton;
+    ButtonSearchCstomerStateObj: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure DSWhereAfterSelectionObject(const ASender: TObject; var ASelected: TObject; var ASelectionType: TioSelectionType);
+    procedure ButtonSearchCustomerNameClick(Sender: TObject);
+    procedure ButtonSearchCustomerStateNameClick(Sender: TObject);
+    procedure ButtonSearchRowDescriptionClick(Sender: TObject);
+    procedure ButtonSearchCstomerStateObjClick(Sender: TObject);
   private
   public
   end;
 
 implementation
 
+uses
+  Model.State;
+
 {$R *.dfm}
+
+procedure TOrdersForm.ButtonSearchCstomerStateObjClick(Sender: TObject);
+var
+  LState: TState;
+begin
+  LState := io.LoadObject<TState>(1);
+  try
+    DSOrders.Where := io.Where('Customer.State', coEqual, LState);
+    DSOrders.Persistence.Reload;
+  finally
+    LState.Free;
+  end;
+end;
+
+procedure TOrdersForm.ButtonSearchCustomerNameClick(Sender: TObject);
+begin
+  DSOrders.Where := io.Where('Customer.Name', coLike, 'Omar%');
+  DSOrders.Persistence.Reload;
+end;
+
+procedure TOrdersForm.ButtonSearchCustomerStateNameClick(Sender: TObject);
+begin
+  DSOrders.Where := io.Where('Customer.State.Name', coLike, 'New Jersey');
+  DSOrders.Persistence.Reload;
+end;
+
+procedure TOrdersForm.ButtonSearchRowDescriptionClick(Sender: TObject);
+begin
+  DSOrders.Where := io.Where('Rows.Description', coLike, 'Love%');
+  DSOrders.Persistence.Reload;
+end;
 
 procedure TOrdersForm.DSWhereAfterSelectionObject(const ASender: TObject; var ASelected: TObject; var ASelectionType: TioSelectionType);
 begin

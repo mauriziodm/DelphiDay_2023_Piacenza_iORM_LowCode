@@ -7,9 +7,9 @@
     <Transaction>2022/06/07 08:32:20.000.255,C:\Users\mauriziodelmagno\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\PizzaOrders_10_LessAttrinutes_Classes.dproj</Transaction>
     <Transaction>2022/06/07 08:32:50.000.397,=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\common_model\Utils.SampleData.pas</Transaction>
     <Transaction>2022/06/07 08:32:50.000.336,=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\common_model\Model.Pizza.pas</Transaction>
+    <Transaction>2022/06/07 08:32:50.000.149,=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\common_model\Model.Customer.pas</Transaction>
     <Transaction>2022/06/07 08:32:50.000.288,=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\common_model\Model.OrderRow.pas</Transaction>
     <Transaction>2022/06/07 08:32:50.000.196,=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\common_model\Model.Order.pas</Transaction>
-    <Transaction>2022/06/07 08:32:50.000.149,=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\common_model\Model.Customer.pas</Transaction>
     <Transaction>2022/06/07 10:26:21.000.024,=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Unit2.pas</Transaction>
     <Transaction>2022/06/07 10:27:24.000.576,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Customers.pas=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Unit2.pas</Transaction>
     <Transaction>2022/06/07 10:27:24.000.576,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Customers.dfm=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Unit2.dfm</Transaction>
@@ -27,13 +27,13 @@
     <Transaction>2022/06/08 08:21:40.000.414,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\FormOrders.pas=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Unit2.pas</Transaction>
     <Transaction>2022/06/08 08:22:14.000.467,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Pizzas.dfm=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\FormPizzas.dfm</Transaction>
     <Transaction>2022/06/08 08:22:14.000.467,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Pizzas.pas=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\FormPizzas.pas</Transaction>
-    <Transaction>2022/06/08 08:22:21.000.493,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Pizza.dfm=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\FormPizza.dfm</Transaction>
     <Transaction>2022/06/08 08:22:21.000.493,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Pizza.pas=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\FormPizza.pas</Transaction>
-    <Transaction>2022/06/08 08:22:29.000.263,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Orders.pas=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\FormOrders.pas</Transaction>
+    <Transaction>2022/06/08 08:22:21.000.493,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Pizza.dfm=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\FormPizza.dfm</Transaction>
     <Transaction>2022/06/08 08:22:29.000.263,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Orders.dfm=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\FormOrders.dfm</Transaction>
+    <Transaction>2022/06/08 08:22:29.000.263,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Orders.pas=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\FormOrders.pas</Transaction>
     <Transaction>2022/06/08 11:23:58.000.350,=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Unit2.pas</Transaction>
-    <Transaction>2022/06/08 11:25:15.000.751,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Order.dfm=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Unit2.dfm</Transaction>
     <Transaction>2022/06/08 11:25:15.000.751,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Order.pas=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Unit2.pas</Transaction>
+    <Transaction>2022/06/08 11:25:15.000.751,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Form.Order.dfm=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\Unit2.dfm</Transaction>
     <Transaction>2022/06/09 06:58:53.000.729,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\PizzaOrders_10_LessAttrinutes_Classes.dproj=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_10_LessAttrinutes_Classes\vcl\PizzaOrders_10_LessAttrinutes_Classes_vcl_desktop.dproj</Transaction>
     <Transaction>2022/06/12 10:34:26.000.747,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_20_MoreAttributes_Classes\vcl\PizzaOrders_20_MoreAttrinutes_Classes_vcl_desktop.dproj=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_20_MoreAttributes_Classes\vcl\PizzaOrders_10_LessAttrinutes_Classes_vcl_desktop.dproj</Transaction>
     <Transaction>2022/06/18 17:03:54.000.966,C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_20_MoreAttributes_Classes\vcl\PizzAmore_20_MoreAttr_Class_vcl_desktop.dproj=C:\delphi\tools\iorm_dev\DDay2022\PizzaOrders_20_MoreAttributes_Classes\vcl\PizzaOrders_20_MoreAttrinutes_Classes_vcl_desktop.dproj</Transaction>
@@ -43,8 +43,8 @@
     <Transaction>2022/08/01 18:04:57.000.408,=C:\delphi\tools\iorm\Samples\PizzAmore_20_MoreAttr_Class\vcl\Unit2.pas</Transaction>
     <Transaction>2022/09/05 09:38:00.000.035,C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\PizzAmore_20_MoreAttr_Class_vcl_desktop.dproj=C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\PizzAmore_25_LessAttr_Class_simpleview_vcl_desktop.dproj</Transaction>
     <Transaction>2022/09/05 09:44:28.000.330,=C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.pas</Transaction>
-    <Transaction>2022/09/05 09:45:20.000.364,C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\SV.Customers.dfm=C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.dfm</Transaction>
     <Transaction>2022/09/05 09:45:20.000.364,C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\SV.Customers.pas=C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.pas</Transaction>
+    <Transaction>2022/09/05 09:45:20.000.364,C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\SV.Customers.dfm=C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.dfm</Transaction>
     <Transaction>2022/09/30 10:12:17.000.690,=C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Form.ViewContext.pas</Transaction>
     <Transaction>2022/09/30 11:53:23.000.538,=C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.pas</Transaction>
     <Transaction>2022/09/30 11:53:58.000.823,C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.dfm=C:\delphi\tools\iorm\Samples\PizzAmore_25_LessAttr_Class_simpleviews\vcl\SVCustomer.dfm</Transaction>
@@ -57,8 +57,10 @@
     <Transaction>2023/05/08 09:18:18.000.856,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.pas</Transaction>
     <Transaction>2023/05/08 09:18:35.000.390,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\common_model\Model.Where.Pizza.pas</Transaction>
     <Transaction>2023/05/08 10:53:22.000.462,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.pas</Transaction>
-    <Transaction>2023/05/08 10:55:16.000.340,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.dfm=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Form.Where.OrderHistory.dfm</Transaction>
     <Transaction>2023/05/08 10:55:16.000.340,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Form.Where.OrderHistory.pas</Transaction>
+    <Transaction>2023/05/08 10:55:16.000.340,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.dfm=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Form.Where.OrderHistory.dfm</Transaction>
+    <Transaction>2023/06/13 23:07:14.000.388,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.pas</Transaction>
+    <Transaction>2023/06/13 23:07:32.000.389,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_25_LessAttr_Class_simpleviews\common_model\Model.State.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_25_LessAttr_Class_simpleviews\vcl\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="..\..\PizzAmore_25_LessAttr_Class_simpleviews"/>
@@ -67,6 +69,7 @@
     <File Path="..\common_model\Model.Order.pas"/>
     <File Path="..\common_model\Model.OrderRow.pas"/>
     <File Path="..\common_model\Model.Pizza.pas"/>
+    <File Path="..\common_model\Model.State.pas"/>
     <File Path="..\common_model\Model.Where.Order.pas"/>
     <File Path="..\common_model\Model.Where.Pizza.pas"/>
     <File Path="..\common_model\Utils.SampleData.pas"/>

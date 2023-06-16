@@ -322,7 +322,7 @@ object CustomersForm: TCustomersForm
     object DBEditWhereName: TDBEdit
       Left = 155
       Top = 6
-      Width = 150
+      Width = 146
       Height = 25
       Anchors = [akLeft, akTop, akRight]
       BorderStyle = bsNone
@@ -336,12 +336,12 @@ object CustomersForm: TCustomersForm
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 146
+      ExplicitWidth = 142
     end
     object DBEditWhereCity: TDBEdit
       Left = 43
       Top = 37
-      Width = 262
+      Width = 258
       Height = 25
       Anchors = [akLeft, akTop, akRight]
       BorderStyle = bsNone
@@ -355,12 +355,13 @@ object CustomersForm: TCustomersForm
       Font.Style = []
       ParentFont = False
       TabOrder = 2
-      ExplicitWidth = 258
+      ExplicitWidth = 254
     end
   end
   object DSCustomers: TioDataSetMaster
     AsDefault = True
     TypeName = 'TCustomer'
+    Async = True
     VirtualFields = True
     Paging.CurrentPageOfFormat = 'Page %d of %d'
     Paging.PageSize = 50

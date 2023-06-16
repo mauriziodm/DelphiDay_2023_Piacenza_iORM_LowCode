@@ -306,7 +306,7 @@ object OrdersForm: TOrdersForm
       ParentFont = False
     end
     object Shape1: TShape
-      Left = 280
+      Left = 286
       Top = 6
       Width = 1
       Height = 57
@@ -323,6 +323,21 @@ object OrdersForm: TOrdersForm
       Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 113
+      Top = 41
+      Width = 86
+      Height = 25
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'Cust.name'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
       ParentFont = False
     end
     object DBEditWhereID: TDBEdit
@@ -379,7 +394,7 @@ object OrdersForm: TOrdersForm
     object DBComboBoxWhereOrderState: TDBComboBox
       Left = 167
       Top = 4
-      Width = 105
+      Width = 113
       Height = 29
       BevelInner = bvNone
       BevelOuter = bvNone
@@ -400,7 +415,7 @@ object OrdersForm: TOrdersForm
     object DBEditWhereNote: TDBEdit
       Left = 54
       Top = 41
-      Width = 218
+      Width = 56
       Height = 25
       BorderStyle = bsNone
       Color = clWhite
@@ -413,6 +428,59 @@ object OrdersForm: TOrdersForm
       Font.Style = []
       ParentFont = False
       TabOrder = 2
+    end
+    object DBEditWhereCustName: TDBEdit
+      Left = 205
+      Top = 39
+      Width = 74
+      Height = 25
+      BorderStyle = bsNone
+      Color = clWhite
+      DataField = 'CustomerStateName'
+      DataSource = SourceWhere
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 5
+    end
+    object ButtonSearchCustomerName: TButton
+      Left = 7
+      Top = 70
+      Width = 65
+      Height = 21
+      Caption = 'Cust.Name'
+      TabOrder = 6
+      OnClick = ButtonSearchCustomerNameClick
+    end
+    object ButtonSearchCustomerStateName: TButton
+      Left = 75
+      Top = 70
+      Width = 81
+      Height = 21
+      Caption = 'C.State.Name'
+      TabOrder = 7
+      OnClick = ButtonSearchCustomerStateNameClick
+    end
+    object ButtonSearchRowDescription: TButton
+      Left = 159
+      Top = 70
+      Width = 66
+      Height = 21
+      Caption = 'Row.Descr.'
+      TabOrder = 8
+      OnClick = ButtonSearchRowDescriptionClick
+    end
+    object ButtonSearchCstomerStateObj: TButton
+      Left = 228
+      Top = 70
+      Width = 78
+      Height = 21
+      Caption = 'C.State (obj)'
+      TabOrder = 9
+      OnClick = ButtonSearchCstomerStateObjClick
     end
   end
   object DSOrders: TioDataSetMaster
@@ -530,6 +598,14 @@ object OrdersForm: TOrdersForm
     end
     object DSWhereToDate: TDateField
       FieldName = 'ToDate'
+    end
+    object DSWhereCustomerName: TStringField
+      FieldName = 'CustomerName'
+      Size = 100
+    end
+    object DSWhereCustomerStateName: TStringField
+      FieldName = 'CustomerStateName'
+      Size = 100
     end
   end
   object SourceWhere: TDataSource
