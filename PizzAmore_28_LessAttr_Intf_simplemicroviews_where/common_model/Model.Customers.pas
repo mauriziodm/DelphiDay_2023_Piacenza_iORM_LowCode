@@ -4,17 +4,18 @@ interface
 
 uses
   iORM, iORM.Attributes, Model.Interfaces, Model.BaseBO,
-  System.Generics.Collections;
+  System.Generics.Collections, ETM.Repository;
 
 type
 
-//  [ioEntity('CUSTOMERS')]
   TGenericCustomer = class(TBaseBO, IGenericCustomer)
   private
     FAddress: String;
     FState: IState;
+    [ioWhere(coLike)]
     FCity: String;
     FContacts: TList<IContact>;
+    FObjVersion: TioObjVersion;
   protected
     function GetFullName: String; virtual; abstract;
     function GetFullAddress: String;
@@ -36,7 +37,8 @@ type
     property FullAddress: String read GetFullAddress;
   end;
 
-  [ioEntity('CUST_PRIV'), ioKeySequence('CUSTOMERS'), diImplements(IGenericCustomer, 'Private')]
+  [ioEntity('CUST_PRIV'), ioKeyGenerator('CUSTOMERS'), diImplements(IGenericCustomer, 'Private')]
+  [etmTrace(TMainRepo)]
   TPrivateCustomer = class(TGenericCustomer)
   private
     FFirstName: String;
@@ -49,7 +51,8 @@ type
     property LastName: String read FLastName write FLastName;
   end;
 
-  [ioEntity('CUST_BUS'), ioKeySequence('CUSTOMERS'), diImplements(IGenericCustomer, 'Business')]
+  [ioEntity('CUST_BUS'), ioKeyGenerator('CUSTOMERS'), diImplements(IGenericCustomer, 'Business')]
+  [etmTrace(TMainRepo)]
   TBusinessCustomer = class(TGenericCustomer)
   private
     FBusinessName: String;

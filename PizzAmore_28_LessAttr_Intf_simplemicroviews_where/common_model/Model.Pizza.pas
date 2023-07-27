@@ -3,29 +3,43 @@ unit Model.Pizza;
 interface
 
 uses
-// "ioFMX" is defined in project options to indicate that it is a firemonkey project (Project | Options | Delphi Compiler | Conditional defines).
-// Note: You need to build your project (Project | Build <ProjectName> or Shift + F9) for the changes to take effect.
+  // "ioFMX" is defined in project options to indicate that it is a firemonkey project (Project | Options | Delphi Compiler | Conditional defines).
+  // Note: You need to build your project (Project | Build <ProjectName> or Shift + F9) for the changes to take effect.
 {$IFDEF ioFMX}
   Fmx.Graphics,
 {$ELSE}
   Vcl.Graphics,
 {$IFEND}
-  iORM, Model.Interfaces, Model.BaseBO, DJSON.Attributes;
+  iORM, Model.Interfaces, Model.BaseBO, System.Generics.Collections, ETM.Repository;
 
 type
 
   [ioEntity('PIZZAS'), diImplements(IPizza)]
+  [etmTrace(TMainRepo)]
   TPizza = class(TBaseBO, IPizza)
   private
     FName: String;
     FPrice: Currency;
-    [djSkip]
+    FIngredients: TList<IIngredient>;
+    [ioSkip([ssETM])]
     FImage: TBitmap;
+    FObjVersion: TioObjVersion;
+    FObjCreated: TioObjCreated;
+    FObjCreatedUserID: TioObjCreatedUserID;
+    FObjCreatedUserName: TioObjCreatedUserName;
+    FObjUpdated: TioObjUpdated;
+    FObjUpdatedUserID: TioObjUpdatedUserID;
+    FObjUpdatedUserName: TioObjUpdatedUserName;
+    // Name
     procedure SetName(const AValue: String);
-    procedure SetPrice(const AValue: Currency);
     function GetName: String;
+    // Price
+    procedure SetPrice(const AValue: Currency);
     function GetPrice: Currency;
+    // Image
     function GetImage: TBitmap;
+    // Ingredients
+    function GetIngredients: TList<IIngredient>;
   public
     constructor Create; overload;
     constructor Create(const AName: String; const APrice: Currency; const AImageFileName: String); overload;
@@ -33,8 +47,20 @@ type
     property Name: String read GetName write SetName;
     property Price: Currency read GetPrice write SetPrice;
     property Image: TBitmap read GetImage;
+    property Ingredients: TList<IIngredient> read GetIngredients;
   end;
 
+  [ioEntity('INGREDIENTS')]
+  TIngredient = class(TBaseBO, IIngredient)
+  private
+    [ioVarchar(30)]
+    FName: String;
+    procedure SetName(const AValue: String);
+    function GetName: String;
+  public
+    constructor Create(const AName: String);
+    property Name: String read GetName write SetName;
+  end;
 
 implementation
 
@@ -44,6 +70,7 @@ constructor TPizza.Create;
 begin
   inherited;
   FImage := TBitmap.Create;
+  FIngredients := TList<IIngredient>.Create;
 end;
 
 constructor TPizza.Create(const AName: String; const APrice: Currency; const AImageFileName: String);
@@ -57,12 +84,18 @@ end;
 destructor TPizza.Destroy;
 begin
   FImage.Free;
+  FIngredients.Free;
   inherited;
 end;
 
 function TPizza.GetImage: TBitmap;
 begin
   Result := FImage;
+end;
+
+function TPizza.GetIngredients: TList<IIngredient>;
+begin
+  Result := FIngredients;
 end;
 
 function TPizza.GetName: String;
@@ -83,6 +116,23 @@ end;
 procedure TPizza.SetPrice(const AValue: Currency);
 begin
   FPrice := AValue;
+end;
+
+{ TIngredient }
+
+constructor TIngredient.Create(const AName: String);
+begin
+  FName := AName;
+end;
+
+function TIngredient.GetName: String;
+begin
+  Result := FName;
+end;
+
+procedure TIngredient.SetName(const AValue: String);
+begin
+  FName := AValue;
 end;
 
 end.

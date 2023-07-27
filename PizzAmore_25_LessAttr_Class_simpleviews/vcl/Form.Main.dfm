@@ -8516,6 +8516,8 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
+    ExplicitTop = 334
+    ExplicitWidth = 189
   end
   object ButtonCustomers: TButton
     Left = 32
@@ -8531,6 +8533,8 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    ExplicitTop = 385
+    ExplicitWidth = 189
   end
   object ButtonPizzas: TButton
     Left = 32
@@ -8546,6 +8550,8 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 436
+    ExplicitWidth = 189
   end
   object ButtonQuit: TButton
     Left = 32
@@ -8561,6 +8567,8 @@ object MainForm: TMainForm
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    ExplicitTop = 500
+    ExplicitWidth = 189
   end
   object ioVCL1: TioVCL
     Left = 8

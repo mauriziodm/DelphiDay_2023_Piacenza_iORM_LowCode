@@ -31,7 +31,6 @@ type
     DSCustomer: TioDataSetMaster;
     DSCustomerID: TIntegerField;
     DSCustomerName: TStringField;
-    DSCustomerPhoneNumber: TStringField;
     SourceCustomer: TDataSource;
     DSCustomerCity: TStringField;
     DSCustomerAddress: TStringField;

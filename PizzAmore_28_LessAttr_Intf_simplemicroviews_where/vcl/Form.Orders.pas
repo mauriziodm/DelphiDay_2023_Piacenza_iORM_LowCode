@@ -61,11 +61,17 @@ type
     ButtonSearchCustomerStateName: TButton;
     ButtonSearchStateObj: TButton;
     ButtonSearchContact: TButton;
+    ButtonSearchRowCustomization: TButton;
+    ButtonSearchRowQty: TButton;
+    ButonSearchRowsPizzaName: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ButtonSearchCustomerStateNameClick(Sender: TObject);
     procedure ButtonSearchStateObjClick(Sender: TObject);
     procedure ButtonSearchContactClick(Sender: TObject);
+    procedure ButtonSearchRowCustomizationClick(Sender: TObject);
+    procedure ButtonSearchRowQtyClick(Sender: TObject);
+    procedure ButonSearchRowsPizzaNameClick(Sender: TObject);
   private
   public
   end;
@@ -102,7 +108,36 @@ procedure TOrdersForm.ButtonSearchCustomerStateNameClick(Sender: TObject);
 var
   LWhere: IioWhere;
 begin
-  LWhere := io.Where('Customer.State.Name', coEqual, 'New York');
+  LWhere := io.Where('Customer.State.Name', coEquals, 'New York');
+  DSOrders.Where := LWhere;
+  DSOrders.Persistence.Reload;
+end;
+
+procedure TOrdersForm.ButtonSearchRowCustomizationClick(Sender: TObject);
+var
+  LWhere: IioWhere;
+begin
+  LWhere := io.Where('Rows.Customizations.Description', coEquals, 'thick');
+  DSOrders.Where := LWhere;
+  DSOrders.Persistence.Reload;
+end;
+
+procedure TOrdersForm.ButonSearchRowsPizzaNameClick(Sender: TObject);
+var
+  LWhere: IioWhere;
+begin
+//  LWhere := io.Where('Rows.Pizza.Name', coLike, 'Margherita%')._And('Customer.FirstName', coNotLike, 'Marco%');
+//  LWhere := io.Where('Rows.Pizza.Name', coLike, 'Margherita%')._And('Customer.FirstName', coLike, 'Marco%');
+  LWhere := io.Where('Rows.Pizza.Name', coLike, 'Margherita%');
+  DSOrders.Where := LWhere;
+  DSOrders.Persistence.Reload;
+end;
+
+procedure TOrdersForm.ButtonSearchRowQtyClick(Sender: TObject);
+var
+  LWhere: IioWhere;
+begin
+  LWhere := io.Where('Rows.Qty', coGreaterOrEqual, 3);
   DSOrders.Where := LWhere;
   DSOrders.Persistence.Reload;
 end;
@@ -113,7 +148,7 @@ var
   LState: IState;
 begin
   LState := io.LoadObject<IState>(1);
-  LWhere := io.Where('Customer.State', coEqual, LState);
+  LWhere := io.Where('Customer.State', coEquals, LState);
   DSOrders.Where := LWhere;
   DSOrders.Persistence.Reload;
 end;

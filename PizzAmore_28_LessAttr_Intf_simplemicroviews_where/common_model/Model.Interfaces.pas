@@ -18,8 +18,13 @@ type
   [ioEnumerated('All, Waiting, Preparing, Ready, Delivered')]
   TOrderState = (osUnknown, osWaiting, osPreparing, osReady, osDelivered);
 
+  [ioEnumerated('Home phone, Mobile phone, Work prhone, Email')]
+  TContactType = (ctHomePhone, ctMobilePhone, ctWorkPhone, ctEmail);
+
   IContact = interface;
   IState = interface;
+  IRowCustomization = interface;
+  IIngredient = interface;
 
   IBaseBO = interface
     ['{BCA1B62F-1AE4-4C6A-AEE4-C0FFE2A8198A}']
@@ -53,9 +58,6 @@ type
     property Name: String read GetName write SetName;
   end;
 
-  [ioEnumerated('Home phone, Mobile phone, Work prhone, Email')]
-  TContactType = (ctHomePhone, ctMobilePhone, ctWorkPhone, ctEmail);
-
   IContact = interface(IBaseBO)
     ['{C7BBC4CC-8652-431C-B6BA-368FDA08221E}']
     // Type
@@ -81,6 +83,17 @@ type
     // Image property (Read Only)
     function GetImage: TBitmap;
     property Image: TBitmap read GetImage;
+    // Ingredients
+    function GetIngredients: TList<IIngredient>;
+    property Ingredients: TList<IIngredient> read GetIngredients;
+  end;
+
+  IIngredient = interface(IBaseBO)
+    ['{A0810A7D-6733-43B0-AFC8-67AAD2452F40}']
+    // Name property
+    procedure SetName(const AValue: String);
+    function GetName: String;
+    property Name: String read GetName write SetName;
   end;
 
   IOrderRow = interface(IBaseBO)
@@ -92,6 +105,9 @@ type
     // RowTotal property (Read Only)
     function GetRowTotal: Currency;
     property RowTotal: Currency read GetRowTotal;
+    // Customizations
+    function GetCustomizations: TList<IRowCustomization>;
+    property Customizations: TList<IRowCustomization> read GetCustomizations;
   end;
 
   IPizzaOrderRow = interface(IOrderRow)
@@ -100,6 +116,14 @@ type
     // Pizza
     function GetPizza: IPizza;
     property Pizza: IPizza read GetPizza;
+  end;
+
+  IRowCustomization = interface(IBaseBO)
+    ['{BC701D2A-A801-4E58-82C8-9442A4CB4A5C}']
+    // Description
+    procedure SetDescription(const AValue: String);
+    function GetDescription: String;
+    property Description: String read GetDescription write SetDescription;
   end;
 
   IOrder = interface(IBaseBO)

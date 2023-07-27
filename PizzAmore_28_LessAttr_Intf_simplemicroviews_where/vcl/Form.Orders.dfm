@@ -119,7 +119,7 @@ object OrdersForm: TOrdersForm
     Left = 0
     Top = 40
     Width = 531
-    Height = 389
+    Height = 343
     Align = alClient
     DataSource = SourceOrders
     TabOrder = 2
@@ -194,19 +194,17 @@ object OrdersForm: TOrdersForm
   end
   object PanelWhere: TPanel
     Left = 0
-    Top = 429
+    Top = 383
     Width = 531
-    Height = 92
+    Height = 138
     Align = alBottom
     BevelOuter = bvNone
     Color = clMenu
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 428
-    ExplicitWidth = 527
     DesignSize = (
       531
-      92)
+      138)
     object Label1: TLabel
       Left = 9
       Top = 7
@@ -253,7 +251,7 @@ object OrdersForm: TOrdersForm
       ParentFont = False
     end
     object ButtonSearch: TSpeedButton
-      Left = 465
+      Left = 441
       Top = 0
       Width = 50
       Height = 45
@@ -268,7 +266,7 @@ object OrdersForm: TOrdersForm
       ExplicitLeft = 481
     end
     object ButtonClear: TSpeedButton
-      Left = 465
+      Left = 441
       Top = 68
       Width = 50
       Height = 25
@@ -283,7 +281,7 @@ object OrdersForm: TOrdersForm
       ExplicitLeft = 481
     end
     object Label4: TLabel
-      Left = 303
+      Left = 306
       Top = 41
       Width = 63
       Height = 25
@@ -320,7 +318,7 @@ object OrdersForm: TOrdersForm
       Pen.Color = clGray
     end
     object ButtonHistory: TSpeedButton
-      Left = 465
+      Left = 441
       Top = 44
       Width = 50
       Height = 25
@@ -442,13 +440,40 @@ object OrdersForm: TOrdersForm
       OnClick = ButtonSearchStateObjClick
     end
     object ButtonSearchContact: TButton
-      Left = 230
+      Left = 163
       Top = 72
       Width = 75
       Height = 21
       Caption = 'C.Contact'
       TabOrder = 7
       OnClick = ButtonSearchContactClick
+    end
+    object ButtonSearchRowCustomization: TButton
+      Left = 302
+      Top = 72
+      Width = 75
+      Height = 21
+      Caption = 'R.Customs'
+      TabOrder = 8
+      OnClick = ButtonSearchRowCustomizationClick
+    end
+    object ButtonSearchRowQty: TButton
+      Left = 264
+      Top = 72
+      Width = 36
+      Height = 21
+      Caption = 'R.Qty'
+      TabOrder = 9
+      OnClick = ButtonSearchRowQtyClick
+    end
+    object ButonSearchRowsPizzaName: TButton
+      Left = 379
+      Top = 72
+      Width = 80
+      Height = 21
+      Caption = 'R.Pizza.Name'
+      TabOrder = 10
+      OnClick = ButonSearchRowsPizzaNameClick
     end
   end
   object DSOrders: TioDataSetMaster

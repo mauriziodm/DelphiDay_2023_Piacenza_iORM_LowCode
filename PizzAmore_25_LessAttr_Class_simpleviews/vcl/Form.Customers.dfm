@@ -277,30 +277,34 @@ object CustomersForm: TCustomersForm
       ParentFont = False
     end
     object ButtonSearch: TSpeedButton
-      Left = 334
+      Left = 326
       Top = 0
       Width = 50
       Height = 45
       Action = acWhereBuild
+      Anchors = [akTop, akRight]
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 334
     end
     object ButtonClear: TSpeedButton
-      Left = 334
+      Left = 326
       Top = 49
       Width = 50
       Height = 25
       Action = acWhereClear
+      Anchors = [akTop, akRight]
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+      ExplicitLeft = 334
     end
     object DBEditWhereID: TDBEdit
       Left = 43
@@ -322,7 +326,7 @@ object CustomersForm: TCustomersForm
     object DBEditWhereName: TDBEdit
       Left = 155
       Top = 6
-      Width = 146
+      Width = 138
       Height = 25
       Anchors = [akLeft, akTop, akRight]
       BorderStyle = bsNone
@@ -336,12 +340,12 @@ object CustomersForm: TCustomersForm
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 142
+      ExplicitWidth = 134
     end
     object DBEditWhereCity: TDBEdit
       Left = 43
       Top = 37
-      Width = 258
+      Width = 250
       Height = 25
       Anchors = [akLeft, akTop, akRight]
       BorderStyle = bsNone
@@ -355,7 +359,7 @@ object CustomersForm: TCustomersForm
       Font.Style = []
       ParentFont = False
       TabOrder = 2
-      ExplicitWidth = 254
+      ExplicitWidth = 246
     end
   end
   object DSCustomers: TioDataSetMaster
@@ -417,6 +421,7 @@ object CustomersForm: TCustomersForm
     object acShowOrSelect: TioBSShowOrSelect
       Category = 'iORM-BS'
       Caption = 'Select'
+      ParentCloseQueryAction = acBack
       SelectCurrentAction = acSelectCurrent
       ShowMode = smBSCurrent
       TargetBindSource = DSCustomers

@@ -3,34 +3,39 @@ unit Model.OrderRow;
 interface
 
 uses
-// "ioFMX" is defined in project options to indicate that it is a firemonkey project (Project | Options | Delphi Compiler | Conditional defines).
-// Note: You need to build your project (Project | Build <ProjectName> or Shift + F9) for the changes to take effect.
+  // "ioFMX" is defined in project options to indicate that it is a firemonkey project (Project | Options | Delphi Compiler | Conditional defines).
+  // Note: You need to build your project (Project | Build <ProjectName> or Shift + F9) for the changes to take effect.
 {$IFDEF ioFMX}
   Fmx.Graphics,
 {$ELSE}
   Vcl.Graphics,
 {$IFEND}
-  iORM, Model.Interfaces, Model.BaseBO;
+  iORM, Model.Interfaces, Model.BaseBO, System.Generics.Collections;
 
 type
 
-  [ioEntity('ORDERROWS')]
   TBaseOrderRow = class(TBaseBO, IOrderRow)
   private
     FOrderID: Integer;
     FQty: Integer;
     FObjStatus: TioObjStatus;
+    FCustomizations: TList<IRowCustomization>;
+    // Qty
     procedure SetQty(const AValue: Integer);
     function GetQty: Integer;
+    // Customizations
+    function GetCustomizations: TList<IRowCustomization>;
   protected
     function GetRowTotal: Currency; virtual; abstract;
   public
     constructor Create;
-    property Qty: Integer read getQty write SetQty;
+    destructor Destroy; override;
+    property Qty: Integer read GetQty write SetQty;
     property RowTotal: Currency read GetRowTotal;
+    property Customizations: TList<IRowCustomization> read GetCustomizations;
   end;
 
-  [ioEntity('ORDERROWS'), diImplements(IOrderRow, 'PizzaOrderRow')]
+  [ioEntity('ROWS_PIZZA'), ioKeyGenerator('ORDERROWS'), diImplements(IOrderRow, 'PizzaOrderRow')]
   TPizzaOrderRow = class(TBaseOrderRow, IPizzaOrderRow)
   private
     FPizza: IPizza;
@@ -45,7 +50,7 @@ type
     property Image: TBitmap read GetImage;
   end;
 
-  [ioEntity('ORDERROWS'), diImplements(IOrderRow, 'CustomOrderRow')]
+  [ioEntity('ROWS_CUSTOM'), ioKeyGenerator('ORDERROWS'), diImplements(IOrderRow, 'CustomOrderRow')]
   TCustomOrderRow = class(TBaseOrderRow)
   private
     FDescription: String;
@@ -58,6 +63,18 @@ type
     property Price: Currency read FPrice write FPrice;
   end;
 
+  [ioEntity('CUSTOMS')]
+  TRowCustomization = class(TBaseBO, IRowCustomization)
+  private
+    [ioVarchar(30)]
+    FDescription: String;
+    procedure SetDescription(const AValue: String);
+    function GetDescription: String;
+  public
+    constructor Create(const ADescription: String);
+    property Description: String read GetDescription write SetDescription;
+  end;
+
 implementation
 
 { TBaseOrderRow }
@@ -65,6 +82,18 @@ implementation
 constructor TBaseOrderRow.Create;
 begin
   FQty := 1;
+  FCustomizations := TList<IRowCustomization>.Create;
+end;
+
+destructor TBaseOrderRow.Destroy;
+begin
+  FCustomizations.Free;
+  inherited;
+end;
+
+function TBaseOrderRow.GetCustomizations: TList<IRowCustomization>;
+begin
+  Result := FCustomizations;
 end;
 
 function TBaseOrderRow.GetQty: Integer;
@@ -123,6 +152,23 @@ end;
 function TCustomOrderRow.GetRowTotal: Currency;
 begin
   Result := FPrice * FQty;
+end;
+
+{ TRowCustomization }
+
+constructor TRowCustomization.Create(const ADescription: String);
+begin
+  FDescription := ADescription;
+end;
+
+function TRowCustomization.GetDescription: String;
+begin
+  Result := FDescription;
+end;
+
+procedure TRowCustomization.SetDescription(const AValue: String);
+begin
+  FDescription := AValue;
 end;
 
 end.

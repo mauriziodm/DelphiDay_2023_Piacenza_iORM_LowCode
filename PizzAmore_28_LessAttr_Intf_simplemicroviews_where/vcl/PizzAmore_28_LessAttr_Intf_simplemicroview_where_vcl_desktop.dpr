@@ -23,7 +23,8 @@ uses
   MicroView.OrderRowPizza in 'MicroView.OrderRowPizza.pas' {MicroViewOrderRowPizza: TFrame},
   Model.Where.Interfaces in '..\common_model\Model.Where.Interfaces.pas',
   Model.Where.Pizza in '..\common_model\Model.Where.Pizza.pas',
-  Model.Where.Order in '..\common_model\Model.Where.Order.pas';
+  Model.Where.Order in '..\common_model\Model.Where.Order.pas',
+  ETM.Repository in '..\common_model\ETM.Repository.pas';
 
 {$R *.res}
 {$STRONGLINKTYPES ON}

@@ -117,7 +117,7 @@ end;
 
 procedure TOrdersForm.DSWhereAfterSelectionObject(const ASender: TObject; var ASelected: TObject; var ASelectionType: TioSelectionType);
 begin
-  DSWhere.WhereBuild;
+  DSWhere.BuildWhere;
 end;
 
 procedure TOrdersForm.FormClose(Sender: TObject; var Action: TCloseAction);

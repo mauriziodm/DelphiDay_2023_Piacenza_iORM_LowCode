@@ -239,7 +239,6 @@ object PrivateCustomerForm: TPrivateCustomerForm
     Height = 25
     BorderStyle = bsNone
     Color = clInactiveBorder
-    DataField = 'PhoneNumber'
     DataSource = SourceCustomer
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -320,10 +319,6 @@ object PrivateCustomerForm: TPrivateCustomerForm
     object DSCustomerLastName: TStringField
       FieldName = 'LastName'
       Size = 250
-    end
-    object DSCustomerPhoneNumber: TStringField
-      FieldName = 'PhoneNumber'
-      Size = 100
     end
     object DSCustomerCity: TStringField
       FieldName = 'City'

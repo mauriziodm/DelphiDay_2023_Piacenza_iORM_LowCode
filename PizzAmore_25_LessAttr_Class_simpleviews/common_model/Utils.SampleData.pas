@@ -18,8 +18,7 @@ type
 implementation
 
 uses
-  iORM, Model.Order, Model.OrderRow, Model.Pizza, Model.Customer, SysUtils, System.IOUtils,
-  Model.State;
+  iORM, Model.Order, Model.OrderRow, Model.Pizza, Model.Customer, SysUtils, System.IOUtils, Model.State;
 
 { TSampleData }
 

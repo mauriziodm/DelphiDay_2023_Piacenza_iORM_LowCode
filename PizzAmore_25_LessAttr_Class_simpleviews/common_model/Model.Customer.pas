@@ -15,6 +15,7 @@ type
     [ioWhere(coLike)]
     FName: String;
     FState: TState;
+    [ioWhere(coLike)]
     FCity: String;
     FAddress: String;
     FPhoneNumber: String;
@@ -41,7 +42,6 @@ uses
 
 constructor TCustomer.Create;
 begin
-  Sleep(1);
   FState := nil;
 end;
 

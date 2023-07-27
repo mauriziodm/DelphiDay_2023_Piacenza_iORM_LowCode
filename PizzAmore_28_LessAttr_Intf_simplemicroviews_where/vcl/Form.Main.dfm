@@ -8504,7 +8504,7 @@ object MainForm: TMainForm
   object ButtonOrders: TButton
     Left = 32
     Top = 335
-    Width = 201
+    Width = 193
     Height = 44
     Action = acShowOrders
     Anchors = [akLeft, akRight, akBottom]
@@ -8516,12 +8516,12 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 0
     ExplicitTop = 334
-    ExplicitWidth = 197
+    ExplicitWidth = 189
   end
   object ButtonCustomers: TButton
     Left = 32
     Top = 387
-    Width = 201
+    Width = 193
     Height = 44
     Action = acShowCustomers
     Anchors = [akLeft, akRight, akBottom]
@@ -8533,12 +8533,12 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 1
     ExplicitTop = 386
-    ExplicitWidth = 197
+    ExplicitWidth = 189
   end
   object ButtonPizzas: TButton
     Left = 32
     Top = 439
-    Width = 201
+    Width = 193
     Height = 44
     Action = acShowPizzas
     Anchors = [akLeft, akRight, akBottom]
@@ -8550,12 +8550,12 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 2
     ExplicitTop = 438
-    ExplicitWidth = 197
+    ExplicitWidth = 189
   end
   object ButtonQuit: TButton
     Left = 32
     Top = 502
-    Width = 201
+    Width = 193
     Height = 32
     Action = acQuit
     Anchors = [akLeft, akRight, akBottom]
@@ -8567,7 +8567,15 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 3
     ExplicitTop = 501
-    ExplicitWidth = 197
+    ExplicitWidth = 189
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 4
   end
   object ioVCL1: TioVCL
     Left = 8
@@ -8580,7 +8588,6 @@ object MainForm: TMainForm
     DatabaseStdFolder = sfDocuments
     Persistent = False
     Pooled = False
-    OnAfterCreateOrAlterDB = SQLiteConnAfterCreateOrAlterDB
     Left = 64
     Top = 272
   end
@@ -8619,6 +8626,7 @@ object MainForm: TMainForm
     end
   end
   object FBConn: TioFirebirdConnectionDef
+    OnAfterRegister = FBConnAfterRegister
     AsDefault = True
     AutoCreateDB.Enabled = True
     AutoCreateDB.ForeignKeys = False

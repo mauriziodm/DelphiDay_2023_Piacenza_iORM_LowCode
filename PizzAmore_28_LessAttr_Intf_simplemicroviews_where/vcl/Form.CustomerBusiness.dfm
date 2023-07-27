@@ -137,7 +137,7 @@ object BusinessCustomerForm: TBusinessCustomerForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 478
+      Width = 474
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -256,7 +256,6 @@ object BusinessCustomerForm: TBusinessCustomerForm
     Height = 25
     BorderStyle = bsNone
     Color = clInactiveBorder
-    DataField = 'City'
     DataSource = SourceCustomer
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -315,10 +314,6 @@ object BusinessCustomerForm: TBusinessCustomerForm
     end
     object DSCustomerName: TStringField
       FieldName = 'BusinessName'
-      Size = 100
-    end
-    object DSCustomerPhoneNumber: TStringField
-      FieldName = 'PhoneNumber'
       Size = 100
     end
     object DSCustomerCity: TStringField

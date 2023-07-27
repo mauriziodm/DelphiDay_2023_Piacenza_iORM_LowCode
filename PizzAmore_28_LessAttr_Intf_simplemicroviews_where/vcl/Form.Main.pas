@@ -25,9 +25,9 @@ type
     acShowPizzas: TioBSShowOrSelect;
     acShowOrders: TioBSShowOrSelect;
     FBConn: TioFirebirdConnectionDef;
-    procedure SQLiteConnAfterCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript,
-      AWarnings: TStrings);
+    Button1: TButton;
     procedure FBConnAfterCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript, AWarnings: TStrings);
+    procedure FBConnAfterRegister(Sender: TObject);
   private
   public
   end;
@@ -48,10 +48,9 @@ begin
   TSampleData.CheckForSampleDataCreation;
 end;
 
-procedure TMainForm.SQLiteConnAfterCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript,
-  AWarnings: TStrings);
+procedure TMainForm.FBConnAfterRegister(Sender: TObject);
 begin
-  TSampleData.CheckForSampleDataCreation;
+  io.Connections.UseUser(1, 'Mauri');
 end;
 
 end.

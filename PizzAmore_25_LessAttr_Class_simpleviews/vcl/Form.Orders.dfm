@@ -202,8 +202,6 @@ object OrdersForm: TOrdersForm
     Color = clMenu
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 428
-    ExplicitWidth = 527
     object Label1: TLabel
       Left = 9
       Top = 7
