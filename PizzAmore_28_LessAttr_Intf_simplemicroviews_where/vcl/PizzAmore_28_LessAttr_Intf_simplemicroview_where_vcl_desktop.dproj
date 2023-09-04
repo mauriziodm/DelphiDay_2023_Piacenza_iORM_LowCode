@@ -191,6 +191,10 @@
         <DCCReference Include="..\common_model\Model.Where.Pizza.pas"/>
         <DCCReference Include="..\common_model\Model.Where.Order.pas"/>
         <DCCReference Include="..\common_model\ETM.Repository.pas"/>
+        <DCCReference Include="Form.Diff.pas">
+            <Form>DiffForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

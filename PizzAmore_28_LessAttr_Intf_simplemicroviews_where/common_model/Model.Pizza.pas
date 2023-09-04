@@ -15,7 +15,7 @@ uses
 type
 
   [ioEntity('PIZZAS'), diImplements(IPizza)]
-  [etmTrace(TMainRepo)]
+  [etmTrace(TTimeSlot)]
   TPizza = class(TBaseBO, IPizza)
   private
     FName: String;
@@ -40,6 +40,8 @@ type
     function GetImage: TBitmap;
     // Ingredients
     function GetIngredients: TList<IIngredient>;
+    // ObjVersion
+    function GetObjVersion: TioObjVersion;
   public
     constructor Create; overload;
     constructor Create(const AName: String; const APrice: Currency; const AImageFileName: String); overload;
@@ -48,6 +50,7 @@ type
     property Price: Currency read GetPrice write SetPrice;
     property Image: TBitmap read GetImage;
     property Ingredients: TList<IIngredient> read GetIngredients;
+    property ObjVersion: TioObjVersion read GetObjVersion;
   end;
 
   [ioEntity('INGREDIENTS')]
@@ -101,6 +104,11 @@ end;
 function TPizza.GetName: String;
 begin
   Result := FName;
+end;
+
+function TPizza.GetObjVersion: TioObjVersion;
+begin
+  Result := FObjVersion;
 end;
 
 function TPizza.GetPrice: Currency;

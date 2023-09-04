@@ -33,8 +33,6 @@ type
     acBack: TioBSCloseQuery;
     acShowOrSelect: TioBSShowOrSelect;
     acAdd: TioBSPersistenceAppend;
-    acWhereBuild: TioBSWhereBuild;
-    acWhereClear: TioBSWhereClear;
     PanelWhere: TPanel;
     Label1: TLabel;
     Label2: TLabel;

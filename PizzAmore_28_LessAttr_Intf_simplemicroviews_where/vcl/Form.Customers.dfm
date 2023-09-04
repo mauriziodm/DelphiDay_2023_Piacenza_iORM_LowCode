@@ -3,8 +3,8 @@ object CustomersForm: TCustomersForm
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Pizz'#39'Amore'
-  ClientHeight = 761
-  ClientWidth = 384
+  ClientHeight = 760
+  ClientWidth = 380
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,18 +18,18 @@ object CustomersForm: TCustomersForm
   TextHeight = 15
   object PanelBottom: TPanel
     Left = 0
-    Top = 721
-    Width = 384
+    Top = 720
+    Width = 380
     Height = 40
     Align = alBottom
     BevelOuter = bvNone
     Color = clMenu
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 720
-    ExplicitWidth = 380
+    ExplicitTop = 719
+    ExplicitWidth = 376
     object ButtonAdd: TSpeedButton
-      Left = 334
+      Left = 330
       Top = 0
       Width = 50
       Height = 40
@@ -95,7 +95,7 @@ object CustomersForm: TCustomersForm
     object DBTextPageOf: TDBText
       Left = 150
       Top = 0
-      Width = 184
+      Width = 180
       Height = 40
       Align = alClient
       Alignment = taCenter
@@ -116,16 +116,16 @@ object CustomersForm: TCustomersForm
   object PanelTop: TPanel
     Left = 0
     Top = 0
-    Width = 384
+    Width = 380
     Height = 40
     Align = alTop
     BevelOuter = bvNone
     Color = clNavy
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 380
+    ExplicitWidth = 376
     object ButtonSelect: TSpeedButton
-      Left = 334
+      Left = 330
       Top = 0
       Width = 50
       Height = 40
@@ -137,6 +137,7 @@ object CustomersForm: TCustomersForm
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+      ExplicitLeft = 334
       ExplicitTop = -6
     end
     object ButtonBack: TSpeedButton
@@ -170,8 +171,8 @@ object CustomersForm: TCustomersForm
   object GridCustomers: TDBGrid
     Left = 0
     Top = 40
-    Width = 384
-    Height = 602
+    Width = 380
+    Height = 601
     Align = alClient
     DataSource = SourceCustomers
     TabOrder = 2
@@ -222,16 +223,19 @@ object CustomersForm: TCustomersForm
   end
   object PanelWhere: TPanel
     Left = 0
-    Top = 642
-    Width = 384
+    Top = 641
+    Width = 380
     Height = 79
     Align = alBottom
     BevelOuter = bvNone
     Color = clMenu
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 641
-    ExplicitWidth = 380
+    ExplicitTop = 640
+    ExplicitWidth = 376
+    DesignSize = (
+      380
+      79)
     object Label1: TLabel
       Left = 8
       Top = 7
@@ -263,11 +267,12 @@ object CustomersForm: TCustomersForm
       ParentFont = False
     end
     object ButtonSearch: TSpeedButton
-      Left = 334
+      Left = 330
       Top = 0
       Width = 50
       Height = 45
-      Action = acWhereBuild
+      Anchors = [akTop, akRight]
+      Caption = 'Search'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
@@ -276,11 +281,12 @@ object CustomersForm: TCustomersForm
       ParentFont = False
     end
     object ButtonClear: TSpeedButton
-      Left = 334
+      Left = 330
       Top = 49
       Width = 50
       Height = 25
-      Action = acWhereClear
+      Anchors = [akTop, akRight]
+      Caption = 'Clear'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
@@ -381,8 +387,8 @@ object CustomersForm: TCustomersForm
     object acShowOrSelect: TioBSShowOrSelect
       Category = 'iORM-BS'
       Caption = 'Select'
-      ParentCloseQueryAction = acBack
-      SelectCurrentAction = acSelectCurrent
+      Action_ParentCloseQueryAction = acBack
+      Action_SelectCurrentAction = acSelectCurrent
       ShowMode = smBSCurrent
       TargetBindSource = DSCustomers
       ViewContextBy = vcByDefaultViewContextProvider
@@ -390,35 +396,24 @@ object CustomersForm: TCustomersForm
     object acAddPrivateCustomer: TioBSPersistenceAppend
       Category = 'iORM-BSPersistence'
       Caption = 'Private customer'
+      Action_ShowOrSelectAction = acShowOrSelect
       EntityTypeAlias = 'Private'
       EntityTypeName = 'IGenericCustomer'
-      ShowOrSelectAction = acShowOrSelect
       TargetBindSource = DSCustomers
     end
     object acAddBusinessCustomer: TioBSPersistenceAppend
       Category = 'iORM-BSPersistence'
       Caption = 'Business customer'
+      Action_ShowOrSelectAction = acShowOrSelect
       EntityTypeAlias = 'Business'
       EntityTypeName = 'IGenericCustomer'
-      ShowOrSelectAction = acShowOrSelect
       TargetBindSource = DSCustomers
     end
     object acSelectCurrent: TioBSSelectCurrent
       Category = 'iORM-BS'
       Caption = 'Select'
-      CloseQueryAction = acBack
+      Action_CloseQueryAction = acBack
       TargetBindSource = DSCustomers
-    end
-    object acWhereBuild: TioBSWhereBuild
-      Category = 'iORM-BSWhereBuilder'
-      Caption = 'Search'
-      TargetBindSource = DSWhere
-    end
-    object acWhereClear: TioBSWhereClear
-      Category = 'iORM-BSWhereBuilder'
-      Caption = 'Clear'
-      TargetBindSource = DSWhere
-      WhereAutoExecuteOnTargetBS = True
     end
   end
   object DSWhere: TioDataSetMaster

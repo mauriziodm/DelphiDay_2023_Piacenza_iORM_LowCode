@@ -56,28 +56,28 @@ begin
   LPizza.Name := 'Margherita pizza';
   LPizza.Price := 4.5;
   LPizza.Image.LoadFromFile(TPath.Combine(LImagesPath, 'MargheritaPizza.bmp'));
-  io.Persist(LPizza);
+  io.PersistObject(LPizza);
   FreeAndnil(LPizza);
   //  Capricciosa pizza
   LPizza := TPizza.Create;
   LPizza.Name := 'Capricciosa pizza';
   LPizza.Price := 7;
   LPizza.Image.LoadFromFile(TPath.Combine(LImagesPath, 'CapricciosaPizza.bmp'));
-  io.Persist(LPizza);
+  io.PersistObject(LPizza);
   FreeAndnil(LPizza);
   // Pepperoni pizza
   LPizza := TPizza.Create;
   LPizza.Name := 'Pepperoni pizza';
   LPizza.Price := 6.5;
   LPizza.Image.LoadFromFile(TPath.Combine(LImagesPath, 'PepperoniPizza.bmp'));
-  io.Persist(LPizza);
+  io.PersistObject(LPizza);
   FreeAndnil(LPizza);
   // Love pizza
   LPizza := TPizza.Create;
   LPizza.Name := 'Love pizza';
   LPizza.Price := 5;
   LPizza.Image.LoadFromFile(TPath.Combine(LImagesPath, 'LovePizza.bmp'));
-  io.Persist(LPizza);
+  io.PersistObject(LPizza);
   FreeAndnil(LPizza);
 end;
 
@@ -92,7 +92,7 @@ begin
   LCustomer.Address := '301 Park Ave';
   LCustomer.PhoneNumber := '(555) 555-1234';
   LCustomer.State := io.LoadObject<TState>(1);
-  io.Persist(LCustomer);
+  io.PersistObject(LCustomer);
   FreeAndnil(LCustomer);
   // Mr. Omar Bossoni
   LCustomer := TCustomer.Create;
@@ -101,7 +101,7 @@ begin
   LCustomer.Address := '111 E 48th St';
   LCustomer.PhoneNumber := '(444) 444-1234';
   LCustomer.State := io.LoadObject<TState>(1);
-  io.Persist(LCustomer);
+  io.PersistObject(LCustomer);
   FreeAndnil(LCustomer);
   // Mr. Marco Mottadelli
   LCustomer := TCustomer.Create;
@@ -110,7 +110,7 @@ begin
   LCustomer.Address := '3501 Bergenline Ave';
   LCustomer.PhoneNumber := '(333) 333-1234';
   LCustomer.State := io.LoadObject<TState>(2);
-  io.Persist(LCustomer);
+  io.PersistObject(LCustomer);
   FreeAndnil(LCustomer);
 end;
 
@@ -121,22 +121,22 @@ begin
   // New York
   LState := TState.Create;
   LState.Name := 'New York';
-  io.Persist(LState);
+  io.PersistObject(LState);
   FreeAndnil(LState);
   // New Jersey
   LState := TState.Create;
   LState.Name := 'New Jersey';
-  io.Persist(LState);
+  io.PersistObject(LState);
   FreeAndnil(LState);
   // California
   LState := TState.Create;
   LState.Name := 'California';
-  io.Persist(LState);
+  io.PersistObject(LState);
   FreeAndnil(LState);
   // Tennessee
   LState := TState.Create;
   LState.Name := 'Tennessee';
-  io.Persist(LState);
+  io.PersistObject(LState);
   FreeAndnil(LState);
 end;
 
@@ -153,7 +153,7 @@ begin
     LCustomer.Address := Format('address %d', [LCounter]);
     LCustomer.PhoneNumber := Format('phone number %d', [LCounter]);
   LCustomer.State := io.LoadObject<TState>(3);
-    io.Persist(LCustomer);
+    io.PersistObject(LCustomer);
     FreeAndnil(LCustomer);
   end;
 end;
@@ -171,7 +171,7 @@ begin
   LOrder.Rows.Add( TOrderRow.Create(2, 'Capricciosa pizza', 7, 2) );
   LOrder.Rows.Add( TOrderRow.Create(4, 'Love pizza', 5, 1) );
   LOrder.OrderState := osReady;
-  io.Persist(LOrder);
+  io.PersistObject(LOrder);
   FreeAndnil(LOrder);
   // Second order
   LOrder := TOrder.Create;
@@ -181,7 +181,7 @@ begin
   LOrder.Rows.Add( TOrderRow.Create(1, 'Margherita pizza', 4.5, 1) );
   LOrder.Rows.Add( TOrderRow.Create(3, 'Pepperoni pizza', 6.5, 1) );
   LOrder.OrderState := osPreparing;
-  io.Persist(LOrder);
+  io.PersistObject(LOrder);
   FreeAndnil(LOrder);
   // Third order
   LOrder := TOrder.Create;
@@ -189,7 +189,7 @@ begin
   LOrder.Customer := io.LoadObject<TCustomer>(3);
   LOrder.Rows.Add( TOrderRow.Create(4, 'Love pizza', 5, 1) );
   LOrder.OrderState := osWaiting;
-  io.Persist(LOrder);
+  io.PersistObject(LOrder);
   FreeAndnil(LOrder);
 end;
 

@@ -24,7 +24,8 @@ uses
   Model.Where.Interfaces in '..\common_model\Model.Where.Interfaces.pas',
   Model.Where.Pizza in '..\common_model\Model.Where.Pizza.pas',
   Model.Where.Order in '..\common_model\Model.Where.Order.pas',
-  ETM.Repository in '..\common_model\ETM.Repository.pas';
+  ETM.Repository in '..\common_model\ETM.Repository.pas',
+  Form.Diff in 'Form.Diff.pas' {DiffForm};
 
 {$R *.res}
 {$STRONGLINKTYPES ON}

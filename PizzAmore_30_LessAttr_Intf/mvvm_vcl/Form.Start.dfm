@@ -38,6 +38,7 @@ object StartForm: TStartForm
         ParentBackground = False
         TabOrder = 0
         StyleElements = []
+        ExplicitHeight = 510
         object LabelTitlePizz: TLabel
           Left = 80
           Top = 32
@@ -8526,6 +8527,8 @@ object StartForm: TStartForm
         ParentBackground = False
         TabOrder = 1
         StyleElements = []
+        ExplicitWidth = 411
+        ExplicitHeight = 510
         DesignSize = (
           415
           511)
@@ -8544,6 +8547,7 @@ object StartForm: TStartForm
           ParentFont = False
           TabOrder = 0
           StyleElements = []
+          ExplicitWidth = 277
         end
         object ButtonCustomers: TButton
           Left = 72
@@ -8560,6 +8564,7 @@ object StartForm: TStartForm
           ParentFont = False
           TabOrder = 1
           StyleElements = []
+          ExplicitWidth = 277
         end
         object ButtonPizzas: TButton
           Left = 72
@@ -8576,6 +8581,7 @@ object StartForm: TStartForm
           ParentFont = False
           TabOrder = 2
           StyleElements = []
+          ExplicitWidth = 277
         end
         object ButtonQuit: TButton
           Left = 72
@@ -8592,6 +8598,8 @@ object StartForm: TStartForm
           ParentFont = False
           TabOrder = 3
           StyleElements = []
+          ExplicitTop = 439
+          ExplicitWidth = 277
         end
       end
     end
@@ -8607,6 +8615,7 @@ object StartForm: TStartForm
     ParentBackground = False
     TabOrder = 1
     StyleElements = []
+    ExplicitWidth = 780
     object Label1: TLabel
       Left = 16
       Top = 11

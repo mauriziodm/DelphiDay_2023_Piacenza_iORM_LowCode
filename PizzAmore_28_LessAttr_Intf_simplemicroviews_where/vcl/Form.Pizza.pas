@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls, iORM, iORM.Attributes, iORM.CommonTypes,
   iORM.Where.Interfaces, Data.DB, iORM.DB.DataSet.Base, iORM.DB.DataSet.Custom, iORM.DB.DataSet.Master, Vcl.ExtDlgs, System.Actions, Vcl.ActnList,
-  iORM.StdActions.Vcl, Model.Pizza;
+  iORM.StdActions.Vcl, Model.Pizza, Vcl.Grids, Vcl.DBGrids;
 
 type
 
@@ -39,8 +39,19 @@ type
     acLoadImage: TAction;
     OpenPictureDialog: TOpenPictureDialog;
     acBack: TioBSCloseQuery;
+    PanelTimeLine: TPanel;
+    Label5: TLabel;
+    DSTimeLine: TioDataSetMaster;
+    DSTimeLineDateAndTime: TDateTimeField;
+    DSTimeLineEventType: TStringField;
+    DSTimeLineSmartEntityVersion: TStringField;
+    DSTimeLineUserName: TStringField;
+    GridCustomers: TDBGrid;
+    SourceTimeLine: TDataSource;
+    ButtonEtmRevert: TSpeedButton;
     procedure acLoadImageExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure DSPizzaAfterOpen(DataSet: TDataSet);
   private
   public
   end;
@@ -57,6 +68,11 @@ begin
     DSPizza.CurrentAs<TPizza>.Image.LoadFromFile(OpenPictureDialog.FileName);
     DSPizza.Refresh(False);
   end;
+end;
+
+procedure TPizzaForm.DSPizzaAfterOpen(DataSet: TDataSet);
+begin
+  DSTimeLine.Open;
 end;
 
 procedure TPizzaForm.FormClose(Sender: TObject; var Action: TCloseAction);

@@ -4,8 +4,8 @@ object PizzaForm: TPizzaForm
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Pizz'#39'Amore'
-  ClientHeight = 501
-  ClientWidth = 413
+  ClientHeight = 716
+  ClientWidth = 405
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -92,16 +92,15 @@ object PizzaForm: TPizzaForm
   object PanelTop: TPanel
     Left = 0
     Top = 0
-    Width = 413
+    Width = 405
     Height = 40
     Align = alTop
     BevelOuter = bvNone
     Color = clNavy
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 409
     DesignSize = (
-      413
+      405
       40)
     object ButtonBack: TSpeedButton
       Left = 0
@@ -120,7 +119,7 @@ object PizzaForm: TPizzaForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 302
+      Width = 266
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -138,16 +137,14 @@ object PizzaForm: TPizzaForm
   end
   object PanelBottom: TPanel
     Left = 0
-    Top = 461
-    Width = 413
+    Top = 676
+    Width = 405
     Height = 40
     Align = alBottom
     BevelOuter = bvNone
     Color = clMenu
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 460
-    ExplicitWidth = 409
     object ButtonRevert: TSpeedButton
       Left = 0
       Top = 0
@@ -165,7 +162,7 @@ object PizzaForm: TPizzaForm
       ExplicitTop = -6
     end
     object ButtonPersist: TSpeedButton
-      Left = 363
+      Left = 359
       Top = 0
       Width = 50
       Height = 40
@@ -244,6 +241,116 @@ object PizzaForm: TPizzaForm
     Stretch = True
     TabOrder = 5
   end
+  object PanelTimeLine: TPanel
+    Left = 0
+    Top = 454
+    Width = 405
+    Height = 222
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = clMenu
+    ParentBackground = False
+    TabOrder = 6
+    object Label5: TLabel
+      Left = 0
+      Top = 0
+      Width = 198
+      Height = 17
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'TimeLine (Entity Time Machine)'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      StyleElements = []
+    end
+    object ButtonEtmRevert: TSpeedButton
+      Left = 331
+      Top = -2
+      Width = 82
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object GridCustomers: TDBGrid
+      Left = 0
+      Top = 17
+      Width = 409
+      Height = 205
+      Align = alClient
+      DataSource = SourceTimeLine
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -12
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'DateAndTime'
+          Title.Alignment = taCenter
+          Title.Caption = 'When'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clNavy
+          Title.Font.Height = -13
+          Title.Font.Name = 'Segoe UI'
+          Title.Font.Style = [fsBold]
+          Width = 120
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'EventType'
+          Title.Alignment = taCenter
+          Title.Caption = 'Type'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clNavy
+          Title.Font.Height = -13
+          Title.Font.Name = 'Segoe UI'
+          Title.Font.Style = [fsBold]
+          Width = 60
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'SmartEntityVersion'
+          Title.Alignment = taCenter
+          Title.Caption = 'Version'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clNavy
+          Title.Font.Height = -13
+          Title.Font.Name = 'Segoe UI'
+          Title.Font.Style = [fsBold]
+          Width = 100
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'UserName'
+          Title.Alignment = taCenter
+          Title.Caption = 'User'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clNavy
+          Title.Font.Height = -13
+          Title.Font.Name = 'Segoe UI'
+          Title.Font.Style = [fsBold]
+          Width = 90
+          Visible = True
+        end>
+    end
+  end
   object DSPizza: TioDataSetMaster
     AsDefault = True
     TypeName = 'TPizza'
@@ -251,6 +358,7 @@ object PizzaForm: TPizzaForm
     TypeOfCollection = tcSingleObject
     OrderBy = '[TPizza.Name]'
     Paging.CurrentPageOfFormat = '%d/%d'
+    AfterOpen = DSPizzaAfterOpen
     Left = 32
     Top = 224
     object DSPizzaID: TIntegerField
@@ -279,12 +387,13 @@ object PizzaForm: TPizzaForm
     object acPersist: TioBSPersistencePersist
       Category = 'iORM-BSPersistence'
       Caption = 'Persist'
+      Action_CloseQueryAction = acBack
       TargetBindSource = DSPizza
     end
     object acRevert: TioBSPersistenceRevertOrDelete
       Category = 'iORM-BSPersistence'
       Caption = 'Revert'
-      CloseQueryAction = acBack
+      Action_CloseQueryAction = acBack
       TargetBindSource = DSPizza
     end
     object acLoadImage: TAction
@@ -301,5 +410,34 @@ object PizzaForm: TPizzaForm
   object OpenPictureDialog: TOpenPictureDialog
     Left = 232
     Top = 352
+  end
+  object DSTimeLine: TioDataSetMaster
+    AsDefault = False
+    TypeName = 'TTimeSlot'
+    ETMfor = DSPizza
+    Paging.CurrentPageOfFormat = '%d/%d'
+    Left = 192
+    Top = 504
+    object DSTimeLineDateAndTime: TDateTimeField
+      FieldName = 'DateAndTime'
+    end
+    object DSTimeLineEventType: TStringField
+      FieldName = 'EventType'
+      Size = 30
+    end
+    object DSTimeLineSmartEntityVersion: TStringField
+      FieldName = 'SmartEntityVersion'
+      Size = 30
+    end
+    object DSTimeLineUserName: TStringField
+      FieldName = 'UserName'
+      Size = 30
+    end
+  end
+  object SourceTimeLine: TDataSource
+    AutoEdit = False
+    DataSet = DSTimeLine
+    Left = 192
+    Top = 560
   end
 end

@@ -38,7 +38,7 @@ type
   end;
 
   [ioEntity('CUST_PRIV'), ioKeyGenerator('CUSTOMERS'), diImplements(IGenericCustomer, 'Private')]
-  [etmTrace(TMainRepo)]
+  [etmTrace(TTimeSlot)]
   TPrivateCustomer = class(TGenericCustomer)
   private
     FFirstName: String;
@@ -52,7 +52,7 @@ type
   end;
 
   [ioEntity('CUST_BUS'), ioKeyGenerator('CUSTOMERS'), diImplements(IGenericCustomer, 'Business')]
-  [etmTrace(TMainRepo)]
+  [etmTrace(TTimeSlot)]
   TBusinessCustomer = class(TGenericCustomer)
   private
     FBusinessName: String;

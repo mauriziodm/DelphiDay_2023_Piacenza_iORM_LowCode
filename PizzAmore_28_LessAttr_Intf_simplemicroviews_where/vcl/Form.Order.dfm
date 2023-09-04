@@ -93,7 +93,7 @@ object OrderForm: TOrderForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 665
+      Width = 657
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -346,11 +346,6 @@ object OrderForm: TOrderForm
     ParentColor = False
     TabOrder = 6
     ExplicitTop = 128
-    inherited ActionListCustMView: TActionList
-      inherited acShow: TioBSShowOrSelect
-        ParentCloseQueryAction = acBack
-      end
-    end
     inherited DSCustomer: TioDataSetDetail
       AsDefault = False
       MasterBindSource = DSOrder
@@ -459,17 +454,20 @@ object OrderForm: TOrderForm
     object acPersist: TioBSPersistencePersist
       Category = 'iORM-BSPersistence'
       Caption = 'Persist'
+      Action_CloseQueryAction = acBack
+      DisableIfChangesDoesNotExists = True
       TargetBindSource = DSOrder
     end
     object acRevert: TioBSPersistenceRevertOrDelete
       Category = 'iORM-BSPersistence'
       Caption = 'Revert'
-      CloseQueryAction = acBack
+      Action_CloseQueryAction = acBack
       TargetBindSource = DSOrder
     end
     object acSelectPizza: TioBSSelectCurrent
       Category = 'iORM-BS'
       Caption = 'Add'
+      Action_CloseQueryAction = acBack
       TargetBindSource = DSPizzas
     end
     object acAddCustomPizza: TAction

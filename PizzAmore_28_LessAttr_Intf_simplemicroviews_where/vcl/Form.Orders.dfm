@@ -4,8 +4,8 @@ object OrdersForm: TOrdersForm
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Pizz'#39'Amore'
-  ClientHeight = 561
-  ClientWidth = 531
+  ClientHeight = 560
+  ClientWidth = 527
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,16 +20,16 @@ object OrdersForm: TOrdersForm
   object PanelTop: TPanel
     Left = 0
     Top = 0
-    Width = 531
+    Width = 527
     Height = 40
     Align = alTop
     BevelOuter = bvNone
     Color = clNavy
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 527
+    ExplicitWidth = 523
     object ButtonSelect: TSpeedButton
-      Left = 481
+      Left = 477
       Top = 0
       Width = 50
       Height = 40
@@ -74,18 +74,18 @@ object OrdersForm: TOrdersForm
   end
   object PanelBottom: TPanel
     Left = 0
-    Top = 521
-    Width = 531
+    Top = 520
+    Width = 527
     Height = 40
     Align = alBottom
     BevelOuter = bvNone
     Color = clMenu
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 520
-    ExplicitWidth = 527
+    ExplicitTop = 519
+    ExplicitWidth = 523
     object ButtonAdd: TSpeedButton
-      Left = 481
+      Left = 477
       Top = 0
       Width = 50
       Height = 40
@@ -118,8 +118,8 @@ object OrdersForm: TOrdersForm
   object GridCustomers: TDBGrid
     Left = 0
     Top = 40
-    Width = 531
-    Height = 343
+    Width = 527
+    Height = 342
     Align = alClient
     DataSource = SourceOrders
     TabOrder = 2
@@ -194,16 +194,18 @@ object OrdersForm: TOrdersForm
   end
   object PanelWhere: TPanel
     Left = 0
-    Top = 383
-    Width = 531
+    Top = 382
+    Width = 527
     Height = 138
     Align = alBottom
     BevelOuter = bvNone
     Color = clMenu
     ParentBackground = False
     TabOrder = 3
+    ExplicitLeft = 8
+    ExplicitTop = 376
     DesignSize = (
-      531
+      527
       138)
     object Label1: TLabel
       Left = 9
@@ -251,34 +253,32 @@ object OrdersForm: TOrdersForm
       ParentFont = False
     end
     object ButtonSearch: TSpeedButton
-      Left = 441
+      Left = 477
       Top = 0
       Width = 50
       Height = 45
-      Action = acWhereBuild
       Anchors = [akTop, akRight]
+      Caption = 'Search'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 481
     end
     object ButtonClear: TSpeedButton
-      Left = 441
-      Top = 68
+      Left = 477
+      Top = 72
       Width = 50
       Height = 25
-      Action = acWhereClear
       Anchors = [akTop, akRight]
+      Caption = 'Clear'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 481
     end
     object Label4: TLabel
       Left = 306
@@ -318,7 +318,7 @@ object OrdersForm: TOrdersForm
       Pen.Color = clGray
     end
     object ButtonHistory: TSpeedButton
-      Left = 441
+      Left = 477
       Top = 44
       Width = 50
       Height = 25
@@ -330,7 +330,6 @@ object OrdersForm: TOrdersForm
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 481
     end
     object DBEditWhereID: TDBEdit
       Left = 54
@@ -475,6 +474,15 @@ object OrdersForm: TOrdersForm
       TabOrder = 10
       OnClick = ButonSearchRowsPizzaNameClick
     end
+    object ButtonSearchRowsPizzaIngredient: TButton
+      Left = 302
+      Top = 95
+      Width = 157
+      Height = 21
+      Caption = 'R.Pizza.Ingredient.Name'
+      TabOrder = 11
+      OnClick = ButtonSearchRowsPizzaIngredientClick
+    end
   end
   object DSOrders: TioDataSetMaster
     AsDefault = True
@@ -548,18 +556,19 @@ object OrdersForm: TOrdersForm
     object acDelete: TioBSPersistenceDelete
       Category = 'iORM-BSPersistence'
       Caption = 'Delete'
+      Action_CloseQueryAction = acBack
       TargetBindSource = DSOrders
     end
     object acBack: TioBSCloseQuery
       Category = 'iORM-BS'
       Caption = 'Back'
       OnUpdateScope = usGlobal
-      TargetBindSource = DSOrders
+      TargetBindSource = DSWhere
     end
     object acShowOrSelect: TioBSShowOrSelect
       Category = 'iORM-BS'
       Caption = 'Select'
-      ParentCloseQueryAction = acBack
+      Action_ParentCloseQueryAction = acBack
       ShowMode = smBSCurrent
       TargetBindSource = DSOrders
       ViewContextBy = vcByDefaultViewContextProvider
@@ -567,31 +576,20 @@ object OrdersForm: TOrdersForm
     object acAdd: TioBSPersistenceAppend
       Category = 'iORM-BSPersistence'
       Caption = 'Add'
+      Action_ShowOrSelectAction = acShowOrSelect
       EntityTypeName = 'IOrder'
-      ShowOrSelectAction = acShowOrSelect
       TargetBindSource = DSOrders
-    end
-    object acWhereBuild: TioBSWhereBuild
-      Category = 'iORM-BSWhereBuilder'
-      Caption = 'Search'
-      PersistAction = acWherePersist
-      TargetBindSource = DSWhere
-    end
-    object acWhereClear: TioBSWhereClear
-      Category = 'iORM-BSWhereBuilder'
-      Caption = 'Clear'
-      TargetBindSource = DSWhere
-      WhereAutoExecuteOnTargetBS = True
     end
     object acWherePersist: TioBSPersistencePersist
       Category = 'iORM-BSPersistence'
       Caption = 'Persist'
+      Action_CloseQueryAction = acBack
       TargetBindSource = DSWhere
     end
     object acWhereShowHistory: TioBSShowOrSelect
       Category = 'iORM-BS'
       Caption = 'History'
-      ParentCloseQueryAction = acBack
+      Action_ParentCloseQueryAction = acBack
       ShowMode = smBSTypeNameAsSelector
       TargetBindSource = DSWhere
       ViewContextBy = vcByDefaultViewContextProvider

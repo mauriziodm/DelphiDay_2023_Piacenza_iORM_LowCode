@@ -137,7 +137,7 @@ object BusinessCustomerForm: TBusinessCustomerForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 474
+      Width = 470
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -345,7 +345,6 @@ object BusinessCustomerForm: TBusinessCustomerForm
     object acRevert: TioBSPersistenceRevertOrDelete
       Category = 'iORM-BSPersistence'
       Caption = 'Revert'
-      CloseQueryAction = acBack
       TargetBindSource = DSCustomer
     end
     object acBack: TioBSCloseQuery

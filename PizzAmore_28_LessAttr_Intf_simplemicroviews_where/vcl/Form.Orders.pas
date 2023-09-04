@@ -54,8 +54,6 @@ type
     acBack: TioBSCloseQuery;
     acShowOrSelect: TioBSShowOrSelect;
     acAdd: TioBSPersistenceAppend;
-    acWhereBuild: TioBSWhereBuild;
-    acWhereClear: TioBSWhereClear;
     acWherePersist: TioBSPersistencePersist;
     acWhereShowHistory: TioBSShowOrSelect;
     ButtonSearchCustomerStateName: TButton;
@@ -64,6 +62,7 @@ type
     ButtonSearchRowCustomization: TButton;
     ButtonSearchRowQty: TButton;
     ButonSearchRowsPizzaName: TButton;
+    ButtonSearchRowsPizzaIngredient: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ButtonSearchCustomerStateNameClick(Sender: TObject);
@@ -72,6 +71,7 @@ type
     procedure ButtonSearchRowCustomizationClick(Sender: TObject);
     procedure ButtonSearchRowQtyClick(Sender: TObject);
     procedure ButonSearchRowsPizzaNameClick(Sender: TObject);
+    procedure ButtonSearchRowsPizzaIngredientClick(Sender: TObject);
   private
   public
   end;
@@ -139,6 +139,13 @@ var
 begin
   LWhere := io.Where('Rows.Qty', coGreaterOrEqual, 3);
   DSOrders.Where := LWhere;
+  DSOrders.Persistence.Reload;
+end;
+
+procedure TOrdersForm.ButtonSearchRowsPizzaIngredientClick(Sender: TObject);
+begin
+//  DSOrders.Where := io.Where('Rows.Pizza.Ingredients.Name', coLike, 'Pepperoni');
+  DSOrders.Where := io.Where('Rows.Pizza.Ingredients.Name', coLike, 'Love');
   DSOrders.Persistence.Reload;
 end;
 

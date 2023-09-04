@@ -4,8 +4,8 @@ object MainForm: TMainForm
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Pizz'#39'Amore'
-  ClientHeight = 546
-  ClientWidth = 284
+  ClientHeight = 544
+  ClientWidth = 276
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object MainForm: TMainForm
   Font.Style = []
   Position = poDesktopCenter
   DesignSize = (
-    284
-    546)
+    276
+    544)
   TextHeight = 15
   object ImagePizza: TImage
     Left = 8
@@ -8480,13 +8480,14 @@ object MainForm: TMainForm
   end
   object Shape1: TShape
     Left = 0
-    Top = 323
-    Width = 284
+    Top = 321
+    Width = 276
     Height = 223
     Align = alBottom
     Brush.Color = clNavy
     Pen.Style = psClear
     ExplicitTop = 312
+    ExplicitWidth = 284
   end
   object LabelTitleAmore: TLabel
     Left = 130
@@ -8502,9 +8503,9 @@ object MainForm: TMainForm
     ParentFont = False
   end
   object ButtonOrders: TButton
-    Left = 32
-    Top = 335
-    Width = 193
+    Left = 57
+    Top = 333
+    Width = 157
     Height = 44
     Action = acShowOrders
     Anchors = [akLeft, akRight, akBottom]
@@ -8515,13 +8516,11 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitTop = 334
-    ExplicitWidth = 189
   end
   object ButtonCustomers: TButton
-    Left = 32
-    Top = 387
-    Width = 193
+    Left = 57
+    Top = 385
+    Width = 157
     Height = 44
     Action = acShowCustomers
     Anchors = [akLeft, akRight, akBottom]
@@ -8532,13 +8531,11 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitTop = 386
-    ExplicitWidth = 189
   end
   object ButtonPizzas: TButton
-    Left = 32
-    Top = 439
-    Width = 193
+    Left = 57
+    Top = 437
+    Width = 157
     Height = 44
     Action = acShowPizzas
     Anchors = [akLeft, akRight, akBottom]
@@ -8549,13 +8546,11 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 438
-    ExplicitWidth = 189
   end
   object ButtonQuit: TButton
-    Left = 32
-    Top = 502
-    Width = 193
+    Left = 57
+    Top = 500
+    Width = 157
     Height = 32
     Action = acQuit
     Anchors = [akLeft, akRight, akBottom]
@@ -8566,28 +8561,20 @@ object MainForm: TMainForm
     Font.Style = []
     ParentFont = False
     TabOrder = 3
-    ExplicitTop = 501
-    ExplicitWidth = 189
-  end
-  object Button1: TButton
-    Left = 8
-    Top = 8
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 4
   end
   object ioVCL1: TioVCL
     Left = 8
     Top = 272
   end
   object SQLiteConn: TioSQLiteConnectionDef
+    OnAfterRegister = FBConnAfterRegister
     AsDefault = False
     AutoCreateDB.ForeignKeys = False
     Database = 'PizzAmore_28_simplemicroview_where_vcl.db'
     DatabaseStdFolder = sfDocuments
     Persistent = False
     Pooled = False
+    OnAfterCreateOrAlterDB = FBConnAfterCreateOrAlterDB
     Left = 64
     Top = 272
   end
@@ -8603,24 +8590,32 @@ object MainForm: TMainForm
     object acShowCustomers: TioBSShowOrSelect
       Category = 'iORM-BS'
       Caption = 'Customers'
+      Action_ParentCloseQueryAction = acQuit
       EntityTypeName = 'IGenericCustomer'
-      ParentCloseQueryAction = acQuit
       ShowMode = smEntityTypeName
       ViewContextBy = vcByDefaultViewContextProvider
     end
     object acShowPizzas: TioBSShowOrSelect
       Category = 'iORM-BS'
       Caption = 'Pizzas'
+      Action_ParentCloseQueryAction = acQuit
       EntityTypeName = 'IPizza'
-      ParentCloseQueryAction = acQuit
       ShowMode = smEntityTypeName
       ViewContextBy = vcByDefaultViewContextProvider
     end
     object acShowOrders: TioBSShowOrSelect
       Category = 'iORM-BS'
       Caption = 'Orders'
+      Action_ParentCloseQueryAction = acQuit
       EntityTypeName = 'IOrder'
-      ParentCloseQueryAction = acQuit
+      ShowMode = smEntityTypeName
+      ViewContextBy = vcByDefaultViewContextProvider
+    end
+    object acShowDiff: TioBSShowOrSelect
+      Category = 'iORM - BS'
+      Caption = 'Diff'
+      Action_ParentCloseQueryAction = acQuit
+      EntityTypeName = 'TTimeSlot'
       ShowMode = smEntityTypeName
       ViewContextBy = vcByDefaultViewContextProvider
     end

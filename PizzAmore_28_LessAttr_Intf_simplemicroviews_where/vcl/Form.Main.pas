@@ -25,7 +25,7 @@ type
     acShowPizzas: TioBSShowOrSelect;
     acShowOrders: TioBSShowOrSelect;
     FBConn: TioFirebirdConnectionDef;
-    Button1: TButton;
+    acShowDiff: TioBSShowOrSelect;
     procedure FBConnAfterCreateOrAlterDB(const Sender: TioCustomConnectionDef; const ADBStatus: TioDBBuilderEngineResult; const AScript, AWarnings: TStrings);
     procedure FBConnAfterRegister(Sender: TObject);
   private
@@ -38,7 +38,7 @@ var
 implementation
 
 uses
-  Utils.SampleData;
+  Utils.SampleData, Model.Interfaces, Model.Pizza;
 
 {$R *.dfm}
 

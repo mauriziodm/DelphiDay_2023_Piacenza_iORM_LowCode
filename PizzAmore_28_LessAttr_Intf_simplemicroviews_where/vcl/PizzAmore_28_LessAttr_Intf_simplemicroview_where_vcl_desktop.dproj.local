@@ -2,16 +2,19 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2023/05/22 16:21:30.000.575,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\vcl\Unit1.pas</Transaction>
-    <Transaction>2023/05/22 16:21:53.000.271,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\vcl\Unit1.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\common_model\Model.Where.Interfaces.pas</Transaction>
+    <Transaction>2023/05/22 16:21:53.000.271,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\common_model\Model.Where.Interfaces.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\vcl\Unit1.pas</Transaction>
     <Transaction>2023/05/22 16:23:01.000.538,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\vcl\Unit1.pas</Transaction>
-    <Transaction>2023/05/22 16:23:20.000.592,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\vcl\Unit1.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\common_model\Model.Where.Pizza.pas</Transaction>
+    <Transaction>2023/05/22 16:23:20.000.592,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\common_model\Model.Where.Pizza.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\vcl\Unit1.pas</Transaction>
     <Transaction>2023/05/22 16:42:32.000.829,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\vcl\Unit1.pas</Transaction>
-    <Transaction>2023/05/22 16:42:46.000.072,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\vcl\Unit1.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\common_model\Model.Where.Order.pas</Transaction>
-    <Transaction>2023/06/15 21:52:14.000.551,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\PizzAmore_27_LessAttr_Intf_simplemicroview_where_vcl_desktop.dproj=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\PizzAmore_27_LessAttr_Intf_simplemicroview_vcl_desktop.dproj</Transaction>
-    <Transaction>2023/06/15 21:52:26.000.471,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\PizzAmore_28_LessAttr_Intf_simplemicroview_where_vcl_desktop.dproj=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\PizzAmore_27_LessAttr_Intf_simplemicroview_where_vcl_desktop.dproj</Transaction>
+    <Transaction>2023/05/22 16:42:46.000.072,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\common_model\Model.Where.Order.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_27_LessAttr_Intf_simplemicroviews\vcl\Unit1.pas</Transaction>
+    <Transaction>2023/06/15 21:52:14.000.551,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\PizzAmore_27_LessAttr_Intf_simplemicroview_vcl_desktop.dproj=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\PizzAmore_27_LessAttr_Intf_simplemicroview_where_vcl_desktop.dproj</Transaction>
+    <Transaction>2023/06/15 21:52:26.000.471,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\PizzAmore_27_LessAttr_Intf_simplemicroview_where_vcl_desktop.dproj=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\PizzAmore_28_LessAttr_Intf_simplemicroview_where_vcl_desktop.dproj</Transaction>
     <Transaction>2023/07/24 19:12:45.000.453,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\Unit1.pas</Transaction>
-    <Transaction>2023/07/24 19:13:29.000.355,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\Unit1.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\common_model\ETM.Repository.pas</Transaction>
+    <Transaction>2023/07/24 19:13:29.000.355,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\common_model\ETM.Repository.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\Unit1.pas</Transaction>
     <Transaction>2023/07/26 11:01:28.000.436,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\Unit1.pas</Transaction>
+    <Transaction>2023/08/04 18:06:40.000.660,=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\Unit1.pas</Transaction>
+    <Transaction>2023/08/04 18:07:24.000.093,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\Form.Diff.pas=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\Unit1.pas</Transaction>
+    <Transaction>2023/08/04 18:07:24.000.093,C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\Form.Diff.dfm=C:\delphi\tools\iorm_dev\DelphiDay 2023 Piacenza iORM LowCode\PizzAmore_28_LessAttr_Intf_simplemicroviews_where\vcl\Unit1.dfm</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="..\..\PizzAmore_28_LessAttr_Intf_simplemicroviews_where"/>
@@ -27,29 +30,31 @@
     <File Path="..\common_model\Model.Where.Order.pas"/>
     <File Path="..\common_model\Model.Where.Pizza.pas"/>
     <File Path="..\common_model\Utils.SampleData.pas"/>
-    <File Path="Form.CustomerBusiness.pas"/>
-    <File Path="Form.CustomerBusiness.dfm"/>
-    <File Path="Form.CustomerPrivate.pas"/>
-    <File Path="Form.CustomerPrivate.dfm"/>
-    <File Path="Form.Customers.pas"/>
-    <File Path="Form.Customers.dfm"/>
     <File Path="Form.Main.pas"/>
     <File Path="Form.Main.dfm"/>
-    <File Path="Form.Order.pas"/>
-    <File Path="Form.Order.dfm"/>
-    <File Path="Form.Orders.pas"/>
-    <File Path="Form.Orders.dfm"/>
-    <File Path="Form.Pizza.pas"/>
-    <File Path="Form.Pizza.dfm"/>
+    <File Path="Form.Customers.pas"/>
+    <File Path="Form.Customers.dfm"/>
+    <File Path="Form.CustomerPrivate.pas"/>
+    <File Path="Form.CustomerPrivate.dfm"/>
     <File Path="Form.Pizzas.pas"/>
     <File Path="Form.Pizzas.dfm"/>
+    <File Path="Form.Pizza.pas"/>
+    <File Path="Form.Pizza.dfm"/>
+    <File Path="Form.Orders.pas"/>
+    <File Path="Form.Orders.dfm"/>
+    <File Path="Form.Order.pas"/>
+    <File Path="Form.Order.dfm"/>
     <File Path="Form.ViewContext.pas"/>
     <File Path="Form.ViewContext.dfm"/>
+    <File Path="Form.CustomerBusiness.pas"/>
+    <File Path="Form.CustomerBusiness.dfm"/>
     <File Path="MicroView.Customer.pas"/>
     <File Path="MicroView.Customer.dfm"/>
     <File Path="MicroView.OrderRowCustom.pas"/>
     <File Path="MicroView.OrderRowCustom.dfm"/>
     <File Path="MicroView.OrderRowPizza.pas"/>
     <File Path="MicroView.OrderRowPizza.dfm"/>
+    <File Path="Form.Diff.pas"/>
+    <File Path="Form.Diff.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

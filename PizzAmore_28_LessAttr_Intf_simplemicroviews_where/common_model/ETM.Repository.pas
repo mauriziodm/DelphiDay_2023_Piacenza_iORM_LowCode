@@ -8,7 +8,7 @@ uses
 type
 
   [etmRepository('ETM_MAIN')]
-  TMainRepo = class(TioEtmCustomRepository)
+  TTimeSlot = class(TioEtmCustomTimeSlot)
 
   end;
 

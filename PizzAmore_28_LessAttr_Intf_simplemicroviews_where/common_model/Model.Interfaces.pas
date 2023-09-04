@@ -86,6 +86,9 @@ type
     // Ingredients
     function GetIngredients: TList<IIngredient>;
     property Ingredients: TList<IIngredient> read GetIngredients;
+    // ObjVersion
+    function GetObjVersion: TioObjVersion;
+    property ObjVersion: TioObjVersion read GetObjVersion;
   end;
 
   IIngredient = interface(IBaseBO)

@@ -37,8 +37,6 @@ type
     acShowOrSelect: TioBSShowOrSelect;
     acAddPrivateCustomer: TioBSPersistenceAppend;
     acSelectCurrent: TioBSSelectCurrent;
-    acWhereBuild: TioBSWhereBuild;
-    acWhereClear: TioBSWhereClear;
     PanelWhere: TPanel;
     Label1: TLabel;
     Label3: TLabel;

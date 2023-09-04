@@ -4,8 +4,8 @@ object PizzasForm: TPizzasForm
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Pizz'#39'Amore'
-  ClientHeight = 661
-  ClientWidth = 384
+  ClientHeight = 660
+  ClientWidth = 380
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,16 +20,16 @@ object PizzasForm: TPizzasForm
   object PanelTop: TPanel
     Left = 0
     Top = 0
-    Width = 384
+    Width = 380
     Height = 40
     Align = alTop
     BevelOuter = bvNone
     Color = clNavy
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 380
+    ExplicitWidth = 376
     object ButtonSelect: TSpeedButton
-      Left = 334
+      Left = 330
       Top = 0
       Width = 50
       Height = 40
@@ -41,6 +41,7 @@ object PizzasForm: TPizzasForm
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+      ExplicitLeft = 334
       ExplicitTop = -6
     end
     object ButtonBack: TSpeedButton
@@ -73,18 +74,18 @@ object PizzasForm: TPizzasForm
   end
   object PanelBottom: TPanel
     Left = 0
-    Top = 621
-    Width = 384
+    Top = 620
+    Width = 380
     Height = 40
     Align = alBottom
     BevelOuter = bvNone
     Color = clMenu
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 620
-    ExplicitWidth = 380
+    ExplicitTop = 619
+    ExplicitWidth = 376
     object ButtonAdd: TSpeedButton
-      Left = 334
+      Left = 330
       Top = 0
       Width = 50
       Height = 40
@@ -96,7 +97,7 @@ object PizzasForm: TPizzasForm
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 264
+      ExplicitTop = 1
     end
     object ButtonDelete: TSpeedButton
       Left = 0
@@ -117,18 +118,18 @@ object PizzasForm: TPizzasForm
   object DBCtrlGrid1: TDBCtrlGrid
     Left = 0
     Top = 40
-    Width = 384
-    Height = 502
+    Width = 380
+    Height = 501
     Align = alClient
     DataSource = SourcePizzas
     PanelHeight = 100
-    PanelWidth = 367
+    PanelWidth = 363
     TabOrder = 2
     RowCount = 5
     SelectedColor = 13828095
     ShowFocus = False
-    ExplicitWidth = 380
-    ExplicitHeight = 501
+    ExplicitWidth = 376
+    ExplicitHeight = 500
     object DBTextName: TDBText
       Left = 99
       Top = 20
@@ -173,16 +174,19 @@ object PizzasForm: TPizzasForm
   end
   object PanelWhere: TPanel
     Left = 0
-    Top = 542
-    Width = 384
+    Top = 541
+    Width = 380
     Height = 79
     Align = alBottom
     BevelOuter = bvNone
     Color = clMenu
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 541
-    ExplicitWidth = 380
+    ExplicitTop = 540
+    ExplicitWidth = 376
+    DesignSize = (
+      380
+      79)
     object Label1: TLabel
       Left = 8
       Top = 7
@@ -228,11 +232,12 @@ object PizzasForm: TPizzasForm
       ParentFont = False
     end
     object ButtonSearch: TSpeedButton
-      Left = 334
+      Left = 330
       Top = 0
       Width = 50
       Height = 45
-      Action = acWhereBuild
+      Anchors = [akTop, akRight]
+      Caption = 'Search'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
@@ -241,11 +246,12 @@ object PizzasForm: TPizzasForm
       ParentFont = False
     end
     object ButtonClear: TSpeedButton
-      Left = 334
+      Left = 330
       Top = 49
       Width = 50
       Height = 25
-      Action = acWhereClear
+      Anchors = [akTop, akRight]
+      Caption = 'Clear'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
@@ -366,6 +372,7 @@ object PizzasForm: TPizzasForm
     object acDelete: TioBSPersistenceDelete
       Category = 'iORM-BSPersistence'
       Caption = 'Delete'
+      Action_CloseQueryAction = acBack
       TargetBindSource = DSPizzas
     end
     object acBack: TioBSCloseQuery
@@ -377,7 +384,7 @@ object PizzasForm: TPizzasForm
     object acShowOrSelect: TioBSShowOrSelect
       Category = 'iORM-BS'
       Caption = 'Select'
-      ParentCloseQueryAction = acBack
+      Action_ParentCloseQueryAction = acBack
       ShowMode = smBSCurrent
       TargetBindSource = DSPizzas
       ViewContextBy = vcByDefaultViewContextProvider
@@ -386,19 +393,7 @@ object PizzasForm: TPizzasForm
       Category = 'iORM-BSPersistence'
       Caption = 'Add'
       EntityTypeName = 'IPizza'
-      ShowOrSelectAction = acShowOrSelect
       TargetBindSource = DSPizzas
-    end
-    object acWhereBuild: TioBSWhereBuild
-      Category = 'iORM-BSWhereBuilder'
-      Caption = 'Search'
-      TargetBindSource = DSWhere
-    end
-    object acWhereClear: TioBSWhereClear
-      Category = 'iORM-BSWhereBuilder'
-      Caption = 'Clear'
-      TargetBindSource = DSWhere
-      WhereAutoExecuteOnTargetBS = True
     end
   end
   object DSWhere: TioDataSetMaster
