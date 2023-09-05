@@ -137,7 +137,7 @@ object BusinessCustomerForm: TBusinessCustomerForm
     object LabelTitle: TLabel
       Left = 56
       Top = 7
-      Width = 470
+      Width = 466
       Height = 21
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
@@ -239,7 +239,6 @@ object BusinessCustomerForm: TBusinessCustomerForm
     Height = 25
     BorderStyle = bsNone
     Color = clInactiveBorder
-    DataField = 'PhoneNumber'
     DataSource = SourceCustomer
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -345,6 +344,7 @@ object BusinessCustomerForm: TBusinessCustomerForm
     object acRevert: TioBSPersistenceRevertOrDelete
       Category = 'iORM-BSPersistence'
       Caption = 'Revert'
+      Action_CloseQueryAction = acBack
       TargetBindSource = DSCustomer
     end
     object acBack: TioBSCloseQuery

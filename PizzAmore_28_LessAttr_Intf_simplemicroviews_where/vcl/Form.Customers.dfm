@@ -267,7 +267,7 @@ object CustomersForm: TCustomersForm
       ParentFont = False
     end
     object ButtonSearch: TSpeedButton
-      Left = 330
+      Left = 326
       Top = 0
       Width = 50
       Height = 45
@@ -279,9 +279,10 @@ object CustomersForm: TCustomersForm
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 330
     end
     object ButtonClear: TSpeedButton
-      Left = 330
+      Left = 326
       Top = 49
       Width = 50
       Height = 25
@@ -293,6 +294,7 @@ object CustomersForm: TCustomersForm
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+      ExplicitLeft = 330
     end
     object DBEditWhereID: TDBEdit
       Left = 43
